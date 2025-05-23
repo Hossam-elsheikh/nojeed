@@ -5,5 +5,5 @@ export default createMiddleware(routing);
 
 export const config = {
   // Match all locales except for /_next/static/* and /_next/image/*
-  matcher: ["/","/(en|de|ar)/:path*"  ],
+  matcher: ["/","/(en|ar)/:path*"  ],
 };

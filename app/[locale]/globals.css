@@ -1,14 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css?family=Creato:400,700&display=swap');
 @import "tw-animate-css";
 @import "tailwindcss";
 @layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
 @custom-variant dark (&:is(.dark *));
 @tailwind utilities;
 /* Define theme colors as CSS variables */
@@ -20,26 +13,7 @@
 --color-accent-soft: oklch(0.89 0.08 90);
 --color-highlight: oklch(0.91 0.0582 92.15);
 --color-highlight-soft: oklch(0.92 0.0512 93.77);
-
-/* Dark Colors */
---color-darkf: oklch(0.2431 0.0047 26.72);
---color-dark-200: oklch(0.2804 0.0033 47.72);
---color-dark-300: oklch(0.3002 0.0073 27.17);
---color-dark-400: oklch(0.2951 0.0033 47.64);
---color-dark-500: oklch(0.0601 0.0068 256.18 / 0.8);
---color-dark-600: oklch(0.1738 0.0332 255.17);
-
-/* Blue Colors */
---color-blue-100: oklch(0.7736 0.2256 227.45);
---color-blue-200: oklch(0.6914 0.1624 246.67);
---color-blue-300: oklch(0.6825 0.2501 264.84);
---color-blue-400: oklch(0.6825 0.2501 264.84 / 0.15);
---color-blue-500: oklch(0.5322 0.1971 261.75);
-
-/* Gray Colors */
---color-gray-100: oklch(0.6533 0.0348 252.83 / 0.6);
---color-gray-200: oklch(0.6533 0.0348 252.83 / 0.92);
---color-gray-300: oklch(0.1986 0.0151 254.66);
+--color-link-hover: oklch(0.6165 0.1046 187.36);
 
 }
 :root {
@@ -48,26 +22,89 @@
   --bg-tertiary: #060d15;
   --bg-editor: #060d15;
   --bg-code: #0d1625;
-  
+
   --border-primary: #132436;
   --border-active: #1a365d;
   --border-highlight: #31c4f3;
-  
+
   --text-primary: #ffffff;
   --text-secondary: #e2e8f0;
   --text-muted: #a0aec0;
   --text-code: #90cdf4;
-  
+
   --accent-primary: #4361ee;
   --accent-secondary: #2b4f82;
   --accent-hover: #162e51;
-  
+
   --shadow-dropdown: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+  --radius: 0.625rem;
+
+  --background: oklch(1 0 0);
+
+  --foreground: oklch(0.145 0 0);
+
+  --card: oklch(1 0 0);
+
+  --card-foreground: oklch(0.145 0 0);
+
+  --popover: oklch(1 0 0);
+
+  --popover-foreground: oklch(0.145 0 0);
+
+  --primary: oklch(0.205 0 0);
+
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.97 0 0);
+
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --muted: oklch(0.97 0 0);
+
+  --muted-foreground: oklch(0.556 0 0);
+
+  --accent: oklch(0.97 0 0);
+
+  --accent-foreground: oklch(0.205 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.922 0 0);
+
+  --input: oklch(0.922 0 0);
+
+  --ring: oklch(0.708 0 0);
+
+  --chart-1: oklch(0.646 0.222 41.116);
+
+  --chart-2: oklch(0.6 0.118 184.704);
+
+  --chart-3: oklch(0.398 0.07 227.392);
+
+  --chart-4: oklch(0.828 0.189 84.429);
+
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  --sidebar: oklch(0.985 0 0);
+
+  --sidebar-foreground: oklch(0.145 0 0);
+
+  --sidebar-primary: oklch(0.205 0 0);
+
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+
+  --sidebar-accent: oklch(0.97 0 0);
+
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+
+  --sidebar-border: oklch(0.922 0 0);
+
+  --sidebar-ring: oklch(0.708 0 0);
 }
-
-
-
-
+html {
+  scroll-behavior: smooth;
+}
 pre {
   max-height: 300px;
   overflow: auto;
@@ -95,9 +132,9 @@ pre {
 }
 
 body {
-  background-color: #1f1f1f;
-  color: #ffffff;
-  font-family: 'Play';
+  background-color: #ffffff;
+  color: #1d1d1d;
+  font-family: 'Cairo';
 }
 
 input:-webkit-autofill,
@@ -225,559 +262,88 @@ input:-webkit-autofill:active {
   }
 }
 
-/* CKEditor Theme Styles */
+@theme inline {
+--radius-sm: calc(var(--radius) - 4px);
+--radius-md: calc(var(--radius) - 2px);
+--radius-lg: var(--radius);
+--radius-xl: calc(var(--radius) + 4px);
+--color-background: var(--background);
+--color-foreground: var(--foreground);
+--color-card: var(--card);
+--color-card-foreground: var(--card-foreground);
+--color-popover: var(--popover);
+--color-popover-foreground: var(--popover-foreground);
+--color-primary: var(--primary);
+--color-primary-foreground: var(--primary-foreground);
+--color-secondary: var(--secondary);
+--color-secondary-foreground: var(--secondary-foreground);
+--color-muted: var(--muted);
+--color-muted-foreground: var(--muted-foreground);
+--color-accent: var(--accent);
+--color-accent-foreground: var(--accent-foreground);
+--color-destructive: var(--destructive);
+--color-border: var(--border);
+--color-input: var(--input);
+--color-ring: var(--ring);
+--color-chart-1: var(--chart-1);
+--color-chart-2: var(--chart-2);
+--color-chart-3: var(--chart-3);
+--color-chart-4: var(--chart-4);
+--color-chart-5: var(--chart-5);
+--color-sidebar: var(--sidebar);
+--color-sidebar-foreground: var(--sidebar-foreground);
+--color-sidebar-primary: var(--sidebar-primary);
+--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+--color-sidebar-accent: var(--sidebar-accent);
+--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+--color-sidebar-border: var(--sidebar-border);
+--color-sidebar-ring: var(--sidebar-ring);
+
+}
+
+.dark {
+--background: oklch(0.145 0 0);
+--foreground: oklch(0.985 0 0);
+--card: oklch(0.205 0 0);
+--card-foreground: oklch(0.985 0 0);
+--popover: oklch(0.205 0 0);
+--popover-foreground: oklch(0.985 0 0);
+--primary: oklch(0.922 0 0);
+--primary-foreground: oklch(0.205 0 0);
+--secondary: oklch(0.269 0 0);
+--secondary-foreground: oklch(0.985 0 0);
+--muted: oklch(0.269 0 0);
+--muted-foreground: oklch(0.708 0 0);
+--accent: oklch(0.269 0 0);
+--accent-foreground: oklch(0.985 0 0);
+--destructive: oklch(0.704 0.191 22.216);
+--border: oklch(1 0 0 / 10%);
+--input: oklch(1 0 0 / 15%);
+--ring: oklch(0.556 0 0);
+--chart-1: oklch(0.488 0.243 264.376);
+--chart-2: oklch(0.696 0.17 162.48);
+--chart-3: oklch(0.769 0.188 70.08);
+--chart-4: oklch(0.627 0.265 303.9);
+--chart-5: oklch(0.645 0.246 16.439);
+--sidebar: oklch(0.205 0 0);
+--sidebar-foreground: oklch(0.985 0 0);
+--sidebar-primary: oklch(0.488 0.243 264.376);
+--sidebar-primary-foreground: oklch(0.985 0 0);
+--sidebar-accent: oklch(0.269 0 0);
+--sidebar-accent-foreground: oklch(0.985 0 0);
+--sidebar-border: oklch(1 0 0 / 10%);
+--sidebar-ring: oklch(0.556 0 0);
+
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+
+}
+  body {
+    @apply bg-background text-foreground;
 
-/* Base editor styling */
-.ck-toolbar.ck-toolbar_grouping, .ck-balloon-rotator {
-  background-color: var(--bg-secondary) !important;
 }
 
-.ck-icon, .ck-form__header__label {
-  color: var(--text-primary) !important;
-}
-
-/* .ck-splitbutton:hover .ck-icon {
-  color: var(--accent-primary) !important;
-} */
-
-.ck.ck-splitbutton.ck-splitbutton_open > .ck-button:not(.ck-on):not(.ck-disabled):not(:hover), .ck.ck-splitbutton:hover > .ck-button:not(.ck-on):not(.ck-disabled):not(:hover) {
-  background-color: var(--accent-secondary) !important;
-  color: var(--text-primary) !important;
-}
-
-
-/* When button hovered or when button got clicked */
-.ck-button:hover .ck-icon {
-  color: var(--text-primary) !important;
-}
-
-.ck.ck-button.ck-on .ck-icon {
-  color: var(--text-primary) !important;
-}
-
-.ck-editor__top, .ck-sticky-panel__content {
-  border: 1px solid var(--border-primary) !important;
-}
-
-.ck-rounded-corners {
-  border-radius: 8px !important;
-  border: solid 2px var(--border-primary) !important;
-}
-
-.ck-editor__editable {
-  background-color: var(--bg-editor) !important;
-  color: var(--text-primary) !important;
-  border: none !important;
-  padding: 24px !important;
-  border-radius: 8px !important;
-  /* min-height: 200px !important; */
-}
-
-.ck-editor__editable h1, .ck-editor__editable h2, .ck-editor__editable h3, .ck-editor__editable h4, .ck-editor__editable h5, .ck-editor__editable h6 {
-  font-size: revert;
-}
-
-/* Toolbar base styling */
-.ck.ck-toolbar {
-  background-color: var(--bg-secondary) !important;
-  border: 1px solid var(--border-primary) !important;
-  border-radius: 6px !important;
-  padding: 4px 8px !important;
-}
-
-/* Toolbar when collapsed/expanded state */
-.ck.ck-toolbar.ck-toolbar_grouping {
-  border-bottom-color: var(--border-active) !important;
-}
-
-/* Toolbar separator styling */
-.ck.ck-toolbar .ck.ck-toolbar__separator {
-  background-color: var(--border-primary) !important;
-  margin: 0 5px !important;
-}
-
-/* Toolbar responsive behavior */
-.ck.ck-toolbar.ck-toolbar_vertical > .ck.ck-toolbar__items {
-  background-color: var(--bg-secondary) !important;
-}
-
-/* Fix focus states for toolbar */
-.ck.ck-toolbar:focus {
-  border-color: var(--accent-primary) !important;
-  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.3) !important;
-}
-
-/* Style for when toolbar is disabled */
-.ck.ck-toolbar.ck-disabled {
-  opacity: 0.6 !important;
-}
-
-.ck-button__label {
-  color: var(--text-primary) !important;
-}
-
-/* CKEditor Toolbar Improvements */
-.ck-toolbar.ck-toolbar_grouping {
-  padding: 8px !important;
-  border-bottom: 2px solid var(--border-active) !important;
-}
-
-
-/* Dropdown styles */
-.ck-dropdown__panel {
-  background-color: var(--bg-secondary) !important;
-  border: 1px solid var(--border-active) !important;
-  border-radius: 6px !important;
-  box-shadow: var(--shadow-dropdown) !important;
-  max-height: 300px !important;
-  overflow-y: auto !important;
-}
-
-.ck-dropdown__button:hover {
-  background-color: var(--accent-hover) !important;
-}
-
-/* dropdown styles */
-.ck-dropdown__panel .ck-list__item {
-  padding: 6px 8px !important;
-}
-
-.ck-dropdown__panel .ck-list__item .ck-button {
-  padding: 6px 10px !important;
-  border-radius: 4px !important;
-}
-
-.ck-dropdown__panel .ck-list__item .ck-button:hover {
-  background-color: var(--accent-hover) !important;
-}
-
-.ck-dropdown__panel .ck-list__item .ck-button.ck-on {
-  background-color: var(--accent-secondary) !important;
-}
-
-/* List item button styles - Fixed */
-.ck-list-item .ck-button {
-  width: 100% !important;
-  text-align: left !important;
-  border-radius: 0 !important;
-  padding: 8px 12px !important;
-  transition: all 0.2s ease !important;
-}
-
-.ck-list-item .ck-button:hover {
-  background-color: var(--accent-hover) !important;
-}
-
-.ck-list-item .ck-button.ck-on {
-  background-color: var(--accent-secondary) !important;
-}
-
-.ck-list-item .ck-button__label {
-  margin-left: 5px !important;
-  font-size: 14px !important;
-}
-
-/* Dropdown menu styling improvements */
-.ck-dropdown__panel .ck-list {
-  border-radius: 6px !important;
-  overflow: hidden !important;
-  padding: 4px 0 !important;
-}
-
-.ck-dropdown__panel .ck-list__item:first-child .ck-button {
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
-}
-
-.ck-dropdown__panel .ck-list__item:last-child .ck-button {
-  border-bottom-left-radius: 4px !important;
-  border-bottom-right-radius: 4px !important;
-}
-
-/* Code block styles */
-.ck-content pre {
-  background-color: var(--bg-code) !important;
-  border: 1px solid var(--border-active) !important;
-  border-radius: 6px !important;
-  padding: 12px !important;
-  color: var(--text-secondary) !important;
-  font-family: 'Monaco', 'Courier New', monospace !important;
-  margin: 16px 0 !important;
-}
-
-.ck-content code {
-  background-color: rgba(26, 54, 93, 0.4) !important;
-  padding: 2px 4px !important;
-  border-radius: 3px !important;
-  color: var(--text-code) !important;
-}
-
-/* Toolbar button improvements */
-.ck.ck-toolbar .ck-toolbar__items {
-  gap: 2px !important;
-}
-
-.ck.ck-button {
-  padding: 6px !important;
-  border-radius: 4px !important;
-  transition: background-color 0.2s ease, color 0.2s ease !important;
-}
-
-.ck.ck-button.ck-off:hover, .ck.ck-button.ck-on:not(.ck-disabled):hover, a.ck.ck-button.ck-on:not(.ck-disabled):hover {
-  background-color: var(--accent-hover);
-}
-
-
-.ck.ck-splitbutton.ck-splitbutton_flatten.ck-splitbutton_open > .ck-splitbutton__action:not(.ck-disabled),
-.ck.ck-splitbutton.ck-splitbutton_flatten.ck-splitbutton_open > .ck-splitbutton__arrow:not(.ck-disabled),
-.ck.ck-splitbutton.ck-splitbutton_flatten:hover > .ck-splitbutton__action:not(.ck-disabled) {
-  background-color: var(--accent-secondary) !important;
-}
-.ck.ck-splitbutton.ck-splitbutton_flatten.ck-splitbutton_open > .ck-splitbutton__arrow:not(.ck-disabled):hover {
-  background-color: var(--accent-hover) !important;
-}
-.ck.ck-button.ck-on {
-  background-color: var(--accent-secondary);
-  color: var(--text-primary) !important;
-}
-
-/* Fix dropdown panel text color */
-.ck-dropdown__panel .ck-list__item .ck-button__label {
-  color: var(--text-primary) !important;
-}
-
-/* Fix language dropdown for code blocks */
-.ck-code-language-dropdown .ck-dropdown__panel {
-  max-height: 300px !important;
-  overflow-y: auto !important;
-}
-
-/* Improve toolbar overflow handling */
-.ck-toolbar__items {
-  flex-wrap: wrap !important;
-}
-
-/* Improve headings in editor content */
-.ck-editor__editable h1 {
-  font-size: 2em !important;
-  margin-top: 0.67em !important;
-  margin-bottom: 0.67em !important;
-  color: var(--text-primary) !important;
-}
-
-.ck-editor__editable h2 {
-  font-size: 1.5em !important;
-  margin-top: 0.83em !important;
-  margin-bottom: 0.83em !important;
-  color: var(--text-primary) !important;
-}
-
-.ck-editor__editable h3 {
-  font-size: 1.17em !important;
-  margin-top: 1em !important;
-  margin-bottom: 1em !important;
-  color: var(--text-primary) !important;
-}
-
-/* Improve table presentation in the editor */
-.ck-content table {
-  border-collapse: collapse !important;
-  width: 100% !important;
-  margin: 1em 0 !important;
-}
-
-.ck-content table td, .ck-content table th {
-  border: 1px solid var(--border-active) !important;
-  padding: 8px !important;
-}
-
-/* Add a subtle hover effect to table cells for better UX */
-.ck-content table td:hover, .ck-content table th:hover {
-  background-color: rgba(26, 54, 93, 0.2) !important;
-}
-
-/* Better styling for links in the editor */
-.ck-content a {
-  color: var(--accent-primary) !important;
-  text-decoration: underline !important;
-}
-
-.ck-content a:hover {
-  color: var(--text-code) !important;
-}
-
-/* Better image caption styling */
-.ck-content .image > figcaption {
-  background-color: var(--bg-code) !important;
-  color: var(--text-muted) !important;
-  padding: 6px !important;
-  font-size: 0.85rem !important; /* Smaller font size for captions */
-  font-family: 'Inter', sans-serif !important; /* Consistent font */
-  text-align: center !important;
-  line-height: 1.4 !important;
-  max-width: 100% !important; /* Ensure caption doesn't overflow */
-
-}
-
-.ck.ck-button.ck-list-item-button {
-  background-color: var(--bg-code) !important;
-  color: var(--text-primary) !important;
-}
-
-.ck-list, .ck-toolbar.ck-toolbar_vertical {
-  background-color: var(--bg-code) !important;
-  color: var(--text-primary) !important;
-}
-
-
-/* CKEditor Balloon Panel Styling */
-.ck.ck-balloon-panel {
-  background-color: var(--bg-secondary) !important;
-  border: 1px solid var(--border-active) !important;
-  border-radius: 6px !important;
-  box-shadow: var(--shadow-dropdown) !important;
-}
-
-/* Balloon panel arrow styling */
-.ck.ck-balloon-panel:before,
-.ck.ck-balloon-panel:after {
-  border-color: var(--border-active) !important;
-}
-
-.ck.ck-balloon-panel:after {
-  border-color: var(--bg-secondary) !important;
-}
-
-/* Balloon panel input fields */
-.ck.ck-balloon-panel input.ck-input {
-  background-color: var(--bg-editor) !important;
-  border: 1px solid var(--border-primary) !important;
-  color: var(--text-primary) !important;
-  border-radius: 4px !important;
-}
-
-.ck.ck-balloon-panel input.ck-input:focus {
-  border-color: var(--accent-primary) !important;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
-}
-
-/* Balloon panel buttons */
-.ck.ck-balloon-panel .ck-button {
-  padding: 6px 10px !important;
-  border-radius: 4px !important;
-  transition: background-color 0.2s ease, color 0.2s ease !important;
-}
-
-.ck.ck-balloon-panel .ck-button:hover {
-  background-color: var(--accent-hover) !important;
-}
-
-/* Balloon panel labels and text */
-.ck.ck-balloon-panel label,
-.ck.ck-balloon-panel .ck-label {
-  color: var(--text-primary) !important;
-  background-color: transparent !important;
-}
-
-/* Link form styling */
-.ck.ck-link-form {
-  padding: 8px !important;
-}
-
-.ck.ck-link-form .ck-labeled-field-view {
-  margin-bottom: 8px !important;
-}
-
-/* Link actions panel */
-.ck.ck-link-actions {
-  padding: 8px !important;
-}
-
-.ck.ck-link-actions .ck-button.ck-link-actions__preview {
-  background-color: transparent !important;
-  color: var(--accent-primary) !important;
-  padding-left: 0 !important;
-}
-
-.ck.ck-link-actions .ck-button.ck-link-actions__preview:hover {
-  color: var(--text-code) !important;
-  background-color: transparent !important;
-}
-
-/* Image toolbar in balloon panel */
-.ck.ck-balloon-panel.ck-toolbar {
-  padding: 4px !important;
-  background-color: var(--bg-secondary) !important;
-}
-
-/* Table toolbar in balloon panel */
-.ck.ck-toolbar.ck-toolbar_floating {
-  background-color: var(--bg-secondary) !important;
-  border: 1px solid var(--border-active) !important;
-  border-radius: 6px !important;
-  box-shadow: var(--shadow-dropdown) !important;
-}
-
-/* Improve color grid button selection visibility */
-.ck.ck-color-grid .ck.ck-button.ck-color-grid__tile.ck-on {
-  border: 2px solid var(--border-highlight) !important;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
-}
-
-
-/* Blog post content styling */
-.blog-content {
-  /* Basic typography and spacing */
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  max-width: none;
-  width: 100%;
-  
-  /* Spacing between elements */
-  & > * + * {
-    margin-top: 1em;
-  }
-  
-  /* Heading styles */
-  & h1, & h2, & h3, & h4, & h5, & h6 {
-    font-family: 'Play', sans-serif;
-    font-weight: 600;
-    line-height: 1.3;
-    color: var(--text-primary);
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-  }
-  
-  & h1 {
-    font-size: 2rem;
-  }
-  
-  & h2 {
-    font-size: 1.75rem;
-  }
-  
-  & h3 {
-    font-size: 1.5rem;
-  }
-  
-  & h4 {
-    font-size: 1.25rem;
-  }
-  
-  /* Paragraph styles */
-  & p {
-    margin-bottom: 1.2em;
-  }
-  
-  /* Link styles */
-  & a {
-    color: var(--accent-primary);
-    text-decoration: underline;
-    transition: color 0.2s ease;
-  }
-  
-  & a:hover {
-    color: var(--text-code);
-  }
-  
-  /* List styles */
-  & ul, & ol {
-    padding-left: 1.5em;
-    margin-bottom: 1.2em;
-  }
-  
-  & li {
-    margin-bottom: 0.5em;
-  }
-  
-  /* Code block styles - matching the editor */
-  & pre {
-    background-color: var(--bg-code);
-    border: 1px solid var(--border-active);
-    border-radius: 6px;
-    padding: 12px;
-    color: var(--text-secondary);
-    font-family: 'Monaco', 'Courier New', monospace;
-    margin: 16px 0;
-    overflow-x: auto;
-  }
-  
-  & code {
-    background-color: rgba(26, 54, 93, 0.4);
-    padding: 2px 4px;
-    border-radius: 3px;
-    color: var(--text-code);
-    font-family: 'Monaco', 'Courier New', monospace;
-  }
-  
-  /* Table styles */
-  & table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 1em 0;
-  }
-  
-  & table td, & table th {
-    border: 1px solid var(--border-active);
-    padding: 8px;
-  }
-  
-  /* Blockquote styles */
-  & blockquote {
-    border-left: 4px solid var(--accent-secondary);
-    padding-left: 1em;
-    margin-left: 0;
-    font-style: italic;
-    color: var(--text-muted);
-  }
-  
-  /* Image styles */
-  & img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 1em 0;
-  }
-  
-  /* Figure and caption styles */
-  & figure {
-    margin: 1.5em 0;
-  }
-  
-  & figcaption {
-    background-color: var(--bg-code);
-    color: var(--text-muted);
-    padding: 6px;
-    font-size: 0.9rem;
-    text-align: center;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-  }
-}
-
-/* Match caption styling in the blog display */
-.blog-content figcaption {
-  background-color: var(--bg-code);
-  color: var(--text-muted);
-  padding: 6px;
-  font-size: 0.85rem; /* Match with editor size */
-  font-family: 'Inter', sans-serif;
-  text-align: center;
-  line-height: 1.4;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  max-width: 100%;
-  margin-top: 0; /* Remove space between image and caption */
-}
-
-/* Make sure the image and caption stay together */
-.blog-content figure {
-  display: table;
-  margin: 1.5em auto; /* Center figures by default */
-  max-width: 100%;
-}
-
-.blog-content figure img {
-  margin-bottom: 0; /* Remove margin between image and caption */
 }

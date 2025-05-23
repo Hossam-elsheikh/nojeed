@@ -2,19 +2,15 @@ import { Locale, routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import localFont from "next/font/local";
 import { notFound } from "next/navigation";
+import { Cairo } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar/NavBar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const cairoFont = Cairo({
+  variable: "--font-cairo",
+  weight: ["400", "700"],
+  subsets: ["arabic"],
 });
 
 export const metadata: Metadata = {
@@ -37,12 +33,16 @@ export default async function RootLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
   return (
-    <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html dir={locale==='ar'? 'rtl':'ltr'} lang={locale}>
+      <body className={`${cairoFont.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <main>
+            <Navbar locale={locale} />
+            <div className="flex flex-col w-full lg:w-[90%] p-5 lg:p-10 mx-auto">
+
+            {children}
+            </div>
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>
