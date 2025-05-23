@@ -1,0 +1,27 @@
+{
+  "NavBar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "logout": "Logout",
+    "settings": "Settings",
+    "profile": "Profile",
+    "language": "Language"
+  },
+  "HomePage": {
+    "title": "Welcome to the Home Page",
+    "description": "This is the home page of our application."
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "description": "If you have any questions, feel free to reach out."
+  },
+  "LoginPage": {
+    "title": "Login to Your Account",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "forgotPassword": "Forgot Password?"
+  }
+}
