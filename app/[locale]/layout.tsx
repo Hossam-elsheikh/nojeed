@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Cairo } from "next/font/google";
+import { Cairo,Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/NavBar";
 
@@ -12,6 +12,12 @@ const cairoFont = Cairo({
   weight: ["400", "700"],
   subsets: ["arabic"],
 });
+
+const RobotoFont = Roboto({
+  variable:"--font-roboto",
+  weight:["100","200","300","400","500","600","700","800","900"],
+  subsets:["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -34,7 +40,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html dir={locale==='ar'? 'rtl':'ltr'} lang={locale}>
-      <body className={`${cairoFont.variable} antialiased`}>
+      <body className={` ${RobotoFont.variable} antialiased max-w-[1919px] mx-auto`}>
         <NextIntlClientProvider messages={messages}>
           <main>
             <Navbar locale={locale} />

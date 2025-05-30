@@ -14,7 +14,7 @@ const Navbar = ({locale}:{locale:string}) => {
   const t = useTranslations("navbar");
 
   return (
-    <div className="flex py-5 px-10 justify-between items-center sticky top-0 z-40 shadow bg-white">
+    <div className="flex py-5 px-10 justify-between lg:mx-20 items-center sticky top-0 z-40 border-b bg-white">
       <Link href={'/'} className="w-1/4">
         <Image src={logo} width={120} height={120} alt="Saluts" />
       </Link>

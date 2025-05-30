@@ -8,7 +8,7 @@ const Hero = () => {
     const t = useTranslations('hero')
   return (
     <div className='flex flex-col-reverse lg:flex-row items-center justify-between py-10 lg:py-20 gap-5 lg:gap-15'>
-      <div className='w-full lg:w-1/2 flex flex-col gap-10'>
+      <div className='w-full lg:w-1/2 flex items-center lg:items-start flex-col gap-10 text-center lg:text-start'>
 
         <motion.h1 initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -23,7 +23,7 @@ const Hero = () => {
         </motion.p>
         <motion.div initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: .3 }}  className='flex flex-col lg:flex-row gap-2'>
+        transition={{ delay: 1, duration: .3 }}  className='flex flex-col lg:flex-row gap-2 items-center lg:items-start'>
           <Button className='w-fit px-5 py-4 text-xl '>{t('cta2')}</Button>
           <Button className='w-fit px-5 py-4 text-xl '>{t('cta3')}</Button>
         </motion.div>

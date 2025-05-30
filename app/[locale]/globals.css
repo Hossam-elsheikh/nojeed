@@ -17,6 +17,8 @@
 
 }
 :root {
+
+  --font-roboto : 'Roboto' ;  
   --bg-primary: #1f1f1f;
   --bg-secondary: #0c1221;
   --bg-tertiary: #060d15;
@@ -134,7 +136,7 @@ pre {
 body {
   background-color: #ffffff;
   color: #1d1d1d;
-  font-family: 'Cairo';
+  font-family: var(--font-roboto);
 }
 
 input:-webkit-autofill,
