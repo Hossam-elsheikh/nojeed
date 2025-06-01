@@ -1,113 +1,113 @@
 {
-  "navbar":{
-    "home":"Home",
-    "services":"Services",
-    "portfolio":"Portfolio",
-    "whyus":"Why us?",
-    "contact":"Contact Us"
-  },
-  "hero": {
-    "headline": "Your Digital Universe, All in One Place.",
-    "subheadline": "From concept to launch — we craft your entire digital presence under one roof. Branding, software, media, marketing, data, and management — seamlessly integrated.",
-    "cta1": "Let’s Build Something Great Together",
-    "cta2": "Get a Free Consultation",
-    "cta3": "Explore Our Work"
-  },
-  "about": {
-    "title": "Who We Are",
-    "body": "At Nojeed, we don’t just deliver services — we build experiences. We are your all-in-one partner for digital excellence, combining strategy, creativity, and technology to bring your brand to life. Whether you're starting from scratch or scaling to the next level, we’ve got every angle covered."
-  },
-  "services": {
-    "title": "What We Do",
-    "intro": "Everything your brand needs, expertly crafted under one roof.",
-    "branding": {
-      "title": "Branding & Digital Identity",
-      "items": [
-        "Brand Strategy & Positioning",
-        "Visual Identity Design",
-        "Brand Guidelines"
-      ],
-      "line": "Build a brand that’s unforgettable — and unshakable."
+    "navbar": {
+        "home": "Home",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "whyus": "Why us?",
+        "contact": "Contact Us"
     },
-    "software": {
-      "title": "Software Development",
-      "items": [
-        "UI/UX Design",
-        "Website & Web App Development",
-        "Mobile & Desktop Applications"
-      ],
-      "line": "From pixels to platforms — we code your vision into reality."
+    "hero": {
+        "headline": "Your Digital Universe, All in One Place.",
+        "subheadline": "From concept to launch — we craft your entire digital presence under one roof. Branding, software, media, marketing, data, and management — seamlessly integrated.",
+        "cta1": "Let’s Build Something Great Together",
+        "cta2": "Get a Free Consultation",
+        "cta3": "Explore Our Work"
     },
-    "media": {
-      "title": "Media Production",
-      "items": [
-        "Graphic Design",
-        "Motion Graphics",
-        "Video Editing & Montage"
-      ],
-      "line": "Visuals that don’t just catch eyes — they hold attention."
+    "about": {
+        "title": "Who We Are",
+        "body": "At Nojeed, we don’t just deliver services — we build experiences. We are your all-in-one partner for digital excellence, combining strategy, creativity, and technology to bring your brand to life. Whether you're starting from scratch or scaling to the next level, we’ve got every angle covered."
     },
-    "marketing": {
-      "title": "Digital Marketing",
-      "items": [
-        "Content Creation",
-        "Social Media Management",
-        "Paid Ads & Campaign Strategy"
-      ],
-      "line": "We turn clicks into conversions, and posts into impact."
+    "services": {
+        "title": "What We Do",
+        "intro": "Everything your brand needs, expertly crafted under one roof.",
+        "branding": {
+            "title": "Branding & Digital Identity",
+            "items": [
+                "Brand Strategy & Positioning",
+                "Visual Identity Design",
+                "Brand Guidelines"
+            ],
+            "line": "Build a brand that’s unforgettable — and unshakable."
+        },
+        "software": {
+            "title": "Software Development",
+            "items": [
+                "UI/UX Design",
+                "Website & Web App Development",
+                "Mobile & Desktop Applications"
+            ],
+            "line": "From pixels to platforms — we code your vision into reality."
+        },
+        "media": {
+            "title": "Media Production",
+            "items": [
+                "Graphic Design",
+                "Motion Graphics",
+                "Video Editing & Montage"
+            ],
+            "line": "Visuals that don’t just catch eyes — they hold attention."
+        },
+        "marketing": {
+            "title": "Digital Marketing",
+            "items": [
+                "Content Creation",
+                "Social Media Management",
+                "Paid Ads & Campaign Strategy"
+            ],
+            "line": "We turn clicks into conversions, and posts into impact."
+        },
+        "data": {
+            "title": "Data Analysis & Reporting",
+            "items": [
+                "Insights & Dashboards",
+                "Campaign Performance Tracking",
+                "Business Intelligence"
+            ],
+            "line": "Decisions backed by data. Every step of the way."
+        },
+        "management": {
+            "title": "Project Management",
+            "items": [
+                "Agile Workflows",
+                "Milestone Tracking",
+                "Strategic Planning"
+            ],
+            "line": "Your vision, delivered — on time, every time."
+        }
     },
-    "data": {
-      "title": "Data Analysis & Reporting",
-      "items": [
-        "Insights & Dashboards",
-        "Campaign Performance Tracking",
-        "Business Intelligence"
-      ],
-      "line": "Decisions backed by data. Every step of the way."
+    "advantage": {
+        "title": "Why Choose Nojeed?",
+        "points": [
+            "💡 All-in-One Partner: From design to deployment — no need to juggle multiple agencies.",
+            "🧠 Strategy + Execution: We think smart and act fast.",
+            "🛠️ Custom Solutions: No templates. Just tailored creativity and code.",
+            "📈 Results-Driven: We align with your goals and track what matters."
+        ],
+        "tagline": "Nojeed — one team, every solution."
     },
-    "management": {
-      "title": "Project Management",
-      "items": [
-        "Agile Workflows",
-        "Milestone Tracking",
-        "Strategic Planning"
-      ],
-      "line": "Your vision, delivered — on time, every time."
+    "testimonials": {
+        "title": "What Our Clients Say",
+        "items": [
+            {
+                "quote": "Nojeed transformed our digital presence beyond expectations!",
+                "name": "Sarah Ahmed",
+                "company": "BrightPath"
+            },
+            {
+                "quote": "Professional, creative, and always on time. Highly recommend!",
+                "name": "Khalid Al-Faraj",
+                "company": "TechNova"
+            }
+        ]
+    },
+    "portfolio": {
+        "title": "Our Work Speaks for Itself",
+        "subheadline": "Explore some of our favorite collaborations across branding, tech, and marketing."
+    },
+    "finalBanner": {
+        "headline": "Let’s Make Your Vision Happen",
+        "subheadline": "Tell us where you want to go — we’ll get you there.",
+        "cta1": "Book a Discovery Call",
+        "cta2": "Send Us a Message"
     }
-  },
-  "advantage": {
-    "title": "Why Choose Nojeed?",
-    "points": [
-      "💡 All-in-One Partner: From design to deployment — no need to juggle multiple agencies.",
-      "🧠 Strategy + Execution: We think smart and act fast.",
-      "🛠️ Custom Solutions: No templates. Just tailored creativity and code.",
-      "📈 Results-Driven: We align with your goals and track what matters."
-    ],
-    "tagline": "Nojeed — one team, every solution."
-  },
-  "testimonials": {
-    "title": "What Our Clients Say",
-    "items": [
-      {
-        "quote": "Nojeed transformed our digital presence beyond expectations!",
-        "name": "Sarah Ahmed",
-        "company": "BrightPath"
-      },
-      {
-        "quote": "Professional, creative, and always on time. Highly recommend!",
-        "name": "Khalid Al-Faraj",
-        "company": "TechNova"
-      }
-    ]
-  },
-  "portfolio": {
-    "title": "Our Work Speaks for Itself",
-    "subheadline": "Explore some of our favorite collaborations across branding, tech, and marketing."
-  },
-  "finalBanner": {
-    "headline": "Let’s Make Your Vision Happen",
-    "subheadline": "Tell us where you want to go — we’ll get you there.",
-    "cta1": "Book a Discovery Call",
-    "cta2": "Send Us a Message"
-  }
 }

@@ -14,10 +14,12 @@
 --color-highlight: oklch(0.91 0.0582 92.15);
 --color-highlight-soft: oklch(0.92 0.0512 93.77);
 --color-link-hover: oklch(0.6165 0.1046 187.36);
+--color-background: oklch(0.42 0.2 297);
 
 }
 :root {
-
+--font-cairo: "Cairo", sans-serif;
+--font-almarai: "Almarai", sans-serif;
   --font-roboto : 'Roboto' ;  
   --bg-primary: #1f1f1f;
   --bg-secondary: #0c1221;
@@ -136,7 +138,8 @@ pre {
 body {
   background-color: #ffffff;
   color: #1d1d1d;
-  font-family: var(--font-roboto);
+  /* font-family: var(--font-roboto); */
+  font-family: var(--font-almarai);
 }
 
 input:-webkit-autofill,
@@ -145,6 +148,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #060d15 inset ;
   -webkit-text-fill-color: white ;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
