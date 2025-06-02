@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import { motion } from 'framer-motion';
 
 interface RevealCardProps {
@@ -17,7 +18,6 @@ interface RevealCardProps {
 export default function RevealCard({
     icon: IconComponent,
     title,
-    points,
     classes,
     isActive,
     onHover,
@@ -27,7 +27,7 @@ export default function RevealCard({
     return (
         <motion.div
             layout
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
             onMouseEnter={onHover}
             onMouseLeave={onLeave}
             onClick={onClick}
@@ -35,9 +35,10 @@ export default function RevealCard({
                 relative cursor-pointer 
                 transition-all duration-300 
                 ease-out rounded-xl p-5 
+               
                 shadow-md ${classes} 
                 ${isActive
-                    ? 'bg-gradient-to-br from-green-100 to-green-200 shadow-lg'
+                    ? 'bg-gradient-to-br from-green-100 to-green-200 shadow-md'
                     : 'bg-white filter grayscale opacity-75'
                 }
             `}
@@ -48,19 +49,18 @@ export default function RevealCard({
                 animate={{ rotate: 0, scale: 1 }}
                 transition={{ duration: 0.4 }}
             >
-                <IconComponent size={56} />
+                <IconComponent size={44} />
             </motion.div>
 
-            <div className="flex flex-col h-full justify-center text-center items-center gap-2 z-10 relative">
+            <div className="flex flex-col h-full   justify-center text-center items-center gap-1 z-10 relative">
                 <motion.h3
-                    className="font-semibold text-lg"
+                    className="font-semibold text-sm"
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.1 }}
                 >
                     {title}
                 </motion.h3>
-               
             </div>
         </motion.div>
     );
