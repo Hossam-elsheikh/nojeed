@@ -7,7 +7,6 @@
     justify-content: center;
     background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
     overflow: hidden;
-    
 }
 
 .body,
@@ -17,26 +16,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
     text-align: left;
     z-index: 1;
 }
 
+/* Shared Heading Style */
 .body h2,
 .mask h2 {
-    font-size: 2.75rem;
+    font-size: 3rem;
     font-weight: 700;
+}
+
+/* Shared Paragraph Style */
+.body p,
+.mask p {
+    font-size: 2.4rem;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+/* Default text colors for body section */
+.body h2 {
     color: #ffffff;
 }
 
-.body p,
-.mask p {
-    font-size: 2rem;
-    line-height: 1.7;
-    max-width: 700px;
+.body p {
     color: #cccccc;
 }
 
+/* Mask styles */
 .mask {
     position: absolute;
     top: 0;
@@ -45,24 +53,23 @@
     height: 100%;
     max-width: none;
 
-    background: #92e3a9;
+    background: #def7e5;
     -webkit-mask-image: url('/mask.svg');
     mask-image: url('/mask.svg');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 
-    color: #fff;
-    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+
 .mask h2 {
-    color: #9f9f;
+    color: #0f4036; 
 }
 
 .mask p {
-    color: #ffffff;
+    color: #214d3b; 
 }

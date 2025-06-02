@@ -1,232 +1,119 @@
-import React from 'react'
-import { Palette, Code, Camera, TrendingUp, BarChart3, CheckSquare, Sparkles, Users, Globe, Smartphone } from 'lucide-react'
+'use client';
+import React, { useState } from 'react';
+import {
+    Palette,
+    Code,
+    Camera,
+    TrendingUp,
+    BarChart3,
+    CheckSquare,
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import RevealCard from './RevelCard';
 
-function ServicesGrid() {
+const items = [
+    {
+        icon: Code,
+        title: 'Software Development',
+        points: ['UI/UX Design', 'Website & Web App Development', 'Mobile & Desktop Applications'],
+        quote: 'From pixels to platforms — we code your vision into reality.',
+        classes: 'row-span-2',
+    },
+    {
+        icon: Palette,
+        title: 'Branding & Digital Identity',
+        points: ['Brand Strategy & Positioning', 'Visual Identity Design', 'Brand Guidelines'],
+        quote: "Build a brand that's unforgettable — and unshakable.",
+        classes: 'row-span-2 col-start-1 row-start-3',
+    },
+    {
+        icon: Camera,
+        title: 'Media Production',
+        points: ['Graphic Design', 'Motion Graphics', 'Video Editing & Montage'],
+        quote: "Visuals that don't just catch eyes — they hold attention.",
+        classes: 'row-span-2 col-start-1 row-start-5',
+    },
+    {
+        icon: TrendingUp,
+        title: 'Digital Marketing',
+        points: ['Content Creation', 'Social Media Management', 'Paid Ads & Campaign Strategy'],
+        quote: 'We turn clicks into conversions, and posts into impact.',
+        classes: 'row-span-2 col-start-5 row-start-1',
+    },
+    {
+        icon: BarChart3,
+        title: 'Data Analysis & Reporting',
+        points: ['Insights & Dashboards', 'Campaign Performance Tracking', 'Business Intelligence'],
+        quote: 'Decisions backed by data. Every step of the way.',
+        classes: 'row-span-2 col-start-5 row-start-3',
+    },
+    {
+        icon: CheckSquare,
+        title: 'Project Management',
+        points: ['Agile Workflows', 'Milestone Tracking', 'Strategic Planning'],
+        quote: 'Your vision, delivered — on time, every time.',
+        classes: 'row-span-2 col-start-5 row-start-5',
+    },
+];
+
+export default function ServicesGrid() {
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+    const contentIndex = hoveredIndex ?? selectedIndex;
+
     return (
-        <div className="p-4 max-w-7xl mx-auto">
-            {/* Mobile Layout */}
-            <div className="block md:hidden space-y-3">
-                {/* Software Development */}
-                <div className="bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg p-4 text-white shadow-lg">
-                    <div className="flex items-center gap-3 mb-3">
-                        <Code className="w-5 h-5" />
-                        <h3 className="font-bold text-base">Software Development</h3>
-                    </div>
-                    <div className="space-y-1 text-xs opacity-90 mb-2">
-                        <p>• UI/UX Design</p>
-                        <p>• Website & Web App Development</p>
-                        <p>• Mobile & Desktop Applications</p>
-                    </div>
-                    <p className="text-xs font-medium italic">From pixels to platforms — we code your vision into reality.</p>
-                </div>
+        <div className="grid grid-cols-5 grid-rows-6 gap-4 p-4 h-screen">
+            {items.map((item, index) => (
+                <RevealCard
+                    key={index}
+                    icon={item.icon}
+                    title={item.title}
+                    points={item.points}
+                    quote={item.quote}
+                    classes={item.classes}
+                    index={index}
+                    isActive={index === contentIndex}
+                    onHover={() => setHoveredIndex(index)}
+                    onLeave={() => setHoveredIndex(null)}
+                    onClick={() => {
+                        setSelectedIndex(index);
+                        setHoveredIndex(null); 
+                    }}
+                />
+            ))}
 
-                {/* Branding & Digital Identity */}
-                <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg p-4 text-white shadow-lg">
-                    <div className="flex items-center gap-3 mb-3">
-                        <Palette className="w-5 h-5" />
-                        <h3 className="font-bold text-base">Branding & Digital Identity</h3>
-                    </div>
-                    <div className="space-y-1 text-xs opacity-90 mb-2">
-                        <p>• Brand Strategy & Positioning</p>
-                        <p>• Visual Identity Design</p>
-                        <p>• Brand Guidelines</p>
-                    </div>
-                    <p className="text-xs font-medium italic">Build a brand that's unforgettable — and unshakable.</p>
-                </div>
-
-                {/* Media Production */}
-                <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg p-4 text-white shadow-lg">
-                    <div className="flex items-center gap-3 mb-3">
-                        <Camera className="w-5 h-5" />
-                        <h3 className="font-bold text-base">Media Production</h3>
-                    </div>
-                    <div className="space-y-1 text-xs opacity-90 mb-2">
-                        <p>• Graphic Design</p>
-                        <p>• Motion Graphics</p>
-                        <p>• Video Editing & Montage</p>
-                    </div>
-                    <p className="text-xs font-medium italic">Visuals that don't just catch eyes — they hold attention.</p>
-                </div>
-
-                {/* Digital Marketing */}
-                <div className="bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg p-4 text-white shadow-lg">
-                    <div className="flex items-center gap-3 mb-3">
-                        <TrendingUp className="w-5 h-5" />
-                        <h3 className="font-bold text-base">Digital Marketing</h3>
-                    </div>
-                    <div className="space-y-1 text-xs opacity-90 mb-2">
-                        <p>• Content Creation</p>
-                        <p>• Social Media Management</p>
-                        <p>• Paid Ads & Campaign Strategy</p>
-                    </div>
-                    <p className="text-xs font-medium italic">We turn clicks into conversions, and posts into impact.</p>
-                </div>
-
-                {/* Data Analysis & Reporting */}
-                <div className="bg-gradient-to-br from-teal-500 to-blue-600 rounded-lg p-4 text-white shadow-lg">
-                    <div className="flex items-center gap-3 mb-3">
-                        <BarChart3 className="w-5 h-5" />
-                        <h3 className="font-bold text-base">Data Analysis & Reporting</h3>
-                    </div>
-                    <div className="space-y-1 text-xs opacity-90 mb-2">
-                        <p>• Insights & Dashboards</p>
-                        <p>• Campaign Performance Tracking</p>
-                        <p>• Business Intelligence</p>
-                    </div>
-                    <p className="text-xs font-medium italic">Decisions backed by data. Every step of the way.</p>
-                </div>
-
-                {/* Project Management */}
-                <div className="bg-gradient-to-br from-violet-500 to-purple-700 rounded-lg p-4 text-white shadow-lg">
-                    <div className="flex items-center gap-3 mb-3">
-                        <CheckSquare className="w-5 h-5" />
-                        <h3 className="font-bold text-base">Project Management</h3>
-                    </div>
-                    <div className="space-y-1 text-xs opacity-90 mb-2">
-                        <p>• Agile Workflows</p>
-                        <p>• Milestone Tracking</p>
-                        <p>• Strategic Planning</p>
-                    </div>
-                    <p className="text-xs font-medium italic">Your vision, delivered — on time, every time.</p>
-                </div>
-
-                {/* Quick Actions - Mobile Grid */}
-                <div className="grid grid-cols-2 gap-3 mt-4">
-                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-lg p-3 flex flex-col items-center justify-center text-white shadow-lg">
-                        <Sparkles className="w-6 h-6 mb-1" />
-                        <h3 className="font-bold text-xs text-center">Get Started</h3>
-                    </div>
-                    <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg p-3 flex flex-col items-center justify-center text-white shadow-lg">
-                        <Users className="w-6 h-6 mb-1" />
-                        <h3 className="font-bold text-xs text-center">About Us</h3>
-                    </div>
-                    <div className="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg p-3 flex flex-col items-center justify-center text-white shadow-lg">
-                        <Globe className="w-6 h-6 mb-1" />
-                        <h3 className="font-bold text-xs text-center">Our Work</h3>
-                    </div>
-                    <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg p-3 flex flex-col items-center justify-center text-white shadow-lg">
-                        <Smartphone className="w-6 h-6 mb-1" />
-                        <h3 className="font-bold text-xs text-center">Contact</h3>
-                    </div>
-                </div>
-            </div>
-
-            {/* Desktop Layout */}
-            <div className="hidden md:grid md:grid-cols-5 md:grid-rows-5 gap-3 min-h-screen">
-                {/* Branding & Digital Identity - Center piece */}
-                <div className="col-start-2 row-start-3 col-span-2 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl p-6 flex flex-col justify-between text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div className="flex items-center gap-3 mb-4">
-                        <Palette className="w-8 h-8" />
-                        <h3 className="font-bold text-xl">Branding & Digital Identity</h3>
-                    </div>
-                    <div className="space-y-2 text-sm opacity-90">
-                        <p>• Brand Strategy & Positioning</p>
-                        <p>• Visual Identity Design</p>
-                        <p>• Brand Guidelines</p>
-                    </div>
-                    <p className="text-sm font-medium mt-4 italic">Build a brand that's unforgettable — and unshakable.</p>
-                </div>
-
-                {/* Software Development - Large top center */}
-                <div className="col-start-3 row-start-1 col-span-2 row-span-2 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl p-6 flex flex-col justify-between text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div className="flex items-center gap-3 mb-4">
-                        <Code className="w-8 h-8" />
-                        <h3 className="font-bold text-xl">Software Development</h3>
-                    </div>
-                    <div className="space-y-2 text-sm opacity-90">
-                        <p>• UI/UX Design</p>
-                        <p>• Website & Web App Development</p>
-                        <p>• Mobile & Desktop Applications</p>
-                    </div>
-                    <p className="text-sm font-medium mt-4 italic">From pixels to platforms — we code your vision into reality.</p>
-                </div>
-
-                {/* Get Started - Top right */}
-                <div className="col-start-5 row-start-1 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <Sparkles className="w-10 h-10 mb-3" />
-                    <h3 className="font-bold text-lg text-center">Get Started</h3>
-                    <p className="text-sm text-center mt-2 opacity-90">Begin your journey</p>
-                </div>
-
-                {/* Media Production - Left tall */}
-                <div className="col-start-1 row-start-1 row-span-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-6 flex flex-col justify-between text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div className="flex items-center gap-3 mb-4">
-                        <Camera className="w-8 h-8" />
-                        <h3 className="font-bold text-xl">Media Production</h3>
-                    </div>
-                    <div className="space-y-2 text-sm opacity-90">
-                        <p>• Graphic Design</p>
-                        <p>• Motion Graphics</p>
-                        <p>• Video Editing & Montage</p>
-                    </div>
-                    <p className="text-sm font-medium mt-4 italic">Visuals that don't just catch eyes — they hold attention.</p>
-                </div>
-
-                {/* About Us - Left top */}
-                <div className="col-start-2 row-start-1 row-span-2 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl p-6 flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <Users className="w-10 h-10 mb-3" />
-                    <h3 className="font-bold text-lg text-center">About Us</h3>
-                    <p className="text-sm text-center mt-2 opacity-90">Meet our team</p>
-                </div>
-
-                {/* Digital Marketing - Right tall */}
-                <div className="col-start-5 row-start-2 row-span-3 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl p-6 flex flex-col justify-between text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div className="flex items-center gap-3 mb-4">
-                        <TrendingUp className="w-8 h-8" />
-                        <h3 className="font-bold text-xl">Digital Marketing</h3>
-                    </div>
-                    <div className="space-y-2 text-sm opacity-90">
-                        <p>• Content Creation</p>
-                        <p>• Social Media Management</p>
-                        <p>• Paid Ads & Campaign Strategy</p>
-                    </div>
-                    <p className="text-sm font-medium mt-4 italic">We turn clicks into conversions, and posts into impact.</p>
-                </div>
-
-                {/* Data Analysis & Reporting - Bottom left */}
-                <div className="col-start-1 row-start-4 col-span-2 row-span-2 bg-gradient-to-br from-teal-500 to-blue-600 rounded-xl p-6 flex flex-col justify-between text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div className="flex items-center gap-3 mb-4">
-                        <BarChart3 className="w-8 h-8" />
-                        <h3 className="font-bold text-xl">Data Analysis & Reporting</h3>
-                    </div>
-                    <div className="space-y-2 text-sm opacity-90">
-                        <p>• Insights & Dashboards</p>
-                        <p>• Campaign Performance Tracking</p>
-                        <p>• Business Intelligence</p>
-                    </div>
-                    <p className="text-sm font-medium mt-4 italic">Decisions backed by data. Every step of the way.</p>
-                </div>
-
-                {/* Our Work - Center right */}
-                <div className="col-start-4 row-start-3 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl p-6 flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <Globe className="w-10 h-10 mb-3" />
-                    <h3 className="font-bold text-lg text-center">Our Work</h3>
-                    <p className="text-sm text-center mt-2 opacity-90">View portfolio</p>
-                </div>
-
-                {/* Project Management - Bottom center */}
-                <div className="col-start-3 row-start-4 col-span-2 row-span-2 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl p-6 flex flex-col justify-between text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div className="flex items-center gap-3 mb-4">
-                        <CheckSquare className="w-8 h-8" />
-                        <h3 className="font-bold text-xl">Project Management</h3>
-                    </div>
-                    <div className="space-y-2 text-sm opacity-90">
-                        <p>• Agile Workflows</p>
-                        <p>• Milestone Tracking</p>
-                        <p>• Strategic Planning</p>
-                    </div>
-                    <p className="text-sm font-medium mt-4 italic">Your vision, delivered — on time, every time.</p>
-                </div>
-
-                {/* Contact - Bottom right small */}
-                <div className="col-start-5 row-start-5 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl p-6 flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <Smartphone className="w-10 h-10 mb-3" />
-                    <h3 className="font-bold text-lg text-center">Contact</h3>
-                    <p className="text-sm text-center mt-2 opacity-90">Let's talk</p>
-                </div>
+            <div className="col-span-3 row-span-6 col-start-2 row-start-1 bg-green-50 text-gray-800 rounded-xl flex items-center justify-center text-center p-6 relative overflow-hidden">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={items[contentIndex].title}
+                        className="space-y-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.4 }}
+                    >
+                        <h2 className="text-4xl font-bold text-green-800">
+                            {items[contentIndex].title}
+                        </h2>
+                        <p className="text-2xl italic text-green-600">
+                            {items[contentIndex].quote}
+                        </p>
+                        <ul className="text-green-700 font-medium text-lg space-y-1">
+                            {items[contentIndex].points.map((point, i) => (
+                                <motion.li
+                                    key={i}
+                                    initial={{ x: -20, opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{ delay: 0.2 * i, type: 'spring' }}
+                                >
+                                    {point}
+                                </motion.li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
-    )
+    );
 }
-
-export default ServicesGrid;
