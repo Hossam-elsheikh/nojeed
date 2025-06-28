@@ -10,7 +10,7 @@ interface PortfolioCardProps {
 const PortfolioCard = ({ title, description, imgSrc }: PortfolioCardProps) => {
     return (
         <div>
-            <div className="relative w-[411px] h-[366px] overflow-hidden">
+            <div className="relative w-[411px] h-[366px] overflow-hidden rounded-2xl">
                 <Image
                     src={`/images/portfolio/${imgSrc}`}
                     alt={title}
