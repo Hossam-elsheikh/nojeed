@@ -4,7 +4,7 @@ import PortfolioCard from './PortfolioCard'
 
 const Portfolio = () => {
     return (
-        <div className='py-8'>
+        <div className='py-8 mb-20'>
             <SectionHeader
                 title="Portfolio"
                 subTitle="From SaaS platforms to business automation tools"
