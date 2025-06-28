@@ -22,7 +22,7 @@ function ServicesGrid() {
 
                 {/* Branding & Digital Identity */}
                 <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg p-4 text-white shadow-lg">
-                    <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center gap-3 mb-3 ">
                         <Palette className="w-5 h-5" />
                         <h3 className="font-bold text-base">Branding & Digital Identity</h3>
                     </div>

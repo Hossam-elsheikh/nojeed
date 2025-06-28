@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Almarai, Cairo,Roboto } from "next/font/google";
+import { Almarai, Cairo,Nunito,Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/NavBar";
 
@@ -22,6 +22,12 @@ const cairo = Cairo({
 const RobotoFont = Roboto({
   variable:"--font-roboto",
   weight:["100","200","300","400","500","600","700","800","900"],
+  subsets:["latin"]
+})
+
+const NunitoFont=Nunito({
+  variable:"--font-nunito",
+  weight:["200","300","400","500","600","700","800","900"],
   subsets:["latin"]
 })
 
@@ -46,7 +52,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html dir={locale==='ar'? 'rtl':'ltr'} lang={locale}>
-          <body className={` ${RobotoFont.variable} ${almarai.variable} ${cairo.variable} antialiased max-w-[1919px] mx-auto`}>
+          <body className={`${NunitoFont.variable} ${RobotoFont.variable} ${almarai.variable} ${cairo.variable} antialiased max-w-[1919px] mx-auto`}>
         <NextIntlClientProvider messages={messages}>
           <main>
             <Navbar locale={locale} />
