@@ -18,11 +18,11 @@
   --color-primary-green: #c3ed5b;
   --color-primary-green-hover:#b0d552;
   --color-secondary-green:#ECF9CC;
+  --color-green-gray:#758E37;
   --color-blue-gray: #263238;
   --color-blue-gray-hover:#222d32;
   --color-custom-gray-50: #F2F4F4;
   --color-custom-gray-100: #E9EBEB;
-
 }
 :root {
 --font-cairo: "Cairo", sans-serif;

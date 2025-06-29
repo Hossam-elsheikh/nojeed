@@ -1,9 +1,5 @@
 import React from 'react'
 import SectionHeader from '../ui/SectionHeader'
-import { div } from 'framer-motion/client'
-import Image from 'next/image'
-import { IoIosStar } from 'react-icons/io'
-import { IoIosStarHalf } from 'react-icons/io'
 import TestimonialCard from './TestimonialCard'
 const testimonials = [
     {

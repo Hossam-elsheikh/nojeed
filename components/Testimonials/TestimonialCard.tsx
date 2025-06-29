@@ -1,5 +1,3 @@
-// components/TestimonialCard.tsx
-
 import Image from 'next/image';
 import { IoIosStar, IoIosStarHalf } from 'react-icons/io';
 

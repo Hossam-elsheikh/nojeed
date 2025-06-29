@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Almarai, Cairo,Nunito,Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/NavBar";
+import Footer from "@/components/Footer/Footer";
 
 const almarai = Almarai({
     variable: "--font-almarai",
@@ -55,11 +56,12 @@ export default async function RootLayout({
           <body className={`${NunitoFont.variable} ${RobotoFont.variable} ${almarai.variable} ${cairo.variable} antialiased max-w-[1919px] mx-auto`}>
         <NextIntlClientProvider messages={messages}>
           <main>
-            <Navbar locale={locale} />
+            {/* <Navbar locale={locale} /> */}
             <div className="flex flex-col w-full lg:w-[90%] p-5 lg:p-10 mx-auto">
 
             {children}
             </div>
+            <Footer/>
           </main>
         </NextIntlClientProvider>
       </body>
