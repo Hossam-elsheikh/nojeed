@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { useTranslations } from 'next-intl'
 import React from 'react'
-import { Button } from '../ui/button'
+
 import SvgIcon from './HeroSvg'
 import AnimatedButton from "../AnimatedButton/AnimatedButton"
 const Hero = () => {
