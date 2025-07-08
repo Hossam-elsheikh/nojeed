@@ -24,7 +24,7 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <div className="py-8 mb-20">
+        <div className="py-20 mb-20">
             <SectionHeader
                 title="Testimonials"
                 subTitle="What Our Clients Say about working with us"

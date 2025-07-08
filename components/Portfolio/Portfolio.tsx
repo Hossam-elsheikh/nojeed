@@ -4,7 +4,7 @@ import PortfolioCard from './PortfolioCard'
 
 const Portfolio = () => {
     return (
-        <section className='py-8 mb-20'>
+        <section className='py-20 mb-20 tracking-wide'>
             <SectionHeader
                 title="Portfolio"
                 subTitle="From SaaS platforms to business automation tools"

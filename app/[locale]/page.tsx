@@ -1,18 +1,20 @@
+import ServicesGrid from '@/components/ServiceGrid'
+import WhatWeDo from '@/components/whatWeDo/WhatWeDo'
 
-import Portfolio from '@/components/Portfolio/Portfolio'
-import Testimonials from '@/components/Testimonials/Testimonials'
-import ContactUs from '@/components/ContactUs/ContactUs'
+import React from 'react'
 
 const page = () => {
     return (
-        <div className="flex flex-col justify-center gap-16">
-            {/* <Hero />
-            <Services />
-            <ServicesGrid /> */}
-            <Portfolio />
-            <ContactUs />
-            <Testimonials />
-        </div>
+        <>
+            <div className="flex flex-col py-20">
+                <WhatWeDo
+                    HeadText="What We Do ?"
+                    SubText=" Build smarter, Launch faster, Scale confidently."
+                />
+                <ServicesGrid />
+            </div>
+            
+        </>
     )
 }
 
