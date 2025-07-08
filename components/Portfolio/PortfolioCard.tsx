@@ -9,7 +9,7 @@ interface PortfolioCardProps {
 
 const PortfolioCard = ({ title, description, imgSrc }: PortfolioCardProps) => {
     return (
-        <div>
+        <div className='flex-1'>
             <div className="relative w-[411px] h-[336] overflow-hidden rounded-2xl">
                 <Image
                     src={`/images/portfolio/${imgSrc}`}

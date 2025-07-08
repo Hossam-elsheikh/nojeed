@@ -1,6 +1,4 @@
-import Hero from '@/components/hero/Hero'
-import Services from '@/components/services/Services'
-import ServicesGrid from '@/components/services/ServicesGrid'
+
 import Portfolio from '@/components/Portfolio/Portfolio'
 import Testimonials from '@/components/Testimonials/Testimonials'
 import ContactUs from '@/components/ContactUs/ContactUs'

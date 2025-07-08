@@ -31,7 +31,7 @@ function ServicesGrid() {
                         <p>• Visual Identity Design</p>
                         <p>• Brand Guidelines</p>
                     </div>
-                    <p className="text-xs font-medium italic">Build a brand that's unforgettable — and unshakable.</p>
+                    <p className="text-xs font-medium italic">Build a brand that&apos;s unforgettable — and unshakable.</p>
                 </div>
 
                 {/* Media Production */}
@@ -45,7 +45,7 @@ function ServicesGrid() {
                         <p>• Motion Graphics</p>
                         <p>• Video Editing & Montage</p>
                     </div>
-                    <p className="text-xs font-medium italic">Visuals that don't just catch eyes — they hold attention.</p>
+                    <p className="text-xs font-medium italic">Visuals that don&apos;t just catch eyes — they hold attention.</p>
                 </div>
 
                 {/* Digital Marketing */}
@@ -124,7 +124,7 @@ function ServicesGrid() {
                         <p>• Visual Identity Design</p>
                         <p>• Brand Guidelines</p>
                     </div>
-                    <p className="text-sm font-medium mt-4 italic">Build a brand that's unforgettable — and unshakable.</p>
+                    <p className="text-sm font-medium mt-4 italic">Build a brand that&apos;s unforgettable — and unshakable.</p>
                 </div>
 
                 {/* Software Development - Large top center */}
@@ -159,7 +159,7 @@ function ServicesGrid() {
                         <p>• Motion Graphics</p>
                         <p>• Video Editing & Montage</p>
                     </div>
-                    <p className="text-sm font-medium mt-4 italic">Visuals that don't just catch eyes — they hold attention.</p>
+                    <p className="text-sm font-medium mt-4 italic">Visuals that don&apos;t just catch eyes — they hold attention.</p>
                 </div>
 
                 {/* About Us - Left top */}
@@ -222,7 +222,7 @@ function ServicesGrid() {
                 <div className="col-start-5 row-start-5 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl p-6 flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
                     <Smartphone className="w-10 h-10 mb-3" />
                     <h3 className="font-bold text-lg text-center">Contact</h3>
-                    <p className="text-sm text-center mt-2 opacity-90">Let's talk</p>
+                    <p className="text-sm text-center mt-2 opacity-90">Let&apos;s talk</p>
                 </div>
             </div>
         </div>

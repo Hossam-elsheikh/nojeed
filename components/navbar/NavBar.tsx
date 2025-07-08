@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import logo from "@/public/logo.svg";
-import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "../locales/LocalSwitcher";
 import MobNav from "./MobNav";

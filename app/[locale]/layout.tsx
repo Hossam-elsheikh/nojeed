@@ -5,7 +5,6 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Almarai, Cairo,Nunito,Roboto } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/NavBar";
 import Footer from "@/components/Footer/Footer";
 
 const almarai = Almarai({
@@ -42,9 +41,9 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>; // Changed to Promise
 }>) {
-  const { locale } = await params;
+  const { locale } =await params;
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
