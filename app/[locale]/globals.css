@@ -17,6 +17,14 @@
     --color-highlight-soft: oklch(0.92 0.0512 93.77);
     --color-link-hover: oklch(0.6165 0.1046 187.36);
     --color-background: oklch(0.42 0.2 297);
+    --color-primary-green: #c3ed5b;
+    --color-primary-green-hover:#b0d552;
+    --color-secondary-green:#ECF9CC;
+    --color-green-gray:#758E37;
+    --color-blue-gray: #263238;
+    --color-blue-gray-hover:#222d32;
+    --color-custom-gray-50: #F2F4F4;
+    --color-custom-gray-100: #E9EBEB;
 }
 :root {
     --font-cairo: 'Cairo', sans-serif;
@@ -137,10 +145,11 @@ pre {
 }
 
 body {
-    background-color: #ffffff;
-    color: #1d1d1d;
-    /* font-family: var(--font-roboto); */
-    font-family: var(--font-almarai);
+  background-color: #ffffff;
+  color: #1d1d1d;
+  /* font-family: var(--font-roboto); */
+  font-family: var(--font-nunito);
+  box-sizing: border-box;
 }
 
 input:-webkit-autofill,

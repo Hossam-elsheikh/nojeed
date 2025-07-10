@@ -3,20 +3,19 @@ import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import { Almarai, Cairo, Nunito } from 'next/font/google'
+import { Almarai, Cairo, Nunito, Roboto } from 'next/font/google'
 import './globals.css'
 import NewNavbar from '@/components/navbar/NewNavbar'
 import NewHero from '@/components/hero/NewHero'
 import WhyNojeed from '@/components/WhyNojeed/WhyNojeed'
+import Footer from '@/components/Footer/Footer'
+import Portfolio from '@/components/Portfolio/Portfolio'
+import ContactUs from '@/components/ContactUs/ContactUs'
+import Testimonials from '@/components/Testimonials/Testimonials'
 
 const almarai = Almarai({
     variable: '--font-almarai',
     subsets: ['arabic', 'latin'],
-    weight: ['300', '400', '700', '800'],
-})
-const nunito = Nunito({
-    variable: '--font-almarai',
-    subsets: ['latin'],
     weight: ['300', '400', '700', '800'],
 })
 
@@ -24,6 +23,17 @@ const cairo = Cairo({
     variable: '--font-cairo',
     subsets: ['arabic', 'latin'],
     weight: ['400', '500', '700'],
+})
+
+const NunitoFont = Nunito({
+    variable: '--font-nunito',
+    weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+    subsets: ['latin'],
+})
+const RobotoFont = Roboto({
+    variable: '--font-roboto',
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
@@ -36,7 +46,7 @@ export default async function RootLayout({
     params,
 }: Readonly<{
     children: React.ReactNode
-    params: { locale: Locale }
+    params: Promise<{ locale: Locale }> // Changed to Promise
 }>) {
     const { locale } = await params
     if (!routing.locales.includes(locale as Locale)) {
@@ -48,7 +58,7 @@ export default async function RootLayout({
     return (
         <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale}>
             <body
-                className={`  ${nunito.variable} ${almarai.variable} ${cairo.variable} antialiased max-w-[1919px] mx-auto`}
+                className={`${NunitoFont.variable} ${RobotoFont.variable} ${almarai.variable} ${cairo.variable} antialiased max-w-[1919px] mx-auto`}
             >
                 <NextIntlClientProvider messages={messages}>
                     <main className="relative overflow-hidden">
@@ -60,6 +70,13 @@ export default async function RootLayout({
                             {children}
                         </div>
                         <WhyNojeed />
+                        <div className="flex flex-col w-full lg:w-[90%] px-5 mx-auto">
+                            {' '}
+                            <Portfolio />
+                            <ContactUs />
+                            <Testimonials />
+                        </div>
+                        <Footer />
                     </main>
                 </NextIntlClientProvider>
             </body>

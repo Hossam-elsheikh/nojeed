@@ -1,6 +1,5 @@
 import ServicesGrid from '@/components/ServiceGrid'
 import WhatWeDo from '@/components/whatWeDo/WhatWeDo'
-import WhyNojeed from '@/components/WhyNojeed/WhyNojeed'
 
 import React from 'react'
 
