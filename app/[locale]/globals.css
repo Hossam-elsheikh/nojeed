@@ -359,3 +359,37 @@ input:-webkit-autofill:active {
         @apply bg-background text-foreground;
     }
 }
+
+.swiper {
+  width: 100%;
+  padding-bottom:96px !important;
+}
+
+.swiper-slide {
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.swiper-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    height: 16px;
+}
+
+.swiper-pagination-bullet{
+       width: 12px !important;
+       height: 12px !important;
+}
+.swiper-pagination-bullet-active{
+    background-color: #9CBE49 !important;
+  transform: scale(1.33); 
+}
+
