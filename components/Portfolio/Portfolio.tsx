@@ -1,15 +1,15 @@
 import React from 'react'
-import SectionHeader from '../ui/SectionHeader'
 import PortfolioCard from './PortfolioCard'
+import WhatWeDo from '../whatWeDo/WhatWeDo'
 
 const Portfolio = () => {
     return (
-        <section className='py-20 mb-20 tracking-wide'>
-            <SectionHeader
-                title="Portfolio"
-                subTitle="From SaaS platforms to business automation tools"
-                additionalClassesSubTitle=""
+        <section className="py-20 mb-20 tracking-wide">
+            <WhatWeDo
+                HeadText="Portfolio"
+                SubText="From SaaS platforms to business automation tools"
             />
+         
             <div className="flex justify-between mt-[5.25rem] !gap-7">
                 <PortfolioCard
                     title="Reservation Hotel System"

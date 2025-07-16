@@ -7,15 +7,15 @@ import { motion } from 'framer-motion'
 
 function ServicesGrid() {
     return (
-        <div className="w-full">
+        <div className="w-full flex flex-col gap-15 pt-10">
             {servicesArray.map((category, index) => {
                 const isEven = index % 2 === 0
 
                 return (
                     <div
                         key={category.id}
-                        className={`min-h-screen flex flex-col lg:flex-row gap-5 ${
-                            category.id === 2 ? 'lg:flex-row-reverse' : ''
+                        className={` flex flex-col lg:flex-row gap-5 ${
+                            category.id === 1 ? 'lg:flex-row-reverse flex-col-reverse' : ''
                         }`}
                     >
                         <motion.div
@@ -23,23 +23,27 @@ function ServicesGrid() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, ease: 'easeOut' }}
-                            className={`flex items-center justify-center w-full lg:w-1/2  ${
+                            className={`flex justify-center relative  ${
                                 category.id === 1
-                                    ? 'lg:translate-x-[-180px]'
+                                    ? ''
                                     : ''
                             }`}
                         >
                             <Image
                                 src={category.image}
                                 alt={category.alt}
-                                width={600}
-                                height={400}
-                                className="object-contain w-full h-auto max-h-[600px]"
+                                width={500}
+                                height={500}
+                                className={` ${
+                                    category.id === 1
+                                        ? ''
+                                        : ''
+                                }`}
                                 priority
                             />
                         </motion.div>
 
-                        <div className="px-6 py-12 flex items-center justify-center w-full lg:w-1/2">
+                        <div className=" py-12 flex  justify-center w-full lg:w-1/2">
                             <div className="w-full max-w-5xl">
                                 <div className="grid grid-cols-1 gap-6">
                                     {category.children.map(
