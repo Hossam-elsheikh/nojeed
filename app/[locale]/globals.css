@@ -25,6 +25,7 @@
     --color-blue-gray-hover:#222d32;
     --color-custom-gray-50: #F2F4F4;
     --color-custom-gray-100: #E9EBEB;
+     --breakpoint-2xl:90rem
 }
 :root {
     --font-cairo: 'Cairo', sans-serif;
@@ -367,7 +368,6 @@ input:-webkit-autofill:active {
 
 .swiper-slide {
   font-size: 18px;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;

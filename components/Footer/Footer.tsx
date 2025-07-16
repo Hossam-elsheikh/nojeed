@@ -10,10 +10,10 @@ import { FaLinkedin } from 'react-icons/fa6'
 const Footer = () => {
     return (
         <section className="bg-blue-gray py-16 w-full flex justify-center">
-            <div className="w-full lg:w-[90%] px-5 lg:px-10">
-                <div className="flex justify-between items-center pb-7 border-b border-green-gray">
+            <div className="w-full lg:w-[90%] px-8 lg:px-10">
+                <div className="flex 2xl:flex-row flex-col justify-between items-start 2xl:items-center pb-7 border-b border-green-gray">
                     <Logo />
-                    <ul className="text-white [&>a]:text-2xl [&>a:hover]:text-primary-green flex gap-[3.25rem]">
+                    <ul className="text-white [&>a]:text-2xl [&>a:hover]:text-primary-green flex gap-[3.25rem] 2xl:flex-row flex-col 2xl:mt-0 mt-12">
                         <Link href="#">Home</Link>
                         <Link href="#">About</Link>
                         <Link href="#">Services</Link>
@@ -21,8 +21,8 @@ const Footer = () => {
                         <Link href="#">Contact us</Link>
                     </ul>
                 </div>
-                <div className="flex gap-60 border-b border-green-gray pt-10 pb-10 text-white !text-[17px]">
-                    <div className='flex-1'>
+                <div className="flex 2xl:flex-row flex-col  2xl:gap-60 gap-12 border-b border-green-gray pt-10 pb-10 text-white !text-[17px]">
+                    <div className="flex-1">
                         <h4 className="text-[19px] mb-4">Follow Us:</h4>
                         <ul className="text-primary-green flex gap-3 p-0.5 [&>li:hover]:text-primary-green-hover duration-200 ease-in-out transition-all">
                             <li>
@@ -42,11 +42,11 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='flex-1'>
+                    <div className="flex-1">
                         <h4 className="text-[19px] mb-6">Find Us:</h4>
                         <p className="">(233748481) (Giza)</p>
                     </div>
-                    <div className='flex-1'>
+                    <div className="flex-1">
                         <h4 className="text-[19px]">Contact us:</h4>
                         <ul className="pt-6 text-white space-y-2">
                             <li>
@@ -74,7 +74,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="mt-10 flex justify-between text-white text-[17px]">
+                <div className="mt-10 flex items-center justify-between 2xl:flex-row flex-col gap-6 text-white text-[17px] leading-6">
                     <ul className="flex text-white gap-6 text-[17px] underline ">
                         <li>
                             <Link href={'#'}>Privacy Policy</Link>
