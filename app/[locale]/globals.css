@@ -22,6 +22,10 @@
     --color-secondary-green: #ecf9cc;
     --color-green-gray: #758e37;
     --color-blue-gray: #263238;
+    --color-blue-gray-hover:#222d32;
+    --color-custom-gray-50: #F2F4F4;
+    --color-custom-gray-100: #E9EBEB;
+     --breakpoint-2xl:90rem
     --color-blue-gray-hover: #222d32;
     --color-custom-gray-50: #f2f4f4;
     --color-custom-gray-100: #e9ebeb;
