@@ -4,16 +4,16 @@ import MainButton from '../ui/MainButton'
 const ContactUs = () => {
     return (
         <section
-            className="py-[5.56rem] bg-no-repeat flex flex-col items-center text-white text-center rounded-4xl"
+            className="2xl:py-[5.56rem] py-[1.375rem] bg-no-repeat flex flex-col items-center text-white text-center 2ءم:rounded-4xl rounded-2xl  px-8"
             style={{
                 backgroundImage: `url('/images/contact-us/contact-us.png')`,
                 backgroundSize: 'cover',
             }}
         >
-            <h2 className="text-[2.875rem] font-bold mb-4">
+            <h2 className="2xl:text-[2.875rem] text-[1.19rem] font-bold mb-4">
                 Let’s Bring Your Software to Life
             </h2>
-            <p className="max-w-xl mx-auto text-lg text-white/90 mb-16">
+            <p className="max-w-xl mx-auto 2xl:text-2xl text-[.81rem] text-white/90 2xl:mb-16 mb-4">
                 Talk to us about your next project, and let’s make it real.
             </p>
             <MainButton btnText="Get in Touch" className="w-[12.0625rem]" />
