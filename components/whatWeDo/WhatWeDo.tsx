@@ -1,21 +1,20 @@
 import React from 'react'
 
-function WhatWeDo({
-    HeadText,
-    SubText,
-}: {
+interface WhatWeDoProps {
     HeadText?: string
     SubText?: string
-}) {
+}
+
+const WhatWeDo: React.FC<WhatWeDoProps> = ({ HeadText, SubText }) => {
     return (
-        <section className="w-full flex flex-col justify-center items-center gap-4">
+        <section className="flex flex-col items-center justify-center text-center w-full gap-4">
             {HeadText && (
-                <p className="bg-sub-bg rounded-2xl px-2 py-3">{HeadText}</p>
+                <p className="bg-sub-bg rounded-2xl px-4 py-3 ">
+                    {HeadText}
+                </p>
             )}
             {SubText && (
-                <h1 className="text-4xl text-main-bg font-semibold">
-                    {SubText}
-                </h1>
+                <h2 className="text-main-bg font-semibold">{SubText}</h2>
             )}
         </section>
     )

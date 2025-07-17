@@ -10,7 +10,7 @@ const ContactUs = () => {
                 backgroundSize: 'cover',
             }}
         >
-            <h2 className="2xl:text-[2.875rem] text-[1.19rem] font-bold mb-4">
+            <h2 className="font-bold mb-4">
                 Let’s Bring Your Software to Life
             </h2>
             <p className="max-w-xl mx-auto 2xl:text-2xl text-[.81rem] text-white/90 2xl:mb-16 mb-4">

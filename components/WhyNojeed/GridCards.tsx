@@ -34,7 +34,7 @@ function ParallaxIcon({ src, index }: { src: string; index: number }) {
 
 function GridCards() {
     return (
-        <div className="grid grid-cols-2 grid-rows-3 max-w-3xl mx-auto overflow-hidden p-6 gap-6">
+        <div className="grid gird-cols-1 md:grid-cols-2 grid-rows-3 max-w-3xl mx-auto overflow-hidden p-6 gap-6">
             {svgIcons.slice(0, 6).map((icon, index) => (
                 <ParallaxIcon key={index} src={icon} index={index} />
             ))}

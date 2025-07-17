@@ -10,17 +10,17 @@ function NewHero() {
 
     return (
         <section
-            className="bg-main-bg bg-center bg-repeat bg-[length:25vw_25vw] h-[125vh] z-10 relative"
+            className="bg-main-bg bg-center bg-repeat bg-[length:25vw_25vw] h-[95vh] md:h-[100vh] z-10 relative"
             style={{
                 backgroundImage: `
                     linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
                 `,
-                backgroundSize: '15vw 15vw',
+                backgroundSize: '10vw 10vw',
             }}
         >
-            <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center text-white px-6">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 flex flex-wrap justify-center ">
+            <div className="relative z-50 flex flex-col items-center py-35 px-2 md:py-55 min-h-screen text-center text-white">
+                <h1 className=" font-bold mb-4 flex flex-wrap justify-center ">
                     {headlineWords.map((word, index) => {
                         const isSpecial = ['Powerful', 'Products.'].includes(
                             word
@@ -76,7 +76,7 @@ function NewHero() {
                     ))}
                 </motion.p>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 z-50">
                     {['Get In Touch', 'Explore Our Work'].map((label, i) => (
                         <motion.button
                             key={label}
@@ -91,7 +91,7 @@ function NewHero() {
                                 duration: 0.5,
                                 ease: 'easeOut',
                             }}
-                            className={`px-6 py-2 font-medium rounded-2xl transition ${
+                            className={`md:px-6 md:py-2 py-1 px-3 font-medium text-sm md:text-base rounded-2xl transition ${
                                 i === 0
                                     ? 'bg-main text-[#0d141c] hover:opacity-90'
                                     : 'border border-main text-main hover:bg-main hover:text-[#0d141c]'
@@ -103,8 +103,8 @@ function NewHero() {
                 </div>
             </div>
             <motion.div
-                className="absolute bottom-0 left-0 -z-40 w-full overflow-hidden h-[80vh] bg-cover bg-center"
-                style={{ backgroundImage: "url('/Ellipse-9.svg')" }}
+                className="absolute bottom-0 left-0 -z-50 w-full overflow-hidden h-[80vh]  bg-cover bg-center"
+                style={{ backgroundImage: "url('/Ellipse-9.svg')"  }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: 'easeOut' }}

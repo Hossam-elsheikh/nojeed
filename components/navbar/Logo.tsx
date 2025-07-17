@@ -3,8 +3,8 @@ import React from 'react'
 import logo from '@/public/logo.svg'
 function Logo() {
     return (
-        <div>
-            <Image src={logo} alt="logo" width={120} height={120} />
+        <div className='w-20   md:w-40 '>
+            <Image src={logo} alt="logo" width={120} height={120}  />
         </div>
     )
 }

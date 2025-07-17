@@ -58,7 +58,7 @@ export default async function RootLayout({
     return (
         <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale}>
             <body
-                className={`${NunitoFont.variable} ${RobotoFont.variable} ${almarai.variable} ${cairo.variable} antialiased max-w-[1919px] mx-auto`}
+                className={`${NunitoFont.variable} ${RobotoFont.variable} ${almarai.variable} ${cairo.variable} antialiased `}
             >
                 <NextIntlClientProvider messages={messages}>
                     <main className="relative overflow-hidden">
@@ -66,7 +66,7 @@ export default async function RootLayout({
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 pt-6 z-20">
                             <NewNavbar />
                         </div>
-                        <div className="relative z-10 mt-[-100vh] pt-[100vh] px-6">
+                        <div className="relative mt-[-100vh] pt-[100vh] px-6">
                             {children}
                         </div>
                         <WhyNojeed />
