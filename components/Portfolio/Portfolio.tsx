@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import SectionHeader from '../ui/SectionHeader'
 import PortfolioCard from './PortfolioCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -11,6 +10,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/pagination'
 
 import { Pagination } from 'swiper/modules'
+import SectionTag from '../whatWeDo/WhatWeDo'
 const projects = [
     {
         title: 'Reservation Hotel System',
@@ -48,10 +48,11 @@ const Portfolio = () => {
 
     return (
         <section className="2xl:pt-28 pt-14 pb-[6rem] tracking-wide">
-            <SectionHeader
-                title="Portfolio"
-                subTitle="From SaaS platforms to business automation tools"
-                additionalClassesSubTitle=""
+        
+            <SectionTag
+                HeadText="Portfolio"
+                SubText="From SaaS platforms to business automation tools"
+                center
             />
 
             <div className="2xl:mt-[5.25rem] mt-[32px]">

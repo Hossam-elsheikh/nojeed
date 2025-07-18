@@ -9,11 +9,11 @@ import { FaLinkedin } from 'react-icons/fa6'
 
 const Footer = () => {
     return (
-        <section className="bg-blue-gray py-16 w-full flex justify-center">
-            <div className="w-full lg:w-[90%] px-8 lg:px-10">
-                <div className="flex 2xl:flex-row flex-col justify-between items-start 2xl:items-center pb-7 border-b border-green-gray">
+        <section className="bg-blue-gray py-16 w-full flex justify-center ">
+            <div className="w-full lg:w-[90%] px-8 lg:px-10 ">
+                <div className="flex 2xl:flex-row flex-col justify-between  items-center lg:items-start 2xl:items-center gap-2 pb-7 border-b border-green-gray">
                     <Logo />
-                    <ul className="text-white [&>a]:text-2xl [&>a:hover]:text-primary-green flex gap-[3.25rem] 2xl:flex-row flex-col 2xl:mt-0 mt-12">
+                    <ul className="text-white [&>a]:text-2xl [&>a:hover]:text-primary-green text-center lg:text-start flex gap-3 lg:gap-10 lg:flex-row flex-col ">
                         <Link href="#">Home</Link>
                         <Link href="#">About</Link>
                         <Link href="#">Services</Link>
@@ -21,10 +21,10 @@ const Footer = () => {
                         <Link href="#">Contact us</Link>
                     </ul>
                 </div>
-                <div className="flex 2xl:flex-row flex-col  2xl:gap-60 gap-12 border-b border-green-gray pt-10 pb-10 text-white !text-[17px]">
+                <div className="flex 2xl:flex-row flex-col  2xl:gap-60 gap-12 border-b border-green-gray pt-10 pb-10 text-white text-center lg:text-start !text-[17px]">
                     <div className="flex-1">
                         <h4 className="text-[19px] mb-4">Follow Us:</h4>
-                        <ul className="text-primary-green flex gap-3 p-0.5 [&>li:hover]:text-primary-green-hover duration-200 ease-in-out transition-all">
+                        <ul className="text-primary-green flex gap-3 p-0.5 [&>li:hover]:text-primary-green-hover duration-200 justify-center lg:justify-start ease-in-out transition-all">
                             <li>
                                 <Link href={'#'}>
                                     <FaInstagram size={18} />
@@ -48,7 +48,7 @@ const Footer = () => {
                     </div>
                     <div className="flex-1">
                         <h4 className="text-[19px]">Contact us:</h4>
-                        <ul className="pt-6 text-white space-y-2">
+                        <ul className="pt-6 text-white space-y-2 flex flex-col items-center lg:items-start">
                             <li>
                                 <Link
                                     href="mailto:info@utdsoftware.com"

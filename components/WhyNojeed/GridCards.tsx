@@ -19,14 +19,13 @@ function ParallaxIcon({ src, index }: { src: string; index: number }) {
         <motion.div
             ref={ref}
             style={{ y }}
-            className="w-full h-full flex items-center justify-center overflow-hidden"
+            className="w-[300px] h-[300px] flex items-center justify-center overflow-hidden"
         >
             <Image
                 src={src}
                 alt={`icon-${index}`}
-                width={264}
-                height={264}
-                className="object-contain"
+                fill
+                className="object-cover"
             />
         </motion.div>
     )
