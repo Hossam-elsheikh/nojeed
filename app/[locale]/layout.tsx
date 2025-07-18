@@ -12,7 +12,8 @@ import Footer from '@/components/Footer/Footer'
 import Portfolio from '@/components/Portfolio/Portfolio'
 import ContactUs from '@/components/ContactUs/ContactUs'
 import Testimonials from '@/components/Testimonials/Testimonials'
-
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from '@vercel/analytics/next'
 const almarai = Almarai({
     variable: '--font-almarai',
     subsets: ['arabic', 'latin'],
@@ -79,6 +80,8 @@ export default async function RootLayout({
                         <Footer />
                     </main>
                 </NextIntlClientProvider>
+                <GoogleAnalytics gaId="G-DN043C7PX2" />
+                <Analytics />
             </body>
         </html>
     )
