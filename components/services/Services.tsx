@@ -25,8 +25,8 @@ function Services() {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 animate={{
-                    WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
-                    WebkitMaskSize: `${size}px`,
+                    maskPosition: `${x - size / 2}px ${y - size / 2}px`,
+                    maskSize: `${size}px`,
                 }}
                 transition={{ type: 'tween', ease: 'backOut' }}
                 className={style.mask}
