@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import SectionHeader from '../ui/SectionHeader'
 import TestimonialCard from './TestimonialCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -11,6 +10,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/pagination'
 
 import { Pagination } from 'swiper/modules'
+import SectionTag from '../whatWeDo/WhatWeDo'
 
 const testimonials = [
     {
@@ -55,11 +55,12 @@ const Testimonials = () => {
 
     return (
         <div className="2xl:py-28 py-16">
-            <SectionHeader
-                title="Testimonials"
-                subTitle="What Our Clients Say about working with us"
-                additionalClassesSubTitle="leading-[1.35]"
+            <SectionTag
+                HeadText="Testimonials"
+                SubText="What Our Clients Say about working with us"
+                center
             />
+          
             <div className="2xl:mt-[3.25rem] mt-8">
                 {isMobile && testimonials.length < 4 ? (
                     <div className="flex flex-col 2xl:gap-1 gap-8">

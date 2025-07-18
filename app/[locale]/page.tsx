@@ -1,5 +1,5 @@
 import ServicesGrid from '@/components/ServiceGrid'
-import WhatWeDo from '@/components/whatWeDo/WhatWeDo'
+import SectionTag from '@/components/whatWeDo/WhatWeDo'
 
 import React, { ReactNode } from 'react'
 const Container = ({ children }: { children: ReactNode }) => {
@@ -12,9 +12,11 @@ const Container = ({ children }: { children: ReactNode }) => {
 const page = () => {
     return (
         <Container>
-            <WhatWeDo
+            <SectionTag
+                center
                 HeadText="What We Do ?"
                 SubText=" Build smarter, Launch faster, Scale confidently."
+                
             />
             <ServicesGrid />
         </Container>

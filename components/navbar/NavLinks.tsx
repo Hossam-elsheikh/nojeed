@@ -5,7 +5,7 @@ function NavLinks() {
     const links = ['Home', 'About', 'Services', 'Portfolio', 'Contact us']
 
     return (
-        <div className="bg-white/20 py-1 px-4 rounded-2xl lg:flex space-x-4 text-white font-medium hidden ">
+        <div className=" py-1 px-4 rounded-2xl lg:flex space-x-4 text-white font-medium hidden ">
             {links.map((link, index) => (
                 <Link
                     key={link}
