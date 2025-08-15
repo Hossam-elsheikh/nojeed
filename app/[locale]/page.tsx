@@ -1,7 +1,10 @@
-import ServicesGrid from '@/components/ServiceGrid'
-import SectionTag from '@/components/whatWeDo/WhatWeDo'
+
+'use client'
+import ServicesGrid from '@/components/whatWeDo/ServiceGrid'
+import SectionTag from '@/components/ui/MainHeading'
 
 import React, { ReactNode } from 'react'
+import { useTranslations } from 'next-intl'
 const Container = ({ children }: { children: ReactNode }) => {
     return (
         <div className="flex flex-col py-20 w-full md:px-4 md:w-3/4 mx-auto">
@@ -9,13 +12,15 @@ const Container = ({ children }: { children: ReactNode }) => {
         </div>
     )
 }
-const page = () => {
+const ServicesPage = () => {
+    const t = useTranslations('services')
+
     return (
         <Container>
             <SectionTag
                 center
-                HeadText="What We Do ?"
-                SubText=" Build smarter, Launch faster, Scale confidently."
+                HeadText={t('title')}
+                SubText={t('intro')}
                 
             />
             <ServicesGrid />
@@ -23,4 +28,4 @@ const page = () => {
     )
 }
 
-export default page
+export default ServicesPage

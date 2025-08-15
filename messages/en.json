@@ -4,110 +4,98 @@
         "services": "Services",
         "portfolio": "Portfolio",
         "whyus": "Why us?",
-        "contact": "Contact Us"
+        "contact": "Contact Us",
+        "cta": "Get a free Consultation"
     },
+    "textDirection": "text-left",
     "hero": {
-        "headline": "Your Digital Universe, All in One Place.",
-        "subheadline": "From concept to launch — we craft your entire digital presence under one roof. Branding, software, media, marketing, data, and management — seamlessly integrated.",
-        "cta1": "Let’s Build Something Great Together",
-        "cta2": "Get a Free Consultation",
-        "cta3": "Explore Our Work"
+        "headline": "Ideas Become ",
+        "subh": " Powerful",
+        "subh2": " Products.",
+        "subheadline": "We build scalable, high-impact software solutions that turn your vision into working products. From concept to full-stack products.",
+        "cta1": "Get In Touch",
+        "cta2": "Explore Our Work"
     },
     "about": {
         "title": "Who We Are",
         "body": "At Nojeed, we don’t just deliver services — we build experiences. We are your all-in-one partner for digital excellence, combining strategy, creativity, and technology to bring your brand to life. Whether you're starting from scratch or scaling to the next level, we’ve got every angle covered."
     },
     "services": {
-        "title": "What We Do",
-        "intro": "Everything your brand needs, expertly crafted under one roof.",
-        "branding": {
-            "title": "Branding & Digital Identity",
-            "items": [
-                "Brand Strategy & Positioning",
-                "Visual Identity Design",
-                "Brand Guidelines"
-            ],
-            "line": "Build a brand that’s unforgettable — and unshakable."
+        "title": "What We Do ?",
+        "intro": "Build smarter, Launch faster, Scale confidently.",
+        "uiux": {
+            "title": "UX/UI Design - Web Design",
+            "description": "Create an intuitive UX/UI for any web product, tailored to achieve business goals and users' need"
         },
-        "software": {
-            "title": "Software Development",
-            "items": [
-                "UI/UX Design",
-                "Website & Web App Development",
-                "Mobile & Desktop Applications"
-            ],
-            "line": "From pixels to platforms — we code your vision into reality."
+        "web": {
+            "title": "Web Development",
+            "description": "Build modern, responsive, and high-performance websites and web apps tailored to boost your business and engage users"
         },
-        "media": {
-            "title": "Media Production",
-            "items": [
-                "Graphic Design",
-                "Motion Graphics",
-                "Video Editing & Montage"
-            ],
-            "line": "Visuals that don’t just catch eyes — they hold attention."
+        "custom": {
+            "title": "Custom Software Solutions",
+            "description": "Tailored systems that solve real problems, backend to frontend"
         },
-        "marketing": {
-            "title": "Digital Marketing",
-            "items": [
-                "Content Creation",
-                "Social Media Management",
-                "Paid Ads & Campaign Strategy"
-            ],
-            "line": "We turn clicks into conversions, and posts into impact."
+        "desktop": {
+            "title": "Desktop Applications",
+            "description": "Tailored systems that solve real problems, backend to frontend"
         },
-        "data": {
-            "title": "Data Analysis & Reporting",
-            "items": [
-                "Insights & Dashboards",
-                "Campaign Performance Tracking",
-                "Business Intelligence"
-            ],
-            "line": "Decisions backed by data. Every step of the way."
+        "mobile": {
+            "title": "Mobile App Development",
+            "description": "Develop high-performance iOS and Android apps, tailored for scalability and user engagement."
         },
-        "management": {
-            "title": "Project Management",
-            "items": [
-                "Agile Workflows",
-                "Milestone Tracking",
-                "Strategic Planning"
-            ],
-            "line": "Your vision, delivered — on time, every time."
+        "auto": {
+            "title": "Command Line Tools & Automation",
+            "description": "Develop powerful command-line interfaces and automation scripts for efficient task management and system operations."
         }
     },
     "advantage": {
-        "title": "Why Choose Nojeed?",
-        "points": [
-            "💡 All-in-One Partner: From design to deployment — no need to juggle multiple agencies.",
-            "🧠 Strategy + Execution: We think smart and act fast.",
-            "🛠️ Custom Solutions: No templates. Just tailored creativity and code.",
-            "📈 Results-Driven: We align with your goals and track what matters."
-        ],
-        "tagline": "Nojeed — one team, every solution."
-    },
-    "testimonials": {
-        "title": "What Our Clients Say",
-        "items": [
-            {
-                "quote": "Nojeed transformed our digital presence beyond expectations!",
-                "name": "Sarah Ahmed",
-                "company": "BrightPath"
+        "title": "Why Nojeed?",
+        "header": "We don’t just code, we create solutions that work.",
+        "cta": "Let’s build a great thing together",
+        "points": {
+            "first": {
+                "title": "Personalized Client Dashboards",
+                "description": "Every client gets a unique dashboard to track their project progress in real-time."
             },
-            {
-                "quote": "Professional, creative, and always on time. Highly recommend!",
-                "name": "Khalid Al-Faraj",
-                "company": "TechNova"
+            "second": {
+                "title": "Full-Stack Expertise",
+                "description": "Handle everything from UX to backend infrastructure."
+            },
+            "third": {
+                "title": "Agile & Efficient",
+                "description": "Rapid delivery without sacrificing quality."
+            },
+            "forth": {
+                "title": "Custom-Fit Solutions",
+                "description": "No one-size-fits-all — everything is tailored."
+            },
+            "fifth": {
+                "title": "Built for Growth",
+                "description": "Scalable tech that evolves with your business."
             }
-        ]
+        }
     },
+    
     "portfolio": {
-        "title": "Our Work Speaks for Itself",
-        "subheadline": "Explore some of our favorite collaborations across branding, tech, and marketing."
+        "title": "Portfolio",
+        "subheadline": "From SaaS platforms to business automation tools",
+        "preview": "Live Preview"
     },
     "finalBanner": {
-        "headline": "Let’s Make Your Vision Happen",
-        "subheadline": "Tell us where you want to go — we’ll get you there.",
-        "cta1": "Book a Discovery Call",
-        "cta2": "Send Us a Message"
-    }
+        "headline": "Let’s Bring Your Software to Life",
+        "subheadline": "Talk to us about your next project, and let’s make it real.",
+        "cta1": "Get in Touch"
+    },
+    "testimonials": {
+        "headline": "Testimonials",
+        "subheadline": "What Our Clients Say about working with us"
+    },
+      "footer":{
+    "follow":"Follow us:",
+    "find":"Find us:",
+    "contact":"Contact us:",
+    "terms":"Terms of Service",
+    "privacy":"Privacy Policy",
+    "rights":"All rights reserved"
+  }
 }

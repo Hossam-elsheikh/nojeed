@@ -1,23 +1,23 @@
 export const whyNojeedPoints = [
     {
-        title: 'Personalized Client Dashboards',
+        title: 'points.first.title',
         description:
-            'Every client gets a unique dashboard to track their project progress in real-time.',
+            'points.first.description',
     },
     {
-        title: 'Full-Stack Expertise',
-        description: 'Handle everything from UX to backend infrastructure.',
+        title: 'points.second.title',
+        description: 'points.second.description',
     },
     {
-        title: 'Agile & Efficient',
-        description: 'Rapid delivery without sacrificing quality.',
+        title: 'points.third.title',
+        description: 'points.third.description',
     },
     {
-        title: 'Custom-Fit Solutions',
-        description: 'No one-size-fits-all — everything is tailored.',
+        title: 'points.forth.title',
+        description: 'points.forth.description',
     },
     {
-        title: 'Built for Growth',
-        description: 'Scalable tech that evolves with your business.',
+        title: 'points.fifth.title',
+        description: 'points.fifth.description',
     },
 ]

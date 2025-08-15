@@ -10,7 +10,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/pagination'
 
 import { Pagination } from 'swiper/modules'
-import SectionTag from '../whatWeDo/WhatWeDo'
+import SectionTag from '../ui/MainHeading'
+import { useTranslations } from 'next-intl'
 
 const testimonials = [
     {
@@ -41,7 +42,7 @@ const testimonials = [
 
 const Testimonials = () => {
     const [isMobile, setIsMobile] = useState(false)
-
+const t = useTranslations('testimonials')
     // Check screen width
     useEffect(() => {
         const checkMobile = () => {
@@ -56,8 +57,8 @@ const Testimonials = () => {
     return (
         <div className="2xl:py-28 py-16">
             <SectionTag
-                HeadText="Testimonials"
-                SubText="What Our Clients Say about working with us"
+                HeadText={t('headline')}
+                SubText={t('subheadline')}
                 center
             />
           
