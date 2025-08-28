@@ -24,6 +24,13 @@ const cairo = Cairo({
 export const metadata: Metadata = {
     title: 'Nojeed',
     description: 'Build real softwares',
+    openGraph: {
+        images: [
+            {
+                url: '/opengraph-image',
+            },
+        ],
+    },
 }
 
 export default async function RootLayout({
