@@ -8,7 +8,7 @@ function NewHero() {
 
     return (
         <section
-            className="bg-main-bg bg-center bg-repeat bg-[length:25vw_25vw] h-[80vh] md:h-[100vh] z-10 relative"
+            className="bg-main-bg bg-center bg-repeat bg-[length:25vw_25vw] h-[89vh] md:h-[100vh] z-10 relative"
             style={{
                 backgroundImage: `
                     linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),

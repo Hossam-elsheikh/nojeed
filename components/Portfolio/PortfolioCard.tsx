@@ -16,7 +16,7 @@ const PortfolioCard = ({ title, description, imgSrc,href }: PortfolioCardProps) 
         <div className="flex-1" dir='ltr'>
             <div className="relative w-full h-[336] overflow-hidden rounded-2xl">
                 <Image
-                    src={`/images/portfolio/${imgSrc}`}
+                    src={`/images/last/${imgSrc}`}
                     alt={title}
                     fill
                     className="object-cover"
