@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { FaRegEnvelope } from 'react-icons/fa6'
+import { FaFacebook, FaRegEnvelope } from 'react-icons/fa6'
 import { BsTelephonePlusFill } from 'react-icons/bs'
 import { FaInstagram } from 'react-icons/fa6'
 import { FaTiktok } from 'react-icons/fa6'
@@ -23,18 +23,23 @@ const Footer = () => {
                         <h4 className="text-[19px] mb-4">{t('follow')}</h4>
                         <ul className="text-primary-green flex gap-3 p-0.5 [&>li:hover]:text-primary-green-hover duration-200 justify-center lg:justify-start ease-in-out transition-all">
                             <li>
-                                <Link href={'#'}>
+                                <Link href={'https://www.instagram.com/nojeed.eg'} target="_blank">
                                     <FaInstagram size={18} />
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'#'}>
+                                <Link href={'https://www.tiktok.com/@nojeed'} target="_blank">
                                     <FaTiktok size={18} />
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'#'}>
+                                <Link href={'https://www.linkedin.com/company/nojeed'} target="_blank">
                                     <FaLinkedin size={18} />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={'https://www.facebook.com/people/Nojeed-Software-Solutions/61581438317200/'} target="_blank">
+                                    <FaFacebook size={18} />
                                 </Link>
                             </li>
                         </ul>
