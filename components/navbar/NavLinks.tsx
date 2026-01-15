@@ -8,19 +8,19 @@ function NavLinks() {
     const links = [
         {
             title: t('home'),
-            href:'home'
+            href: 'home',
         },
-          {
+        {
             title: t('services'),
-            href:'services'
+            href: 'services',
         },
-          {
+        {
             title: t('portfolio'),
-            href:'portfolio'
+            href: 'portfolio',
         },
-          {
+        {
             title: t('whyus'),
-            href:'whyus'
+            href: 'whyus',
         },
         //   {
         //     title: t('contact'),
@@ -34,7 +34,7 @@ function NavLinks() {
                 <Link
                     key={link.href}
                     href={`#${link.href}`}
-                    className={`px-4 py-2 rounded-xl transition-colors duration-300 `}
+                    className={`px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/10 hover:text-[#c3ed5b] hover:scale-105 active:scale-95`}
                 >
                     {link.title}
                 </Link>

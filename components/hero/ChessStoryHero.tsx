@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 import * as motion from 'motion/react-client'
-import { useScroll, useTransform, useSpring } from 'motion/react'
+import { useScroll, useTransform, useSpring, MotionValue } from 'motion/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
@@ -124,6 +124,173 @@ const Pill = ({ className }: { className?: string }) => (
     <div className={`w-12 h-4 rounded-full ${className}`} />
 )
 
+const ChessStoryStep = ({
+    step,
+    index,
+    smoothProgress,
+    t,
+}: {
+    step: (typeof storySteps)[0]
+    index: number
+    smoothProgress: MotionValue<number>
+    t: (key: string) => string
+}) => {
+    const inputRange =
+        index === 0
+            ? [0, 0.2]
+            : [(index - 1) * 0.2, index * 0.2, (index + 1) * 0.2]
+    const outputRange = index === 0 ? [1, 0] : [0, 1, 0]
+
+    const opacity = useTransform(smoothProgress, inputRange, outputRange)
+
+    return (
+        <motion.div
+            style={{
+                opacity,
+                display: 'flex',
+            }}
+            className={`absolute inset-0 flex-col md:flex-row items-center justify-center md:justify-between w-full h-full pointer-events-none gap-2 md:gap-0`}
+        >
+            <div className="md:flex-1 flex flex-col justify-center items-start text-left max-w-xl p-4 md:p-8 z-20">
+                <motion.span
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    className={`text-[#c3ed5b] font-mono text-sm mb-4 tracking-wider uppercase`}
+                >
+                    {`0${index + 1} / 05`}
+                </motion.span>
+                <motion.h2
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-sm font-cairo"
+                >
+                    {t(`${step.key}.title`)}
+                </motion.h2>
+                <motion.p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-md font-sans">
+                    {t(`${step.key}.description`)}
+                </motion.p>
+            </div>
+
+            <div className="md:flex-1 flex items-center justify-center relative w-full h-[40vh] md:h-full">
+                <motion.div
+                    className={`relative ${step.size}`}
+                    initial={{
+                        opacity: 0,
+                        scale: 0.8,
+                        rotate: step.rotate - 10,
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        scale: 1,
+                        rotate: step.rotate,
+                    }}
+                    transition={{
+                        type: 'spring',
+                        stiffness: 40,
+                    }}
+                >
+                    {/* Abstract Geometric Background - "Live" Animations */}
+
+                    {/* 1. Large Circle Outline - Slowly Rotating */}
+                    <motion.div
+                        className={`absolute -top-10 -right-10 opacity-20 ${step.accent}`}
+                        animate={{ rotate: 360 }}
+                        transition={{
+                            duration: 20,
+                            repeat: Infinity,
+                            ease: 'linear',
+                        }}
+                    >
+                        {/* <CircleOutline size={120} /> */}
+                        <Triangle size={40} />
+                    </motion.div>
+
+                    {/* 2. Floating Triangle - Top Left */}
+                    <motion.div
+                        className={`absolute -top-8 -left-12 opacity-30 ${step.fill}`}
+                        animate={{
+                            y: [0, -15, 0],
+                            rotate: [0, 10, 0],
+                        }}
+                        transition={{
+                            duration: 6,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                        }}
+                    >
+                        <Triangle size={40} />
+                    </motion.div>
+
+                    {/* 3. Dot Grid - Bottom Right (Static but patterned) */}
+                    <motion.div
+                        className={`absolute -bottom-16 -right-8 opacity-20 ${step.fill}`}
+                        initial={{ scale: 0.8 }}
+                        animate={{ scale: [0.8, 1, 0.8] }}
+                        transition={{
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                        }}
+                    >
+                        <DotGrid />
+                    </motion.div>
+
+                    {/* 4. Squiggle - Bottom Left */}
+                    <motion.div
+                        className={`absolute bottom-0 -left-16 opacity-40 ${step.accent}`}
+                        animate={{ x: [0, 10, 0] }}
+                        transition={{
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                        }}
+                    >
+                        <Squiggle />
+                    </motion.div>
+
+                    {/* 5. Solid Pill - Floating Top Right */}
+                    <motion.div
+                        className={`absolute top-0 -right-20 opacity-30 ${step.bg}`}
+                        animate={{ y: [0, 15, 0] }}
+                        transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                            delay: 1,
+                        }}
+                    >
+                        <Pill />
+                    </motion.div>
+
+                    {/* 6. Another Triangle - Far Left */}
+                    <motion.div
+                        className={`absolute top-1/2 -left-24 opacity-15 text-white`}
+                        animate={{ rotate: -360 }}
+                        transition={{
+                            duration: 25,
+                            repeat: Infinity,
+                            ease: 'linear',
+                        }}
+                    >
+                        <Triangle size={20} className="fill-white" />
+                    </motion.div>
+
+                    <Image
+                        src={step.image}
+                        alt={t(`${step.key}.title`)}
+                        fill
+                        className="object-contain z-10"
+                        style={{
+                            filter: 'drop-shadow(0 0 25px rgba(255,255,255,0.15)) drop-shadow(0 20px 40px rgba(0,0,0,0.7))',
+                        }}
+                        priority
+                    />
+                </motion.div>
+            </div>
+        </motion.div>
+    )
+}
+
 export default function ChessStoryHero() {
     const t = useTranslations('hero.story')
     const containerRef = useRef<HTMLDivElement>(null)
@@ -162,178 +329,15 @@ export default function ChessStoryHero() {
 
                 {/* CONTENT SWAPPER */}
                 <div className="relative z-10 w-full max-w-7xl px-6 h-full flex flex-col items-center justify-center">
-                    {storySteps.map((step, index) => {
-                        // Calculate range for this step
-                        const stepSize = 1 / storySteps.length
-                        const start = index * stepSize
-                        const end = start + stepSize
-
-                        return (
-                            <motion.div
-                                key={index}
-                                style={{
-                                    opacity:
-                                        index === 0
-                                            ? useTransform(
-                                                  smoothProgress,
-                                                  [0, 0.2],
-                                                  [1, 0]
-                                              )
-                                            : useTransform(
-                                                  smoothProgress,
-                                                  [
-                                                      (index - 1) * 0.2,
-                                                      index * 0.2,
-                                                      (index + 1) * 0.2,
-                                                  ],
-                                                  [0, 1, 0]
-                                              ),
-                                    display: 'flex',
-                                }}
-                                className={`absolute inset-0 flex-col md:flex-row items-center justify-center md:justify-between w-full h-full pointer-events-none gap-2 md:gap-0`}
-                            >
-                                <div className="md:flex-1 flex flex-col justify-center items-start text-left max-w-xl p-4 md:p-8 z-20">
-                                    <motion.span
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        className={`text-[#c3ed5b] font-mono text-sm mb-4 tracking-wider uppercase`}
-                                    >
-                                        {`0${index + 1} / 05`}
-                                    </motion.span>
-                                    <motion.h2
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-sm font-cairo"
-                                    >
-                                        {t(`${step.key}.title`)}
-                                    </motion.h2>
-                                    <motion.p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-md font-sans">
-                                        {t(`${step.key}.description`)}
-                                    </motion.p>
-                                </div>
-
-                                <div className="md:flex-1 flex items-center justify-center relative w-full h-[40vh] md:h-full">
-                                    <motion.div
-                                        className={`relative ${step.size}`}
-                                        initial={{
-                                            opacity: 0,
-                                            scale: 0.8,
-                                            rotate: step.rotate - 10,
-                                        }}
-                                        whileInView={{
-                                            opacity: 1,
-                                            scale: 1,
-                                            rotate: step.rotate,
-                                        }}
-                                        transition={{
-                                            type: 'spring',
-                                            stiffness: 40,
-                                        }}
-                                    >
-                                        {/* Abstract Geometric Background - "Live" Animations */}
-
-                                        {/* 1. Large Circle Outline - Slowly Rotating */}
-                                        <motion.div
-                                            className={`absolute -top-10 -right-10 opacity-20 ${step.accent}`}
-                                            animate={{ rotate: 360 }}
-                                            transition={{
-                                                duration: 20,
-                                                repeat: Infinity,
-                                                ease: 'linear',
-                                            }}
-                                        >
-                                            {/* <CircleOutline size={120} /> */}
-                                            <Triangle size={40} />
-                                        </motion.div>
-
-                                        {/* 2. Floating Triangle - Top Left */}
-                                        <motion.div
-                                            className={`absolute -top-8 -left-12 opacity-30 ${step.fill}`}
-                                            animate={{
-                                                y: [0, -15, 0],
-                                                rotate: [0, 10, 0],
-                                            }}
-                                            transition={{
-                                                duration: 6,
-                                                repeat: Infinity,
-                                                ease: 'easeInOut',
-                                            }}
-                                        >
-                                            <Triangle size={40} />
-                                        </motion.div>
-
-                                        {/* 3. Dot Grid - Bottom Right (Static but patterned) */}
-                                        <motion.div
-                                            className={`absolute -bottom-16 -right-8 opacity-20 ${step.fill}`}
-                                            initial={{ scale: 0.8 }}
-                                            animate={{ scale: [0.8, 1, 0.8] }}
-                                            transition={{
-                                                duration: 8,
-                                                repeat: Infinity,
-                                                ease: 'easeInOut',
-                                            }}
-                                        >
-                                            <DotGrid />
-                                        </motion.div>
-
-                                        {/* 4. Squiggle - Bottom Left */}
-                                        <motion.div
-                                            className={`absolute bottom-0 -left-16 opacity-40 ${step.accent}`}
-                                            animate={{ x: [0, 10, 0] }}
-                                            transition={{
-                                                duration: 4,
-                                                repeat: Infinity,
-                                                ease: 'easeInOut',
-                                            }}
-                                        >
-                                            <Squiggle />
-                                        </motion.div>
-
-                                        {/* 5. Solid Pill - Floating Top Right */}
-                                        <motion.div
-                                            className={`absolute top-0 -right-20 opacity-30 ${step.bg}`}
-                                            animate={{ y: [0, 15, 0] }}
-                                            transition={{
-                                                duration: 5,
-                                                repeat: Infinity,
-                                                ease: 'easeInOut',
-                                                delay: 1,
-                                            }}
-                                        >
-                                            <Pill />
-                                        </motion.div>
-
-                                        {/* 6. Another Triangle - Far Left */}
-                                        <motion.div
-                                            className={`absolute top-1/2 -left-24 opacity-15 text-white`}
-                                            animate={{ rotate: -360 }}
-                                            transition={{
-                                                duration: 25,
-                                                repeat: Infinity,
-                                                ease: 'linear',
-                                            }}
-                                        >
-                                            <Triangle
-                                                size={20}
-                                                className="fill-white"
-                                            />
-                                        </motion.div>
-
-                                        <Image
-                                            src={step.image}
-                                            alt={t(`${step.key}.title`)}
-                                            fill
-                                            className="object-contain z-10"
-                                            style={{
-                                                filter: 'drop-shadow(0 0 25px rgba(255,255,255,0.15)) drop-shadow(0 20px 40px rgba(0,0,0,0.7))',
-                                            }}
-                                            priority
-                                        />
-                                    </motion.div>
-                                </div>
-                            </motion.div>
-                        )
-                    })}
+                    {storySteps.map((step, index) => (
+                        <ChessStoryStep
+                            key={index}
+                            step={step}
+                            index={index}
+                            smoothProgress={smoothProgress}
+                            t={t}
+                        />
+                    ))}
                 </div>
 
                 {/* CTA at the bottom */}
