@@ -90,24 +90,24 @@ const Triangle = ({
     </svg>
 )
 
-const CircleOutline = ({
-    className,
-    size = 40,
-}: {
-    className?: string
-    size?: number
-}) => (
-    <svg width={size} height={size} viewBox="0 0 40 40" className={className}>
-        <circle
-            cx="20"
-            cy="20"
-            r="18"
-            strokeWidth="3"
-            fill="none"
-            className="stroke-current"
-        />
-    </svg>
-)
+// const CircleOutline = ({
+//     className,
+//     size = 40,
+// }: {
+//     className?: string
+//     size?: number
+// }) => (
+//     <svg width={size} height={size} viewBox="0 0 40 40" className={className}>
+//         <circle
+//             cx="20"
+//             cy="20"
+//             r="18"
+//             strokeWidth="3"
+//             fill="none"
+//             className="stroke-current"
+//         />
+//     </svg>
+// )
 
 const Squiggle = ({ className }: { className?: string }) => (
     <svg width="50" height="15" viewBox="0 0 50 15" className={className}>
