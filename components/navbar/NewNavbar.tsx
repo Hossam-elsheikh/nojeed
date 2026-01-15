@@ -8,16 +8,19 @@ import { LanguageSwitcher } from '@/i18n/LanguageSwitcher'
 function NewNavbar() {
     const t = useTranslations('navbar')
     return (
-        <section className="flex flex-row justify-between items-center">
+        <section className="flex flex-row justify-between items-center bg-[#013531]/80 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 shadow-2xl transition-all duration-300 hover:bg-[#013531]/90">
             <Logo />
             <NavLinks />
-            <div className=' items-center gap-2 hidden xs:flex'>
-
-            <MainButton btnText={t('cta')} className="text-xs md:text-sm" href='https://wa.me/201286623451?text=can%20i%20talk%20to%20someone%20please'/>
-            <div className='block md:hidden'>
-                <LanguageSwitcher />
+            <div className=" items-center gap-2 hidden md:flex">
+                <MainButton
+                    btnText={t('cta')}
+                    className="text-xs md:text-xs"
+                    href="https://wa.me/201286623451?text=can%20i%20talk%20to%20someone%20please"
+                />
             </div>
-            </div>
+                <div className="block md:hidden">
+                    <LanguageSwitcher />
+                </div>
         </section>
     )
 }

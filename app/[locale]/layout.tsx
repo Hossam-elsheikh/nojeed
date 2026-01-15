@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 import { Cairo } from 'next/font/google'
 import './globals.css'
 import NewNavbar from '@/components/navbar/NewNavbar'
-import NewHero from '@/components/hero/NewHero'
+import ChessStoryHero from '@/components/hero/ChessStoryHero'
 import WhyNojeed from '@/components/WhyNojeed/WhyNojeed'
 import Footer from '@/components/Footer/Footer'
 import Portfolio from '@/components/Portfolio/Portfolio'
@@ -19,7 +19,6 @@ const cairo = Cairo({
     subsets: ['arabic', 'latin'],
     weight: ['400', '500', '700'],
 })
-
 
 export const metadata: Metadata = {
     title: 'Nojeed',
@@ -49,18 +48,14 @@ export default async function RootLayout({
     const messages = await getMessages()
     return (
         <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale}>
-            <body
-                className={`${cairo.variable} antialiased `}
-            >
+            <body className={`${cairo.variable} antialiased `}>
                 <NextIntlClientProvider messages={messages}>
-                    <main className="relative overflow-hidden">
-                        <NewHero />
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 pt-6 z-20">
+                    <main className="relative">
+                        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 pt-6 z-50">
                             <NewNavbar />
                         </div>
-                        <div className="relative mt-[-100vh] pt-[100vh] px-6">
-                            {children}
-                        </div>
+                        <ChessStoryHero />
+                        <div className="relative z-20">{children}</div>
                         <WhyNojeed />
                         <div className="flex flex-col pb-20 w-full lg:w-[90%] px-5 mx-auto">
                             {' '}

@@ -4,8 +4,8 @@ import logo from '@/public/images/logo.svg'
 import Link from 'next/link'
 function Logo() {
     return (
-        <Link href='#' className='w-20   md:w-40 '>
-            <Image src={logo} alt="logo" width={120} height={120}  />
+        <Link href='#' className='w-20   md:w-40 px-4'>
+            <Image src={logo} alt="logo" width={100} height={100}  />
         </Link>
     )
 }

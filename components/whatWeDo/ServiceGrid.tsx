@@ -53,7 +53,7 @@ function ServicesGrid() {
                                         (service, sIndex) => (
                                             <motion.div
                                                 key={service.id}
-                                                className={`flex flex-col items-start ${text} gap-2`}
+                                                className={`flex flex-col px-6 items-start ${text} gap-2`}
                                                 initial={{ opacity: 0, y: 30 }}
                                                 whileInView={{
                                                     opacity: 1,
