@@ -190,7 +190,7 @@ const ChessStoryStep = ({
             }}
             className={`absolute inset-0 flex-col md:flex-row items-center justify-center md:justify-between w-full h-full pointer-events-none gap-2 md:gap-0`}
         >
-            <div className="md:flex-1 flex flex-col justify-center items-start text-left max-w-xl p-4 md:p-8 z-20">
+            <div className="md:flex-1 flex flex-col justify-center items-start text-start max-w-xl p-4 md:p-8 z-20">
                 <span className="text-[#c3ed5b] font-mono text-sm mb-4 tracking-wider uppercase">
                     {`0${index + 1} / 05`}
                 </span>
