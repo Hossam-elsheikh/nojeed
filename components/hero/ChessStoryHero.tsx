@@ -2,7 +2,14 @@
 
 import React, { useRef } from 'react'
 import * as motion from 'motion/react-client'
-import { useScroll, useTransform, useSpring, MotionValue } from 'motion/react'
+import {
+    useScroll,
+    useTransform,
+    useMotionValue,
+    useMotionValueEvent,
+    animate,
+    MotionValue,
+} from 'motion/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
@@ -124,6 +131,40 @@ const Pill = ({ className }: { className?: string }) => (
     <div className={`w-12 h-4 rounded-full ${className}`} />
 )
 
+const FADE = 0.06 // fraction of total scroll used for each fade transition
+
+// Midpoint of each step's dwell zone — landing here guarantees full opacity
+const TOTAL = storySteps.length
+const SNAP_TARGETS = Array.from({ length: TOTAL }, (_, i) => (i + 0.5) / TOTAL)
+// e.g. for 5 steps: [0.1, 0.3, 0.5, 0.7, 0.9]
+
+function getOpacityRanges(index: number, total: number) {
+    const start = index / total
+    const end = (index + 1) / total
+    const isFirst = index === 0
+    const isLast = index === total - 1
+
+    if (isFirst) {
+        // Visible immediately, dwell, then fade out before next step
+        return {
+            inputRange: [0, end - FADE, end] as number[],
+            outputRange: [1, 1, 0] as number[],
+        }
+    }
+    if (isLast) {
+        // Fade in, then stay fully visible to the end
+        return {
+            inputRange: [start, start + FADE] as number[],
+            outputRange: [0, 1] as number[],
+        }
+    }
+    // Fade in, dwell, fade out
+    return {
+        inputRange: [start, start + FADE, end - FADE, end] as number[],
+        outputRange: [0, 1, 1, 0] as number[],
+    }
+}
+
 const ChessStoryStep = ({
     step,
     index,
@@ -135,12 +176,10 @@ const ChessStoryStep = ({
     smoothProgress: MotionValue<number>
     t: (key: string) => string
 }) => {
-    const inputRange =
-        index === 0
-            ? [0, 0.2]
-            : [(index - 1) * 0.2, index * 0.2, (index + 1) * 0.2]
-    const outputRange = index === 0 ? [1, 0] : [0, 1, 0]
-
+    const { inputRange, outputRange } = getOpacityRanges(
+        index,
+        storySteps.length
+    )
     const opacity = useTransform(smoothProgress, inputRange, outputRange)
 
     return (
@@ -151,43 +190,22 @@ const ChessStoryStep = ({
             }}
             className={`absolute inset-0 flex-col md:flex-row items-center justify-center md:justify-between w-full h-full pointer-events-none gap-2 md:gap-0`}
         >
-            <div className="md:flex-1 flex flex-col justify-center items-start text-left max-w-xl p-4 md:p-8 z-20">
-                <motion.span
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    className={`text-[#c3ed5b] font-mono text-sm mb-4 tracking-wider uppercase`}
-                >
+            <div className="md:flex-1 flex flex-col justify-center items-start text-start max-w-xl p-4 md:p-8 z-20">
+                <span className="text-[#c3ed5b] font-mono text-sm mb-4 tracking-wider uppercase">
                     {`0${index + 1} / 05`}
-                </motion.span>
-                <motion.h2
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-sm font-cairo"
-                >
+                </span>
+                <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-sm font-cairo">
                     {t(`${step.key}.title`)}
-                </motion.h2>
-                <motion.p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-md font-sans">
+                </h2>
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-md font-sans">
                     {t(`${step.key}.description`)}
-                </motion.p>
+                </p>
             </div>
 
             <div className="md:flex-1 flex items-center justify-center relative w-full h-[40vh] md:h-full">
                 <motion.div
                     className={`relative ${step.size}`}
-                    initial={{
-                        opacity: 0,
-                        scale: 0.8,
-                        rotate: step.rotate - 10,
-                    }}
-                    whileInView={{
-                        opacity: 1,
-                        scale: 1,
-                        rotate: step.rotate,
-                    }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 40,
-                    }}
+                    style={{ rotate: step.rotate }}
                 >
                     {/* Abstract Geometric Background - "Live" Animations */}
 
@@ -299,10 +317,26 @@ export default function ChessStoryHero() {
         offset: ['start start', 'end end'],
     })
 
-    const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001,
+    // Track scroll 1:1 while scrolling; snap to nearest fully-visible step when idle
+    const smoothProgress = useMotionValue(0)
+    const snapTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+    useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+        // Follow scroll exactly — no lag
+        smoothProgress.set(latest)
+
+        // After 150ms with no scroll, spring to nearest dwell midpoint
+        if (snapTimerRef.current) clearTimeout(snapTimerRef.current)
+        snapTimerRef.current = setTimeout(() => {
+            const target = SNAP_TARGETS.reduce((a, b) =>
+                Math.abs(b - latest) < Math.abs(a - latest) ? b : a
+            )
+            animate(smoothProgress, target, {
+                type: 'spring',
+                stiffness: 400,
+                damping: 35,
+            })
+        }, 150)
     })
 
     // Extended Theme Colors for Hero Section specifically
@@ -358,8 +392,8 @@ export default function ChessStoryHero() {
                 </div>
             </div>
 
-            {/* SPACER FOR SCROLLING */}
-            <div className="h-[500vh]" />
+            {/* SPACER FOR SCROLLING — 200vh = ~40vh per step */}
+            <div className="h-[200vh]" />
         </section>
     )
 }
