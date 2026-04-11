@@ -10,14 +10,6 @@ import {
     animate,
     MotionValue,
 } from 'motion/react'
-import {
-    useScroll,
-    useTransform,
-    useMotionValue,
-    useMotionValueEvent,
-    animate,
-    MotionValue,
-} from 'motion/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
