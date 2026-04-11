@@ -4,21 +4,17 @@ import Link from 'next/link'
 import React from 'react'
 import { LuEye } from 'react-icons/lu'
 interface PortfolioCardProps {
-    title: string
-    description: string
+    projectKey: string
     imgSrc: string
     href: string
 }
 
-const PortfolioCard = ({
-    title,
-    description,
-    imgSrc,
-    href,
-}: PortfolioCardProps) => {
+const PortfolioCard = ({ projectKey, imgSrc, href }: PortfolioCardProps) => {
     const t = useTranslations('portfolio')
+    const title = t(`projects.${projectKey}.title` as never)
+    const description = t(`projects.${projectKey}.description` as never)
     return (
-        <div className="flex-1" dir="ltr">
+        <div className="flex-1 select-none">
             <div className="relative w-full h-[336] overflow-hidden rounded-2xl">
                 <Image
                     src={`/images/last/${imgSrc}`}
@@ -35,15 +31,13 @@ const PortfolioCard = ({
                     {description}
                 </p>
             </div>
-            <button className="2xl:text-[17px] leading-[20px] 2xl:px-[1.9rem] 2xl:py-[.875rem] bg-primary-green rounded-2xl flex items-center gap-2.5 font-medium hover:bg-primary-green-hover duration-200 cursor-pointer ease-in-out hover:text-blue-gray-hover text-[13px] px-[21.5px] py-[10.5px]">
-                <Link
-                    href={href}
-                    target="_blank"
-                    className="flex items-center gap-2"
-                >
-                    {t('preview')} <LuEye className="w-4 h-4 sm:w-6 sm:h-6" />
-                </Link>
-            </button>
+            <Link
+                href={href}
+                target="_blank"
+                className="2xl:text-[17px] leading-[20px] 2xl:px-[1.9rem] 2xl:py-[.875rem] bg-primary-green rounded-2xl inline-flex items-center gap-2.5 font-medium hover:bg-primary-green-hover duration-200 ease-in-out hover:text-blue-gray-hover text-[13px] px-[21.5px] py-[10.5px]"
+            >
+                {t('preview')} <LuEye className="w-4 h-4 sm:w-6 sm:h-6" />
+            </Link>
         </div>
     )
 }

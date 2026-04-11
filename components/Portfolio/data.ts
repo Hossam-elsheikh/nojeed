@@ -1,31 +1,43 @@
-export const projects = [
+﻿export const projects = [
     {
-        title: 'Pharmacy Solutions (e-commerce)',
-        description:
-            'Pharma Solutions is a comprehensive e-commerce platform designed to provide a smooth, secure, and user-friendly experience for purchasing medicines and medical supplies online.',
+        key: 'pharmacySolutions',
         imgSrc: 'pharmasolutions.webp',
-        href:"https://pharmasolutionskw.com"
+        href: 'https://pharmasolutionskw.com',
     },
     {
-        title: 'Fekrativity',
-        description:
-            'Fekrativity is a professional events management agency that offers end-to-end services—from conceptual design and logistics to marketing and execution—using modern technologies like VR/AR and mobile applications to deliver immersive, tailored experiences for conferences, exhibitions, and other events.',
+        key: 'fekrativity',
         imgSrc: 'fekrativity.webp',
-        href:"https://www.fekrativity.com/"
+        href: 'https://www.fekrativity.com/',
     },
     {
-        title: 'Wild Oasis',
-        description:
-            'Wild Oasis is a sleek, luxury cabin booking platform presenting immersive experiences in mountain-forest settings, complete with sections for exploration (Cabins), company background (About), and guest access, while featuring contact info and reservation management.',
+        key: 'wildOasis',
         imgSrc: 'wildoasis.webp',
-        href:"https://wild-oasis-mz.vercel.app/"
+        href: 'https://wild-oasis-mz.vercel.app/',
     },
     {
-        title: 'Beauty center',
-        description:
-            'Beauty Center is a premier Saudi Arabian e-commerce and B2B platform that unites local and global brands, offering over 800,000 women’s lifestyle products through a feature-rich interface—highlighting user-friendly design, secure payments, inventory/order management, promotional tools, analytics, and dedicated partner support—all under the trusted registration of the Saudi Business Center ',
+        key: 'beautyCenter',
         imgSrc: 'beautycenter.webp',
-        href:"https://beauty-center-nine.vercel.app/"
+        href: 'https://beauty-center-nine.vercel.app/',
+    },
+    {
+        key: 'cashLab',
+        imgSrc: 'cashlab.webp',
+        href: '/',
+    },
+    {
+        key: 'discoverEgypt',
+        imgSrc: 'egypt.webp',
+        href: 'https://egypt-explorer-ten.vercel.app/en',
+    },
+    {
+        key: 'ezyRent',
+        imgSrc: 'ezyrent.webp',
+        href: 'https://ezy-rent-six.vercel.app/',
+    },
+    {
+        key: 'keyper',
+        imgSrc: 'keyper.webp',
+        href: 'https://keyper-nu.vercel.app/en',
     },
     // Add more projects here
 ]

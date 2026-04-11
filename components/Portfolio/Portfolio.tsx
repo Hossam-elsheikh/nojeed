@@ -44,8 +44,7 @@ const Portfolio = () => {
                             <PortfolioCard
                                 key={index}
                                 href={project.href}
-                                title={project.title}
-                                description={project.description}
+                                projectKey={project.key}
                                 imgSrc={project.imgSrc}
                             />
                         ))}
@@ -64,8 +63,7 @@ const Portfolio = () => {
                             <SwiperSlide key={index}>
                                 <PortfolioCard
                                     href={project.href}
-                                    title={project.title}
-                                    description={project.description}
+                                    projectKey={project.key}
                                     imgSrc={project.imgSrc}
                                 />
                             </SwiperSlide>
