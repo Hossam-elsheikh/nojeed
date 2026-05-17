@@ -15,7 +15,7 @@ function NewNavbar() {
                 <MainButton
                     btnText={t('cta')}
                     className="text-xs md:text-xs"
-                    href="https://wa.me/201286623451?text=can%20i%20talk%20to%20someone%20please"
+                    href="https://calendly.com/nojeed-eg/30min"
                 />
             </div>
                 <div className="block md:hidden">
