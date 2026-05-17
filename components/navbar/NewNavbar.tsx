@@ -17,10 +17,15 @@ function NewNavbar() {
                     className="text-xs md:text-xs"
                     href="https://calendly.com/nojeed-eg/30min"
                 />
+                <MainButton
+                    href="https://wa.me/201286623451?text=can%20i%20talk%20to%20someone%20please"
+                    btnText={t('contact')}
+                    className="border !py-1.75 !border-primary-green !text-primary-green text-xs md:text-xs hover:!bg-primary-green hover:!text-blue-gray !bg-transparent"
+                />
             </div>
-                <div className="block md:hidden">
-                    <LanguageSwitcher />
-                </div>
+            <div className="block md:hidden">
+                <LanguageSwitcher />
+            </div>
         </section>
     )
 }
