@@ -1,18 +1,15 @@
 import { Locale, routing } from '@/i18n/routing'
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { Cairo } from 'next/font/google'
 import './globals.css'
-import NewNavbar from '@/components/navbar/NewNavbar'
-import ChessStoryHero from '@/components/hero/ChessStoryHero'
-import WhyNojeed from '@/components/WhyNojeed/WhyNojeed'
-import Footer from '@/components/Footer/Footer'
-import Portfolio from '@/components/Portfolio/Portfolio'
-import ContactUs from '@/components/ContactUs/ContactUs'
+import { Header } from '@/sections/Header'
+import { Footer } from '@/sections/Footer'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/next'
+import { site } from '@/lib/site'
 
 const cairo = Cairo({
     variable: '--font-cairo',
@@ -20,16 +17,31 @@ const cairo = Cairo({
     weight: ['400', '500', '700'],
 })
 
-export const metadata: Metadata = {
-    title: 'Nojeed',
-    description: 'Build real softwares',
-    openGraph: {
-        images: [
-            {
-                url: '/opengraph-image',
-            },
-        ],
-    },
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: Locale }>
+}): Promise<Metadata> {
+    const { locale } = await params
+    const t = await getTranslations({ locale, namespace: 'seo' })
+
+    return {
+        metadataBase: new URL(site.baseUrl),
+        title: {
+            default: t('title'),
+            template: `%s | ${site.name}`,
+        },
+        description: t('description'),
+        alternates: {
+            languages: { en: '/en', ar: '/ar' },
+        },
+        openGraph: {
+            title: t('title'),
+            description: t('description'),
+            type: 'website',
+            images: [{ url: '/opengraph-image' }],
+        },
+    }
 }
 
 export default async function RootLayout({
@@ -37,36 +49,23 @@ export default async function RootLayout({
     params,
 }: Readonly<{
     children: React.ReactNode
-    params: Promise<{ locale: Locale }> // Changed to Promise
+    params: Promise<{ locale: Locale }>
 }>) {
     const { locale } = await params
     if (!routing.locales.includes(locale as Locale)) {
         notFound()
     }
-    // Providing all messages to the client
-    // side is the easiest way to get started
     const messages = await getMessages()
+
     return (
         <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale}>
-            <body className={`${cairo.variable} antialiased `}>
+            <body className={`${cairo.variable} antialiased`}>
                 <NextIntlClientProvider messages={messages}>
-                    <main className="relative">
-                        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 pt-6 z-50">
-                            <NewNavbar />
-                        </div>
-                        <ChessStoryHero />
-                        <div className="relative z-20">{children}</div>
-                        <WhyNojeed />
-                        <div className="flex flex-col pb-20 w-full lg:w-[90%] px-5 mx-auto">
-                            {' '}
-                            <Portfolio />
-                            <ContactUs />
-                            {/* <Testimonials /> */}
-                        </div>
-                        <Footer />
-                    </main>
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
                 </NextIntlClientProvider>
-                <GoogleAnalytics gaId="G-DN043C7PX2" />
+                <GoogleAnalytics gaId={site.gaId} />
                 <Analytics />
             </body>
         </html>

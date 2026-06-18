@@ -1,41 +1,44 @@
-# ✅ Tech Stack Overview
+# Nojeed — Landing Page
 
-## Main Framework: Next.js
-Utilized for server-side rendering, static site generation, and building all dashboards and pages with high performance and scalability in mind.
+A modern, high-converting landing page for Nojeed, a software development agency.
 
-## Design System: Shadcn/UI + Tailwind CSS
-Combines utility-first styling with prebuilt, accessible components for a consistent and responsive UI across all parts of the application.
+## Stack
 
-## Icons: Lucide
-A modern and customizable icon library used for visual consistency across UI components.
+- **Framework:** Next.js (App Router) + TypeScript
+- **Styling:** Tailwind CSS v4
+- **Animation:** Framer Motion, respects `prefers-reduced-motion`
+- **i18n:** next-intl — English and Arabic (RTL-ready), content in `locales/en.json` and `locales/ar.json`
+- **Forms:** React Hook Form (client-side validation)
+- **Icons:** Lucide (UI icons), react-icons (brand/social icons)
+- **Primitives:** Radix UI (`Select`, `Dialog` for the mobile menu)
 
-## Typography
+## Structure
 
-**Font Family**  
-- **Titles, buttons, headers:** "Creato Display"  
-- **Body text:** sans-serif
+```
+app/[locale]/   routing, layout, metadata, sitemap/robots/OG image
+components/     small reusable pieces (Logo, Container, SectionHeading, Button, Input...)
+sections/       one file per landing page section (Hero, Services, Process, ...)
+lib/            data arrays, site constants (contact info, socials), cn() helper
+locales/        en.json / ar.json translation content
+i18n/           next-intl routing + request config
+```
 
-**Font Size System**  
-Custom font size classes (`.fz-14`, `.fz-20`, `.fz-heading`, etc.) are defined inside the Tailwind `@layer components` to ensure consistent typography across screen sizes.
+## Development
 
-# 🧠 Developer Tools
+```
+npm install
+npm run dev
+```
 
-## Linting: ESLint
-Enforces strict code quality rules. Modifying or disabling ESLint configurations is not allowed without prior team approval.
+## Environment variables
 
-## State Management: Zustand
-A minimal, scalable state management solution that works with both client and server components, making it ideal for complex dashboard interactions.
+Copy `.env.example` to `.env.local` and fill in:
 
-## API Management
-- **React Query** – Handles server state, caching, and background synchronization.  
-- **Axios** – Used for making HTTP requests with built-in support for interceptors and custom configuration.
+- `GMAIL_APP_PASSWORD` — required for the contact form (`app/api/contact/route.ts`) to actually deliver messages to nojeed.eg@gmail.com via Gmail SMTP. See `.env.example` for how to generate one. Without it, the form shows a visible error instead of silently dropping submissions.
 
-## Forms & Validation
-- **React Hook Form** – For performant and scalable form management.  
-- **Zod** – For robust schema validation and type-safe data handling.
+## Content TODOs
 
-## Internationalization (i18n)
-A modern translation library (e.g., `next-i18next` or `i18next`) to enable multilingual support and localization.
+A few sections ship with clearly-marked placeholder content (see `// TODO` comments in code) that needs real assets before launch:
 
-# 🧱 Ideal Use Case
-This boilerplate is tailored for admin dashboards and content-heavy platforms with strict design systems, multilingual requirements, and robust client-server interactions.
+- `sections/Portfolio.tsx` — swap project images for real product screenshots.
+- `sections/Testimonials.tsx` / `lib/data/testimonials.ts` — replace placeholder quotes and client logos with real ones (section is currently hidden in `app/[locale]/page.tsx` until then).
