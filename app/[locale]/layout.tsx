@@ -1,4 +1,8 @@
 import { Locale, routing } from '@/i18n/routing'
+
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }))
+}
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
