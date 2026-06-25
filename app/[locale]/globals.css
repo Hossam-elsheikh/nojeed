@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
 
 @theme {
     --color-background: #f5eee1;
@@ -25,6 +26,7 @@ body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-space-grotesk), sans-serif;
+    overflow-x: hidden;
 }
 
 [dir='rtl'] body {

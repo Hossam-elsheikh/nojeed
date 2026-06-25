@@ -36,7 +36,7 @@ export function Reviews() {
             <Container className="flex flex-col gap-10">
                 <SectionHeading title={t('headline')} subtitle={t('subheadline')} center />
 
-                <div className="relative flex items-center justify-center" style={{ height: 310 }}>
+                <div className="relative flex items-center justify-center overflow-hidden" style={{ height: 310 }}>
                     {testimonials.map((item, index) => {
                         const pos = getPos(index)
                         return (
