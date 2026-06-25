@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/Container'
 import { product, productModules, alsoIncluded, productFeatures } from '@/lib/data/products'
+import { site } from '@/lib/site'
 
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations('productsPage')
@@ -40,10 +41,10 @@ export default async function ProductsPage() {
                     </span>
                     <p className="text-muted text-lg max-w-[600px] mx-auto mt-5">{t('subtitle')}</p>
                     <div className="flex flex-wrap gap-3.5 justify-center mt-7.5">
-                        <Button href="/contact" variant="dark">
+                        <Button href={site.whatsappHref} variant="dark">
                             {t('cta1')}
                         </Button>
-                        <Button href="/contact" variant="outline">
+                        <Button href={site.whatsappHref} variant="outline">
                             {t('cta2')}
                         </Button>
                     </div>

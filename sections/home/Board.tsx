@@ -64,46 +64,54 @@ export function Board() {
                     <motion.div {...fadeUp(0.1)}>
                         <Link
                             href="/projects"
-                            className="group relative flex flex-col h-full min-h-[260px] rounded-[22px] border border-navy/10 bg-surface p-7.5 overflow-hidden transition-all hover:border-accent hover:-translate-y-1"
+                            className="group relative flex flex-col h-full min-h-[300px] rounded-[22px] border border-navy/12 bg-navy-dark overflow-hidden transition-all hover:border-teal/40 hover:-translate-y-1"
                         >
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_90%,rgba(37,196,199,0.12),transparent_65%)]" />
                             <Image
                                 src={rook}
                                 alt=""
-                                className="absolute -bottom-7 -end-7 h-44 w-auto object-contain opacity-90 rotate-[-8deg] transition-transform duration-300 group-hover:rotate-[-3deg] group-hover:scale-105 rtl:rotate-[8deg] rtl:group-hover:rotate-[3deg]"
+                                className="absolute -bottom-10 left-1/2 -translate-x-1/2 h-[260px] w-auto object-contain opacity-20"
                             />
-                            <div className="relative z-10 flex items-center justify-between">
-                                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
-                                    {t('projects.eyebrow')}
-                                </span>
-                                <span className="text-navy text-xl rtl:-scale-x-100">↗</span>
+                            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-dark to-transparent pointer-events-none z-[5]" />
+                            <div className="relative z-10 flex flex-col h-full p-7.5">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-bright">
+                                        {t('projects.eyebrow')}
+                                    </span>
+                                    <span className="text-white/60 text-xl rtl:-scale-x-100">↗</span>
+                                </div>
+                                <h3 className="font-serif font-medium text-2xl text-white mt-3.5">
+                                    {t('projects.title')}
+                                </h3>
+                                <p className="text-white/60 mt-2 max-w-[58%]">{t('projects.description')}</p>
                             </div>
-                            <h3 className="relative z-10 font-serif font-medium text-2xl text-navy mt-3.5">
-                                {t('projects.title')}
-                            </h3>
-                            <p className="relative z-10 text-muted mt-2 max-w-[75%]">{t('projects.description')}</p>
                         </Link>
                     </motion.div>
 
                     <motion.div {...fadeUp(0.18)}>
                         <Link
                             href="/products"
-                            className="group relative flex flex-col h-full min-h-[260px] rounded-[22px] border border-navy/10 bg-surface p-7.5 overflow-hidden transition-all hover:border-accent hover:-translate-y-1"
+                            className="group relative flex flex-col h-full min-h-[300px] rounded-[22px] border border-navy/12 bg-navy-dark overflow-hidden transition-all hover:border-accent/50 hover:-translate-y-1"
                         >
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_90%,rgba(162,199,83,0.10),transparent_65%)]" />
                             <Image
                                 src={queen}
                                 alt=""
-                                className="absolute -bottom-7 -end-7 h-44 w-auto object-contain opacity-90 rotate-[-8deg] transition-transform duration-300 group-hover:rotate-[-3deg] group-hover:scale-105 rtl:rotate-[8deg] rtl:group-hover:rotate-[3deg]"
+                                className="absolute -bottom-10 left-1/2 -translate-x-1/2 h-[260px] w-auto object-contain opacity-20"
                             />
-                            <div className="relative z-10 flex items-center justify-between">
-                                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
-                                    {t('products.eyebrow')}
-                                </span>
-                                <span className="text-navy text-xl rtl:-scale-x-100">↗</span>
+                            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-dark to-transparent pointer-events-none z-[5]" />
+                            <div className="relative z-10 flex flex-col h-full p-7.5">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                                        {t('products.eyebrow')}
+                                    </span>
+                                    <span className="text-white/60 text-xl rtl:-scale-x-100">↗</span>
+                                </div>
+                                <h3 className="font-serif font-medium text-2xl text-white mt-3.5">
+                                    {t('products.title')}
+                                </h3>
+                                <p className="text-white/60 mt-2 max-w-[58%]">{t('products.description')}</p>
                             </div>
-                            <h3 className="relative z-10 font-serif font-medium text-2xl text-navy mt-3.5">
-                                {t('products.title')}
-                            </h3>
-                            <p className="relative z-10 text-muted mt-2 max-w-[75%]">{t('products.description')}</p>
                         </Link>
                     </motion.div>
                 </div>

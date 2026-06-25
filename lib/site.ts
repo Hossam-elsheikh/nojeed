@@ -2,7 +2,7 @@ export const site = {
     name: 'Nojeed',
     baseUrl: 'https://nojeed.vercel.app',
     email: 'nojeed.eg@gmail.com',
-    contactRecipient: 'hossam.m.elsheikh@gmail.com',
+    contactRecipient: 'nojeed.eg@gmail.com',
     phone: '+20 128 662 3451',
     phoneHref: 'tel:+201286623451',
     whatsappHref: 'https://wa.me/201286623451?text=can%20i%20talk%20to%20someone%20please',

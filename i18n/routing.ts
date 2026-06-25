@@ -35,6 +35,14 @@ export const routing = defineRouting({
             en: '/contact',
             ar: '/contact',
         },
+        '/terms': {
+            en: '/terms',
+            ar: '/terms',
+        },
+        '/privacy': {
+            en: '/privacy',
+            ar: '/privacy',
+        },
     },
 })
 

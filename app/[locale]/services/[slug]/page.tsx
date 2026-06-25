@@ -71,14 +71,15 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         </div>
                     </div>
                     <div className="relative flex items-center justify-center min-h-[320px]">
-                        <div className="absolute size-[280px] rounded-full bg-[radial-gradient(circle,rgba(37,196,199,0.18),transparent_62%)]" />
+                        <div className="absolute size-[260px] rounded-full bg-[radial-gradient(circle,rgba(37,196,199,0.14),transparent_62%)]" />
+                        <div className="absolute size-[180px] rounded-[32px] bg-navy-dark opacity-80 rotate-[-10deg]" />
                         <Image
                             src={`/images/chess/${service.piece}.png`}
                             alt=""
                             width={420}
                             height={420}
-                            className="relative h-[clamp(260px,30vw,360px)] w-auto object-contain"
-                            style={{ filter: 'drop-shadow(0 24px 36px rgba(22,36,63,.28))', animation: 'floaty 6s ease-in-out infinite' }}
+                            className="relative h-[clamp(180px,20vw,240px)] w-auto object-contain"
+                            style={{ filter: 'drop-shadow(0 16px 28px rgba(22,36,63,.38))', animation: 'floaty 6s ease-in-out infinite' }}
                         />
                     </div>
                 </Container>

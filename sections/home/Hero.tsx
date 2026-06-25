@@ -28,9 +28,9 @@ export function Hero() {
     ]
 
     return (
-        <section id="top" className="relative overflow-hidden">
+        <section id="top" className="relative overflow-hidden pt-14 md:pt-20">
             <Container className="grid lg:grid-cols-2 items-center gap-8 min-h-[600px]">
-                <div className="py-12">
+                <div className="pb-14 pt-4">
                     <motion.div
                         {...riseIn(0)}
                         className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal"
@@ -78,7 +78,7 @@ export function Hero() {
                     </motion.div>
                 </div>
 
-                <div className="relative min-h-[420px] lg:min-h-[520px] self-stretch hidden sm:block rtl:-scale-x-100">
+                <div className="relative min-h-[420px] lg:min-h-[520px] self-stretch hidden sm:flex items-center justify-center rtl:-scale-x-100">
                     <svg
                         viewBox="0 0 600 620"
                         preserveAspectRatio="xMidYMid meet"
@@ -127,15 +127,12 @@ export function Hero() {
                         <circle cx="360" cy="230" r="4" fill="#A2C753" />
                     </svg>
                     <div
-                        className="absolute"
+                        className="relative"
                         style={{
-                            insetInlineEnd: '2%',
-                            top: '50%',
-                            transform: 'translateY(-52%)',
-                            height: 'clamp(280px, 36vw, 420px)',
-                            width: 'clamp(280px, 36vw, 420px)',
+                            height: 'clamp(200px, 26vw, 300px)',
+                            width: 'clamp(200px, 26vw, 300px)',
                             animation: prefersReducedMotion ? undefined : 'floaty 6s ease-in-out infinite',
-                            filter: 'drop-shadow(0 28px 40px rgba(22,36,63,.28))',
+                            filter: 'drop-shadow(0 20px 32px rgba(22,36,63,.28))',
                         }}
                     >
                         <Image src={knight} alt="" fill className="object-contain" priority />

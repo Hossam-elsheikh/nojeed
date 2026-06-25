@@ -84,10 +84,10 @@ export function Footer() {
                     </p>
                     <ul className="flex gap-6 underline">
                         <li>
-                            <NextLink href="#">{t('terms')}</NextLink>
+                            <Link href="/terms">{t('terms')}</Link>
                         </li>
                         <li>
-                            <NextLink href="#">{t('privacy')}</NextLink>
+                            <Link href="/privacy">{t('privacy')}</Link>
                         </li>
                     </ul>
                 </Container>
