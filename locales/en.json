@@ -5,21 +5,58 @@
     },
     "header": {
         "services": "Services",
-        "work": "Work",
-        "whyus": "Why Us",
+        "projects": "Projects",
+        "products": "Products",
         "contact": "Contact",
-        "cta": "Free Consultation",
-        "whatsapp": "WhatsApp Us"
+        "cta": "Free Consultation"
+    },
+    "pieces": {
+        "pawn": "Pawn",
+        "bishop": "Bishop",
+        "knight": "Knight",
+        "rook": "Rook",
+        "queen": "Queen",
+        "king": "King"
     },
     "hero": {
         "eyebrow": "Software Development Studio",
-        "headline": "We build software that",
-        "headlineAccent": "ships fast and scales",
-        "subheadline": "Nojeed designs and builds web, mobile, and custom software products — from first sketch to production launch.",
-        "cta1": "Start a Project",
+        "headline": "Think in moves.",
+        "headlineAccent": "Ship in weeks.",
+        "subheadline": "Nojeed designs and builds web, mobile, desktop, and custom software — planned with intent, engineered to win, delivered to production.",
+        "cta1": "Free Consultation",
         "cta2": "See our work",
-        "credibility": "8+ products launched · SaaS · e-commerce · dashboards",
-        "scrollHint": "Scroll to explore"
+        "stat1Value": "8+",
+        "stat1Label": "products launched",
+        "stat2Value": "6",
+        "stat2Label": "services, one team"
+    },
+    "home": {
+        "board": {
+            "eyebrow": "The board",
+            "title": "Everything we build, in one place",
+            "subtitle": "Explore how we work, what we've shipped, and the product we built for ourselves.",
+            "services": {
+                "eyebrow": "Services",
+                "title": "Design, build and scale — as clear engagements",
+                "description": "Web, mobile, desktop and custom software. Fixed-scope sprints or embedded squads — you always know the next move.",
+                "tag1": "Product design",
+                "tag2": "Web & mobile",
+                "tag3": "Custom software",
+                "cta": "Explore services →"
+            },
+            "projects": {
+                "eyebrow": "Projects",
+                "title": "Case studies",
+                "description": "Real products we've shipped for real clients — what we built and why.",
+                "cta": "View projects →"
+            },
+            "products": {
+                "eyebrow": "Products",
+                "title": "Software we own",
+                "description": "School 360 — a full school management system we built on Odoo, ready to deploy.",
+                "cta": "Explore School 360 →"
+            }
+        }
     },
     "services": {
         "title": "What We Do",
@@ -32,6 +69,10 @@
             "title": "Web Development",
             "description": "Fast, responsive websites and web apps that turn visitors into customers."
         },
+        "mobile": {
+            "title": "Mobile App Development",
+            "description": "iOS and Android apps engineered to perform well and scale with your user base."
+        },
         "custom": {
             "title": "Custom Software",
             "description": "Bespoke systems built around how your business actually runs, not a generic template."
@@ -40,14 +81,64 @@
             "title": "Desktop Applications",
             "description": "Reliable desktop tools with offline support and deep OS integration for teams that can't depend on a browser tab."
         },
-        "mobile": {
-            "title": "Mobile App Development",
-            "description": "iOS and Android apps engineered to perform well and scale with your user base."
-        },
         "automation": {
             "title": "CLI Tools & Automation",
             "description": "Scripts and command-line tools that cut out repetitive work and reduce human error."
         }
+    },
+    "servicesPage": {
+        "eyebrow": "What we do",
+        "title": "Six ways we move your software forward",
+        "intro": "Every engagement is scoped clearly from day one — defined goals, a clear sequence, and a team that delivers. Pick a service, or let us shape the whole project.",
+        "learnMore": "Learn more →",
+        "included": {
+            "discover": {
+                "title": "Discovery & scope",
+                "description": "We map goals, users and constraints before any work begins, so every step has a reason."
+            },
+            "design": {
+                "title": "Design & architecture",
+                "description": "Flows, prototypes and technical architecture agreed and validated before we build."
+            },
+            "build": {
+                "title": "Build & QA",
+                "description": "Tight iterations, regular demos, and tests that catch issues before your users do."
+            },
+            "launch": {
+                "title": "Launch & support",
+                "description": "A smooth go-live, plus monitoring and support as your product grows."
+            }
+        },
+        "detail": {
+            "servicePrefix": "Service",
+            "uiux": {
+                "subtitle": "Research, flows, and pixel-level design systems that make your product easy to understand in seconds — and easy to scale later."
+            },
+            "web": {
+                "subtitle": "Fast, accessible web platforms and portals built on foundations that stay solid as traffic and your team grow."
+            },
+            "mobile": {
+                "subtitle": "iOS and Android apps engineered to perform well and scale with your user base — native or cross-platform."
+            },
+            "custom": {
+                "subtitle": "Bespoke systems and integrations built around how your business actually runs — including full Odoo implementations like School 360."
+            },
+            "desktop": {
+                "subtitle": "Reliable desktop tools with offline support and deep OS integration, for teams that can't depend on a browser tab."
+            },
+            "automation": {
+                "subtitle": "Scripts, CLIs and workflow automation that remove repetitive work and reduce human error."
+            }
+        },
+        "stackEyebrow": "The stack",
+        "stackTitle": "Modern, reliable tools",
+        "relatedTitle": "Related work",
+        "allProjects": "All projects →",
+        "heroCta1": "Start a project →",
+        "heroCta2": "See related work",
+        "ctaTitle": "Not sure which service you need?",
+        "ctaSubtitle": "Tell us the outcome you're after. We'll recommend the right engagement.",
+        "ctaButton": "Start a project →"
     },
     "process": {
         "title": "How We Work",
@@ -106,65 +197,198 @@
             "pharmacySolutions": {
                 "title": "Pharmacy Solutions",
                 "tag": "E-commerce",
-                "description": "A secure, user-friendly e-commerce platform for buying medicines and medical supplies online."
+                "description": "A secure, user-friendly e-commerce platform for buying medicines and medical supplies online.",
+                "challenge": "Pharmacies in Kuwait needed a way to sell medicines and medical supplies online without sacrificing the trust and accuracy a pharmacy requires.",
+                "approach": "We built a secure e-commerce platform with verified product listings, prescription-aware checkout, and an admin panel built around how a pharmacy actually manages stock.",
+                "result": "A live platform pharmacy staff can run day-to-day, with a shopping experience customers trust."
             },
             "fekrativity": {
                 "title": "Fekrativity",
                 "tag": "Events",
-                "description": "An events management agency site covering everything from concept design to execution, with VR/AR experiences."
+                "description": "An events management agency site covering everything from concept design to execution, with VR/AR experiences.",
+                "challenge": "An events management agency needed a site that could showcase end-to-end event production — from concept to execution — including immersive VR/AR experiences.",
+                "approach": "We designed a portfolio-driven site structured around their service categories, built to present past events and immersive experiences clearly to prospective clients.",
+                "result": "A professional online presence that reflects the creativity of their event production work."
             },
             "wildOasis": {
                 "title": "Wild Oasis",
                 "tag": "Booking",
-                "description": "A luxury cabin booking platform with immersive mountain-forest visuals and reservation management."
+                "description": "A luxury cabin booking platform with immersive mountain-forest visuals and reservation management.",
+                "challenge": "A cabin rental business needed a booking platform that matched the immersive, high-end feel of staying in a mountain-forest cabin.",
+                "approach": "We built a reservation system with real-time availability and rich visuals, so the booking experience feels as premium as the stay itself.",
+                "result": "A booking platform guests can browse and reserve confidently, end to end."
             },
             "beautyCenter": {
                 "title": "Beauty Center",
                 "tag": "B2B E-commerce",
-                "description": "A Saudi B2B marketplace uniting local and global beauty brands across 800,000+ products."
+                "description": "A Saudi B2B marketplace uniting local and global beauty brands across 800,000+ products.",
+                "challenge": "A Saudi B2B marketplace needed to unite local and global beauty brands across hundreds of thousands of products in one usable platform.",
+                "approach": "We built a B2B e-commerce experience designed for bulk browsing and ordering at scale, organizing a massive catalog without overwhelming buyers.",
+                "result": "A marketplace that makes an 800,000+ product catalog genuinely navigable for business buyers."
             },
             "ezyRent": {
                 "title": "EzyRent",
                 "tag": "Real Estate",
-                "description": "A global rental marketplace with real-time availability across thousands of verified listings."
+                "description": "A global rental marketplace with real-time availability across thousands of verified listings.",
+                "challenge": "A rental marketplace needed real-time availability across thousands of listings without the search experience breaking down at scale.",
+                "approach": "We built a fast, filterable browsing experience backed by a marketplace architecture that keeps availability accurate as listings grow.",
+                "result": "A rental platform that stays fast and reliable as its listing count scales."
             },
             "keyper": {
                 "title": "Keyper",
                 "tag": "Real Estate",
-                "description": "A premium landing page for a real estate advisory firm, guiding clients from discovery to closing."
+                "description": "A premium landing page for a real estate advisory firm, guiding clients from discovery to closing.",
+                "challenge": "A real estate advisory firm needed a landing page that could guide prospective clients from first visit to a booked consultation.",
+                "approach": "We designed a focused, premium landing page structured around the firm's advisory process, from discovery to closing.",
+                "result": "A clear, professional entry point that turns visits into consultations."
             },
             "discoverEgypt": {
                 "title": "Discover Egypt",
                 "tag": "Travel",
-                "description": "A travel companion platform blending historical exploration with modern, verified local insights."
+                "description": "A travel companion platform blending historical exploration with modern, verified local insights.",
+                "challenge": "Travelers exploring Egypt needed a single, modern platform blending historical context with verified, practical local insights.",
+                "approach": "We built a travel companion experience that pairs historical exploration content with up-to-date, locally verified information.",
+                "result": "A modern guide that makes discovering Egypt easier and more reliable for visitors."
             }
         }
+    },
+    "projectsPage": {
+        "eyebrow": "Selected work",
+        "title": "Real products we've shipped",
+        "intro": "Real clients, real timelines, real outcomes — across e-commerce, booking, marketplaces and more.",
+        "breadcrumb": "Projects",
+        "viewCaseStudy": "View case study →",
+        "challengeTitle": "The challenge",
+        "approachTitle": "Our approach",
+        "resultTitle": "The result",
+        "visitLive": "Visit live site →",
+        "nextProject": "Next project",
+        "backToProjects": "All projects →",
+        "ctaTitle": "Your project could be next",
+        "ctaButton": "Start a project →"
     },
     "testimonials": {
         "headline": "Testimonials",
         "subheadline": "What our clients say about working with us",
-        "items": {
-            "first": {
-                "quote": "Nojeed turned our idea into a working product faster than we expected, and kept us in the loop the whole way.",
-                "name": "Client Name",
-                "role": "Founder, E-commerce Brand"
+        "viewOnFacebook": "View on Facebook"
+    },
+    "productsPage": {
+        "eyebrow": "Software we own",
+        "title": "School 360",
+        "builtOnLabel": "Built on Odoo 19",
+        "subtitle": "A modular school management system covering everything from admissions to the canteen — with a parent/student portal, Telegram and mobile notifications, video calls, and full Arabic support.",
+        "cta1": "Talk to us about School 360",
+        "cta2": "Request a demo",
+        "modulesEyebrow": "What's inside",
+        "modulesTitle": "One system, every part of school operations",
+        "modules": {
+            "admissions": {
+                "title": "Admissions",
+                "description": "Manage applications and enrollment from first inquiry to a confirmed seat."
             },
-            "second": {
-                "quote": "Communication was clear from day one, and the final product matched exactly what we asked for.",
-                "name": "Client Name",
-                "role": "Operations Lead, Logistics Startup"
+            "students": {
+                "title": "Students",
+                "description": "A complete student record — profiles, classes, guardians, and admission history."
             },
-            "third": {
-                "quote": "They handled both the design and the engineering side, which saved us from juggling two separate agencies.",
-                "name": "Client Name",
-                "role": "Product Manager, SaaS Platform"
+            "academic": {
+                "title": "Academic Affairs",
+                "description": "Curriculum, lesson plans and teaching resources, organized by subject and grade."
+            },
+            "exams": {
+                "title": "Exams & Grading",
+                "description": "Exam schedules, results entry, and pass-rate analytics — published the moment they're ready."
+            },
+            "calendar": {
+                "title": "Calendar & Meetings",
+                "description": "School-wide events, parent meetings and staff schedules, visible to everyone who needs them."
+            },
+            "communication": {
+                "title": "Announcements & Notifications",
+                "description": "Send updates straight to Telegram and the mobile app — parents and staff see them where they actually check."
+            },
+            "discussion": {
+                "title": "Team Chat & Video Calls",
+                "description": "Built-in channels and video calls for staff groups and parent-teacher meetings — no separate app needed."
+            },
+            "library": {
+                "title": "Library",
+                "description": "Catalog, lending and returns, with live availability tracked automatically."
+            },
+            "transport": {
+                "title": "Transport",
+                "description": "Bus routes, daily assignments and ride tracking, organized by line."
+            },
+            "hostel": {
+                "title": "Hostel",
+                "description": "Room allocation and occupancy for resident students, tracked in real time."
+            },
+            "schoolSetup": {
+                "title": "School Setup",
+                "description": "Grade levels, classes and sections configured to match how your school is actually structured."
+            }
+        },
+        "featuresEyebrow": "Built for real schools",
+        "featuresTitle": "Accessible to parents, staff, and students alike",
+        "features": {
+            "portal": {
+                "title": "Parent & student portal",
+                "description": "Parents and students check grades, attendance, and fees without calling the office."
+            },
+            "mobileApp": {
+                "title": "Mobile app",
+                "description": "A dedicated app for parents and students alongside the web portal."
+            },
+            "arabic": {
+                "title": "Full Arabic support",
+                "description": "Every screen, report and notification works fully in Arabic, RTL included — as shown above."
+            }
+        },
+        "faqTitle": "Questions, answered",
+        "faq": {
+            "q1": "Is School 360 built on a platform we can trust long-term?",
+            "a1": "Yes — it's built on Odoo 19, a mature open-source ERP used worldwide, so you're never locked into a closed system.",
+            "q2": "Can it be customized for how our school actually works?",
+            "a2": "Yes — as an Odoo-based system, modules can be configured or extended to match your school's specific workflow.",
+            "q3": "Does it really work fully in Arabic?",
+            "a3": "Completely. The portal, notifications, and reports are fully localized for Arabic-speaking staff, parents and students."
+        },
+        "ctaTitle": "See School 360 on your data",
+        "ctaButton": "Book a demo →",
+        "alsoIncludedEyebrow": "Also included",
+        "alsoIncludedTitle": "Everything else schools need, built in",
+        "alsoIncluded": {
+            "attendance": {
+                "title": "Attendance",
+                "description": "Daily attendance tracking for students and staff, with instant visibility."
+            },
+            "fees": {
+                "title": "Fees",
+                "description": "Tuition and fee collection, invoicing, and payment tracking in one place."
+            },
+            "hr": {
+                "title": "HR",
+                "description": "Staff records, payroll, and HR workflows for teaching and admin staff."
+            },
+            "canteen": {
+                "title": "Canteen",
+                "description": "Meal plans and canteen orders, connected to student accounts."
             }
         }
     },
     "finalCta": {
         "headline": "Let's Bring Your Software to Life",
         "subheadline": "Talk to us about your next project, and let's make it real.",
-        "whatsapp": "Chat on WhatsApp",
+        "whatsapp": "Chat on WhatsApp"
+    },
+    "contactPage": {
+        "eyebrow": "Your move",
+        "title": "Let's talk about your project",
+        "subtitle": "Tell us what you're building. We'll come back with a plan, a timeline and a first move — usually within a business day.",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone",
+        "whereLabel": "Where",
+        "bilingualNote": "We reply in English & العربية — usually within one business day.",
+        "backHome": "Back to home",
         "or": "or"
     },
     "contactForm": {
@@ -199,6 +423,7 @@
     },
     "footer": {
         "follow": "Follow us:",
+        "explore": "Explore",
         "find": "Find us:",
         "location": "Giza, Egypt",
         "contact": "Contact us:",

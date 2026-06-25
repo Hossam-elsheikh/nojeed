@@ -1,22 +1,17 @@
-import { Hero } from '@/sections/Hero'
-import { Services } from '@/sections/Services'
-import { Process } from '@/sections/Process'
-import { WhyUs } from '@/sections/WhyUs'
-import { Portfolio } from '@/sections/Portfolio'
-// import { Testimonials } from '@/sections/Testimonials'
-import { FinalCta } from '@/sections/FinalCta'
+import { Hero } from '@/sections/home/Hero'
+import { Board } from '@/sections/home/Board'
+import { WhyUs } from '@/sections/home/WhyUs'
+import { Reviews } from '@/sections/home/Reviews'
+import { ContactCta } from '@/sections/home/ContactCta'
 
 export default function Home() {
     return (
         <>
             <Hero />
-            <Services />
-            <Process />
+            <Board />
             <WhyUs />
-            <Portfolio />
-            {/* Testimonials hidden for now until real client quotes are ready */}
-            {/* <Testimonials /> */}
-            <FinalCta />
+            <Reviews />
+            <ContactCta />
         </>
     )
 }

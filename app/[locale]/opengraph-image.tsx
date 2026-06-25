@@ -12,7 +12,7 @@ export default function OpengraphImage() {
         (
             <div
                 style={{
-                    background: '#000000',
+                    background: '#16243F',
                     width: '100%',
                     height: '100%',
                     display: 'flex',

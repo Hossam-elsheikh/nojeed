@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import { Cairo } from 'next/font/google'
+import { Cairo, Space_Grotesk, Spectral } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/sections/Header'
 import { Footer } from '@/sections/Footer'
@@ -15,6 +15,19 @@ const cairo = Cairo({
     variable: '--font-cairo',
     subsets: ['arabic', 'latin'],
     weight: ['400', '500', '700'],
+})
+
+const spaceGrotesk = Space_Grotesk({
+    variable: '--font-space-grotesk',
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+})
+
+const spectral = Spectral({
+    variable: '--font-spectral',
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    style: ['normal', 'italic'],
 })
 
 export async function generateMetadata({
@@ -59,7 +72,7 @@ export default async function RootLayout({
 
     return (
         <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale}>
-            <body className={`${cairo.variable} antialiased`}>
+            <body className={`${cairo.variable} ${spaceGrotesk.variable} ${spectral.variable} antialiased`}>
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     <main>{children}</main>

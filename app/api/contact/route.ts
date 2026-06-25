@@ -44,7 +44,7 @@ export async function POST(request: Request) {
     try {
         await transporter.sendMail({
             from: `"Nojeed Website" <${site.email}>`,
-            to: site.email,
+            to: site.contactRecipient,
             replyTo: email,
             subject: `New project inquiry from ${name}`,
             text: `Name: ${name}\nEmail: ${email}\nProject type: ${projectType}\n\nMessage:\n${message}`,

@@ -1,9 +1,19 @@
 @import 'tailwindcss';
 
 @theme {
-    --color-background: #062420;
-    --color-foreground: #ffffff;
-    --color-accent: #c3ed5b;
+    --color-background: #f5eee1;
+    --color-background-alt: #efe6d5;
+    --color-surface: #fbf6ec;
+    --color-foreground: #1c1b18;
+    --color-muted: #56524a;
+    --color-subtle: #8a8578;
+    --color-navy: #16243f;
+    --color-navy-dark: #0e1a30;
+    --color-navy-darker: #0a1426;
+    --color-teal: #0e8e9a;
+    --color-teal-bright: #25c4c7;
+    --color-accent: #a2c753;
+    --color-accent-hover: #92b945;
     --breakpoint-2xl: 90rem;
 }
 
@@ -14,6 +24,18 @@ html {
 body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-space-grotesk), sans-serif;
+}
+
+[dir='rtl'] body {
+    font-family: var(--font-cairo), sans-serif;
+}
+
+.font-serif {
+    font-family: var(--font-spectral), Georgia, serif;
+}
+
+[dir='rtl'] .font-serif {
     font-family: var(--font-cairo), sans-serif;
 }
 
@@ -21,8 +43,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #0d1f1c inset;
-    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 30px var(--color-surface) inset;
+    -webkit-text-fill-color: var(--color-foreground);
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -42,6 +64,22 @@ input:-webkit-autofill:active {
     p {
         font-size: clamp(0.95rem, 2vw, 1.05rem);
         line-height: 1.65;
+    }
+}
+
+@keyframes floaty {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -26;
     }
 }
 

@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/routing'
 import { Logo } from '@/components/Logo'
 import { Container } from '@/components/Container'
 import { LanguageToggle } from '@/components/LanguageToggle'
@@ -11,41 +11,44 @@ import { site } from '@/lib/site'
 
 export function Header() {
     const t = useTranslations('header')
+    const pathname = usePathname()
     const links = [
-        { href: '#services', label: t('services') },
-        { href: '#portfolio', label: t('work') },
-        { href: '#whyus', label: t('whyus') },
-        { href: '#contact', label: t('contact') },
-    ]
+        { href: '/services', label: t('services') },
+        { href: '/projects', label: t('projects') },
+        { href: '/products', label: t('products') },
+        { href: '/contact', label: t('contact') },
+    ] as const
 
     return (
-        <header className="fixed top-0 inset-x-0 z-50 pt-4 px-4">
-            <Container className="px-0">
-                <div className="flex items-center justify-between gap-4 bg-[#013531]/80 backdrop-blur-md border border-white/10 rounded-full px-4 md:px-6 py-3 shadow-2xl">
-                    <Logo />
-                    <nav className="hidden lg:flex items-center gap-1">
-                        {links.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="px-4 py-2 rounded-xl text-sm font-medium text-foreground/90 hover:bg-white/10 hover:text-accent transition"
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
-                    </nav>
-                    <div className="hidden lg:flex items-center gap-3">
-                        <LanguageToggle />
-                        <Button href={site.calendlyHref} className="text-sm">
-                            {t('cta')}
-                        </Button>
-                    </div>
-                    <div className="flex items-center gap-2 lg:hidden">
-                        <Button href={site.calendlyHref} className="text-xs px-4 py-2">
-                            {t('cta')}
-                        </Button>
-                        <MobileMenu />
-                    </div>
+        <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-navy/10">
+            <Container className="flex items-center justify-between gap-4 py-4">
+                <Logo />
+                <nav className="hidden lg:flex items-center gap-7 text-[14.5px] font-medium text-foreground/90">
+                    {links.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={
+                                pathname === link.href
+                                    ? 'text-navy font-bold'
+                                    : 'hover:text-teal transition'
+                            }
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+                </nav>
+                <div className="hidden lg:flex items-center gap-6">
+                    <LanguageToggle />
+                    <Button href={site.calendlyHref} className="text-sm px-5.5 py-2.5">
+                        {t('cta')}
+                    </Button>
+                </div>
+                <div className="flex items-center gap-3 lg:hidden">
+                    <Button href={site.calendlyHref} className="text-xs px-4 py-2">
+                        {t('cta')}
+                    </Button>
+                    <MobileMenu />
                 </div>
             </Container>
         </header>
