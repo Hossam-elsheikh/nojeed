@@ -1,0 +1,13 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stacked coins -->
+  <ellipse cx="56" cy="98" rx="30" ry="12" fill="#F06A2A"/>
+  <rect x="26" y="84" width="60" height="14" fill="#F06A2A"/>
+  <ellipse cx="56" cy="84" rx="30" ry="12" fill="#FF8A4C"/>
+  <ellipse cx="56" cy="72" rx="30" ry="12" fill="#F06A2A"/>
+  <rect x="26" y="58" width="60" height="14" fill="#F06A2A"/>
+  <ellipse cx="56" cy="58" rx="30" ry="12" fill="#FFC23C"/>
+  <!-- Front coin with symbol -->
+  <circle cx="94" cy="56" r="28" fill="#FFC23C"/>
+  <circle cx="94" cy="56" r="22" fill="#F0A91E"/>
+  <text x="94" y="68" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">$</text>
+</svg>

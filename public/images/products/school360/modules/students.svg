@@ -1,0 +1,10 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Back person (teal) -->
+  <circle cx="92" cy="48" r="16" fill="#23B5B5"/>
+  <path d="M68 104 C68 84 78 74 92 74 C106 74 116 84 116 104 Z" fill="#23B5B5"/>
+  <!-- Front person (purple) -->
+  <circle cx="54" cy="54" r="18" fill="#7B3F9E"/>
+  <path d="M26 110 C26 88 38 76 54 76 C70 76 82 88 82 110 Z" fill="#7B3F9E"/>
+  <!-- Front person highlight -->
+  <path d="M54 76 C70 76 82 88 82 110 L54 110 Z" fill="#9B59C4"/>
+</svg>

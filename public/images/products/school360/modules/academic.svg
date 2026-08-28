@@ -1,0 +1,14 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left page -->
+  <path d="M70 42 C58 34 40 32 26 36 L26 100 C40 96 58 98 70 106 Z" fill="#7B3F9E"/>
+  <!-- Right page -->
+  <path d="M70 42 C82 34 100 32 114 36 L114 100 C100 96 82 98 70 106 Z" fill="#9B59C4"/>
+  <!-- Spine -->
+  <rect x="67" y="42" width="6" height="64" rx="2" fill="#5E2E7C"/>
+  <!-- Text lines left -->
+  <path d="M36 50 L60 54 M36 62 L60 66 M36 74 L60 78" stroke="#C79BDD" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Text lines right -->
+  <path d="M80 54 L104 50 M80 66 L104 62 M80 78 L104 74" stroke="#D9BCEC" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Bookmark ribbon -->
+  <path d="M92 32 L92 60 L100 52 L108 60 L108 32 Z" fill="#FF8A4C"/>
+</svg>

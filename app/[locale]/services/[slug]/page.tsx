@@ -33,7 +33,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     const index = services.findIndex((s) => s.slug === slug)
     const tServices = await getTranslations('services')
     const tHeader = await getTranslations('header')
-    const tPieces = await getTranslations('pieces')
     const t = await getTranslations('servicesPage')
     const tProcess = await getTranslations('process')
     const stack = stacksBySlug[slug as ServiceSlug]
@@ -53,7 +52,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         </div>
                         <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal mt-4.5">
                             <span className="size-1.5 rounded-full bg-accent" />
-                            {tPieces(service.piece)} · {t('detail.servicePrefix')} 0{index + 1}
+                            {t('detail.servicePrefix')} 0{index + 1}
                         </div>
                         <h1 className="font-serif font-medium text-navy text-[clamp(40px,5.2vw,64px)] leading-[1.04] mt-3.5">
                             {tServices(`${service.key}.title`)}

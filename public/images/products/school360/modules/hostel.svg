@@ -1,0 +1,13 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Building body -->
+  <rect x="30" y="48" width="80" height="66" rx="6" fill="#7B3F9E"/>
+  <!-- Roof -->
+  <path d="M24 50 L70 24 L116 50 Z" fill="#9B59C4"/>
+  <!-- Door -->
+  <rect x="60" y="84" width="20" height="30" rx="3" fill="#FFC23C"/>
+  <!-- Windows -->
+  <rect x="40" y="62" width="16" height="16" rx="3" fill="#23B5B5"/>
+  <rect x="84" y="62" width="16" height="16" rx="3" fill="#23B5B5"/>
+  <rect x="40" y="86" width="14" height="14" rx="3" fill="#FF8A4C"/>
+  <rect x="86" y="86" width="14" height="14" rx="3" fill="#FF8A4C"/>
+</svg>

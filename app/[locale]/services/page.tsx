@@ -16,7 +16,6 @@ export default async function ServicesPage() {
     const t = await getTranslations('servicesPage')
     const tServices = await getTranslations('services')
     const tHeader = await getTranslations('header')
-    const tPieces = await getTranslations('pieces')
     const tProcess = await getTranslations('process')
 
     return (
@@ -52,7 +51,7 @@ export default async function ServicesPage() {
                                         <Icon className="text-teal-bright" size={26} aria-hidden="true" />
                                     </span>
                                     <span className="text-xs font-semibold uppercase tracking-[0.14em] text-subtle">
-                                        {tPieces(service.piece)} · 0{index + 1}
+                                        0{index + 1}
                                     </span>
                                 </div>
                                 <h3 className="font-serif font-medium text-[25px] text-navy mt-4.5">

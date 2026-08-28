@@ -1,0 +1,18 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Plate -->
+  <circle cx="70" cy="70" r="34" fill="#23B5B5"/>
+  <circle cx="70" cy="70" r="22" fill="#F0FAFA"/>
+  <!-- Fork -->
+  <g fill="#7B3F9E">
+    <rect x="22" y="28" width="4" height="22" rx="2"/>
+    <rect x="30" y="28" width="4" height="22" rx="2"/>
+    <rect x="38" y="28" width="4" height="22" rx="2"/>
+    <path d="M22 48 L42 48 L40 60 C40 66 36 70 32 70 C28 70 24 66 24 60 Z"/>
+    <rect x="29" y="66" width="6" height="46" rx="3"/>
+  </g>
+  <!-- Knife -->
+  <g fill="#FF8A4C">
+    <path d="M112 28 C104 30 100 44 100 58 L108 58 Z"/>
+    <rect x="103" y="56" width="6" height="56" rx="3"/>
+  </g>
+</svg>

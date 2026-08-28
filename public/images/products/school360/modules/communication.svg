@@ -1,0 +1,10 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Back bubble (teal) -->
+  <path d="M58 34 L112 34 C118 34 122 38 122 44 L122 76 C122 82 118 86 112 86 L96 86 L96 100 L82 86 L58 86 C52 86 48 82 48 76 L48 44 C48 38 52 34 58 34 Z" fill="#23B5B5"/>
+  <circle cx="78" cy="60" r="4" fill="#ffffff"/>
+  <circle cx="92" cy="60" r="4" fill="#ffffff"/>
+  <circle cx="106" cy="60" r="4" fill="#ffffff"/>
+  <!-- Front bubble (purple) -->
+  <path d="M30 50 L74 50 C80 50 84 54 84 60 L84 86 C84 92 80 96 74 96 L58 96 L44 110 L44 96 L30 96 C24 96 20 92 20 86 L20 60 C20 54 24 50 30 50 Z" fill="#7B3F9E"/>
+  <path d="M34 66 L66 66 M34 78 L56 78" stroke="#C79BDD" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

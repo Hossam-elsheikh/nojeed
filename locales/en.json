@@ -274,104 +274,258 @@
     },
     "productsPage": {
         "eyebrow": "Software we own",
-        "title": "School 360",
-        "builtOnLabel": "Built on Odoo 19",
-        "subtitle": "A modular school management system covering everything from admissions to the canteen — with a parent/student portal, Telegram and mobile notifications, video calls, and full Arabic support.",
-        "cta1": "Talk to us about School 360",
-        "cta2": "Request a demo",
-        "modulesEyebrow": "What's inside",
-        "modulesTitle": "One system, every part of school operations",
-        "modules": {
-            "admissions": {
-                "title": "Admissions",
-                "description": "Manage applications and enrollment from first inquiry to a confirmed seat."
+        "title": "Products we build, run, and stand behind",
+        "intro": "Not client work. These are our own products — designed, shipped, and still being improved by the same team you'd be hiring.",
+        "viewProduct": "Explore the product",
+        "nextProduct": "Next product",
+        "cards": {
+            "nabih": {
+                "name": "Nabih",
+                "tag": "Mobile app",
+                "meta": "Flutter · Android · Live on Google Play",
+                "description": "An offline personal assistant that gathers prayers, habits, reading, and spending into one list for today. No account, no server, encrypted on the device."
             },
-            "students": {
-                "title": "Students",
-                "description": "A complete student record — profiles, classes, guardians, and admission history."
-            },
-            "academic": {
-                "title": "Academic Affairs",
-                "description": "Curriculum, lesson plans and teaching resources, organized by subject and grade."
-            },
-            "exams": {
-                "title": "Exams & Grading",
-                "description": "Exam schedules, results entry, and pass-rate analytics — published the moment they're ready."
-            },
-            "calendar": {
-                "title": "Calendar & Meetings",
-                "description": "School-wide events, parent meetings and staff schedules, visible to everyone who needs them."
-            },
-            "communication": {
-                "title": "Announcements & Notifications",
-                "description": "Send updates straight to Telegram and the mobile app — parents and staff see them where they actually check."
-            },
-            "discussion": {
-                "title": "Team Chat & Video Calls",
-                "description": "Built-in channels and video calls for staff groups and parent-teacher meetings — no separate app needed."
-            },
-            "library": {
-                "title": "Library",
-                "description": "Catalog, lending and returns, with live availability tracked automatically."
-            },
-            "transport": {
-                "title": "Transport",
-                "description": "Bus routes, daily assignments and ride tracking, organized by line."
-            },
-            "hostel": {
-                "title": "Hostel",
-                "description": "Room allocation and occupancy for resident students, tracked in real time."
-            },
-            "schoolSetup": {
-                "title": "School Setup",
-                "description": "Grade levels, classes and sections configured to match how your school is actually structured."
+            "school360": {
+                "name": "School 360",
+                "tag": "School management",
+                "meta": "Odoo 19 · Web portal · Mobile app",
+                "description": "A modular school management system covering everything from admissions to the canteen — with a parent and student portal, mobile notifications, and full Arabic support."
             }
         },
-        "featuresEyebrow": "Built for real schools",
-        "featuresTitle": "Accessible to parents, staff, and students alike",
-        "features": {
-            "portal": {
-                "title": "Parent & student portal",
-                "description": "Parents and students check grades, attendance, and fees without calling the office."
+        "ctaTitle": "Have a product of your own in mind?",
+        "ctaButton": "Talk to us →"
+    },
+    "products": {
+        "nabih": {
+            "eyebrow": "Product · Mobile app",
+            "title": "Nabih keeps track, so you don't have to.",
+            "subtitle": "A personal assistant that gathers what recurs, what progresses, and what you log into one list for today. It speaks your dialect, and reminds without reproach.",
+            "meaning": "Nabih — نبيه — is Arabic for attentive: quick to notice.",
+            "ctaStore": "Get it on Google Play",
+            "ctaSite": "nabih.nojeed.me",
+            "ctaNote": "Android 8+ · one-time purchase · no account",
+            "chips": {
+                "noServer": "No server",
+                "encrypted": "Encrypted on device",
+                "offline": "Works offline"
             },
-            "mobileApp": {
-                "title": "Mobile app",
-                "description": "A dedicated app for parents and students alongside the web portal."
+            "stats": {
+                "cities": "cities held offline",
+                "marks": "milestone marks",
+                "locales": "languages and dialects"
             },
-            "arabic": {
-                "title": "Full Arabic support",
-                "description": "Every screen, report and notification works fully in Arabic, RTL included — as shown above."
-            }
+            "primitivesEyebrow": "How it works",
+            "primitivesTitle": "One engine, three shapes",
+            "primitivesIntro": "Nabih is not seven small apps in a bundle. Everything it tracks reduces to one of three shapes, and every area is a declarative file rather than a screen of its own — which is why a new area costs no new code.",
+            "primitives": {
+                "recurring": {
+                    "title": "Recurring",
+                    "question": "Am I still keeping this up?",
+                    "description": "Prayers, Quran, workouts, medication, calling your mother. A fixed cadence, or an elastic one measured from the last time you actually did it.",
+                    "example": "Usually every 6 days · last done 9 days ago"
+                },
+                "progress": {
+                    "title": "Progress",
+                    "question": "How far along am I?",
+                    "description": "Books, courses, a syllabus, a memorization plan, a savings target. A total, a finish date, and the pace today asks for.",
+                    "example": "61 of 480 pages · 4 a day gets you there"
+                },
+                "log": {
+                    "title": "Log",
+                    "question": "What has my behaviour looked like?",
+                    "description": "Spending, weight, sleep, water, workout volume. Numbers recorded with categories and described back to you, never scored.",
+                    "example": "1,580 left over 9 days · 175 a day"
+                }
+            },
+            "areasEyebrow": "What you switch on",
+            "areasTitle": "Open the areas you want, and leave the rest",
+            "areasIntro": "Each area is something you turn on yourself. Open two or open seven, and change your mind whenever you like — whatever is due gathers on a single screen, ordered by what is actually pressing.",
+            "areas": {
+                "prayers": "Prayers",
+                "quran": "Quran reading",
+                "habits": "Habits",
+                "books": "Books & study",
+                "spending": "Spending",
+                "people": "Family & friends",
+                "exercise": "Exercise"
+            },
+            "areasNote": "Prayer times are calculated on the device from a built-in list of more than six thousand cities. Nothing is ever looked up online.",
+            "featuresEyebrow": "What it actually does",
+            "featuresTitle": "Attentive, and never pushy",
+            "features": {
+                "rhythm": {
+                    "title": "Recurring items learn your rhythm instead of imposing a schedule.",
+                    "description": "Every person and every habit has its own pulse. Nabih watches what you actually do, works out the natural gap, and speaks up when you fall behind it — not every day out of duty.",
+                    "quote": "It's been 9 days since you called Khaled. You usually call every 6."
+                },
+                "finishLine": {
+                    "title": "Progress arrives, because it has a finish line.",
+                    "description": "Every book or course carries a target and a date. Nabih tells you the pace today asks for and compares it with your real one — without alarming you about it.",
+                    "quote": "Four pages a day gets you there. You're two days ahead."
+                },
+                "ceiling": {
+                    "title": "Logs come with an elastic ceiling, not a hard limit.",
+                    "description": "Spending, water, weight — any number you record. Nabih says how much is left and over how many days, and describes last week without passing judgement on it.",
+                    "quote": "1,580 left over 9 days — that's 175 a day."
+                },
+                "summary": {
+                    "title": "A weekly summary that describes rather than advises.",
+                    "description": "Once a week Nabih tells you what changed in your rhythm — not what you ought to do about it. No grades, and no comparison with anybody else.",
+                    "quote": "Reading moved from mornings to after dinner, and held better there."
+                }
+            },
+            "quietEyebrow": "Quiet by design",
+            "quietTitle": "It speaks only when there is something to say",
+            "quiet": {
+                "notifications": {
+                    "title": "Quiet notifications",
+                    "description": "One fact and two actions on the lock screen. You set how often Nabih may speak and the hours it must stay silent, and it works inside that budget instead of notifying you for everything."
+                },
+                "widgets": {
+                    "title": "Home screen widgets",
+                    "description": "Two or three items at most: what's late, and what's next. Tick things off without opening the app at all."
+                },
+                "marks": {
+                    "title": "35 milestone marks",
+                    "description": "Marks earned once, along the way. None is ever taken away, none is scored out of a total, and prayer and Quran reading earn none of them — worship is not a game."
+                }
+            },
+            "noShameTitle": "What it will not do",
+            "noShameBody": "Nabih will not tell you that you are behind, compare you with anybody else, or use a broken streak to make you anxious. Anything to do with food, weight, or exercise carries no target at all. Disappear for a month and come back, and it picks up where you left off without comment.",
+            "privacyEyebrow": "Privacy",
+            "privacyTitle": "No account. No server. No ads.",
+            "privacyBody": "Nabih collects nothing. Everything you record is written to an encrypted database on your own device, its key held in the platform keystore. There is nowhere for your data to be sent, because that service does not exist.",
+            "privacy": {
+                "signup": "No sign-up, and no identifier of any kind",
+                "tracking": "No usage tracking, no crash reports",
+                "ads": "No ads, no advertising ID",
+                "backup": "No cloud backup — the backup file is yours",
+                "internet": "The internet is unused in this release"
+            },
+            "privacyNote": "Everything can be exported to a single file, optionally protected with a password, and restored on any device. Correcting an entry records the correction rather than erasing what was there.",
+            "langEyebrow": "Your language",
+            "langTitle": "It sounds like someone from where you're from",
+            "langBody": "Arabic in Modern Standard and four dialects, plus three European languages — authored by native speakers, never machine-translated. Numerals, calendar, first day of the week, and currency are settings of their own, so English in Cairo still means Egyptian pounds and a week that starts on Saturday.",
+            "dialectsLabel": "Arabic",
+            "languagesLabel": "Also in",
+            "dialects": {
+                "msa": "Modern Standard",
+                "egyptian": "Egyptian",
+                "saudi": "Saudi",
+                "levantine": "Levantine",
+                "moroccan": "Moroccan"
+            },
+            "languages": {
+                "english": "English",
+                "french": "French",
+                "german": "German"
+            },
+            "rtl": "Right-to-left layout throughout",
+            "screensNote": "Real screens from the app.",
+            "stackLabel": "Built with",
+            "ctaTitle": "Let your mind rest. Nabih is keeping track.",
+            "ctaButton": "Get it on Google Play"
         },
-        "faqTitle": "Questions, answered",
-        "faq": {
-            "q1": "Is School 360 built on a platform we can trust long-term?",
-            "a1": "Yes — it's built on Odoo 19, a mature open-source ERP used worldwide, so you're never locked into a closed system.",
-            "q2": "Can it be customized for how our school actually works?",
-            "a2": "Yes — as an Odoo-based system, modules can be configured or extended to match your school's specific workflow.",
-            "q3": "Does it really work fully in Arabic?",
-            "a3": "Completely. The portal, notifications, and reports are fully localized for Arabic-speaking staff, parents and students."
-        },
-        "ctaTitle": "See School 360 on your data",
-        "ctaButton": "Book a demo →",
-        "alsoIncludedEyebrow": "Also included",
-        "alsoIncludedTitle": "Everything else schools need, built in",
-        "alsoIncluded": {
-            "attendance": {
-                "title": "Attendance",
-                "description": "Daily attendance tracking for students and staff, with instant visibility."
+        "school360": {
+            "eyebrow": "Product · School management",
+            "builtOnLabel": "Built on Odoo 19",
+            "subtitle": "A modular school management system covering everything from admissions to the canteen — with a parent and student portal, Telegram and mobile notifications, video calls, and full Arabic support.",
+            "cta1": "Talk to us about School 360",
+            "cta2": "Request a demo",
+            "modulesEyebrow": "What's inside",
+            "modulesTitle": "One system, every part of school operations",
+            "modules": {
+                "admissions": {
+                    "title": "Admissions",
+                    "description": "Manage applications and enrollment from first inquiry to a confirmed seat."
+                },
+                "students": {
+                    "title": "Students",
+                    "description": "A complete student record — profiles, classes, guardians, and admission history."
+                },
+                "academic": {
+                    "title": "Academic Affairs",
+                    "description": "Curriculum, lesson plans and teaching resources, organized by subject and grade."
+                },
+                "exams": {
+                    "title": "Exams & Grading",
+                    "description": "Exam schedules, results entry, and pass-rate analytics — published the moment they're ready."
+                },
+                "calendar": {
+                    "title": "Calendar & Meetings",
+                    "description": "School-wide events, parent meetings and staff schedules, visible to everyone who needs them."
+                },
+                "communication": {
+                    "title": "Announcements & Notifications",
+                    "description": "Send updates straight to Telegram and the mobile app — parents and staff see them where they actually check."
+                },
+                "discussion": {
+                    "title": "Team Chat & Video Calls",
+                    "description": "Built-in channels and video calls for staff groups and parent-teacher meetings — no separate app needed."
+                },
+                "library": {
+                    "title": "Library",
+                    "description": "Catalog, lending and returns, with live availability tracked automatically."
+                },
+                "transport": {
+                    "title": "Transport",
+                    "description": "Bus routes, daily assignments and ride tracking, organized by line."
+                },
+                "hostel": {
+                    "title": "Hostel",
+                    "description": "Room allocation and occupancy for resident students, tracked in real time."
+                },
+                "schoolSetup": {
+                    "title": "School Setup",
+                    "description": "Grade levels, classes and sections configured to match how your school is actually structured."
+                }
             },
-            "fees": {
-                "title": "Fees",
-                "description": "Tuition and fee collection, invoicing, and payment tracking in one place."
+            "featuresEyebrow": "Built for real schools",
+            "featuresTitle": "Accessible to parents, staff, and students alike",
+            "features": {
+                "portal": {
+                    "title": "Parent & student portal",
+                    "description": "Parents and students check grades, attendance, and fees without calling the office."
+                },
+                "mobileApp": {
+                    "title": "Mobile app",
+                    "description": "A dedicated app for parents and students alongside the web portal."
+                },
+                "arabic": {
+                    "title": "Full Arabic support",
+                    "description": "Every screen, report and notification works fully in Arabic, RTL included."
+                }
             },
-            "hr": {
-                "title": "HR",
-                "description": "Staff records, payroll, and HR workflows for teaching and admin staff."
+            "faqTitle": "Questions, answered",
+            "faq": {
+                "q1": "Is School 360 built on a platform we can trust long-term?",
+                "a1": "Yes — it's built on Odoo 19, a mature open-source ERP used worldwide, so you're never locked into a closed system.",
+                "q2": "Can it be customized for how our school actually works?",
+                "a2": "Yes — as an Odoo-based system, modules can be configured or extended to match your school's specific workflow.",
+                "q3": "Does it really work fully in Arabic?",
+                "a3": "Completely. The portal, notifications, and reports are fully localized for Arabic-speaking staff, parents and students."
             },
-            "canteen": {
-                "title": "Canteen",
-                "description": "Meal plans and canteen orders, connected to student accounts."
+            "ctaTitle": "See School 360 on your data",
+            "ctaButton": "Book a demo →",
+            "alsoIncludedEyebrow": "Also included",
+            "alsoIncludedTitle": "Everything else schools need, built in",
+            "alsoIncluded": {
+                "attendance": {
+                    "title": "Attendance",
+                    "description": "Daily attendance tracking for students and staff, with instant visibility."
+                },
+                "fees": {
+                    "title": "Fees",
+                    "description": "Tuition and fee collection, invoicing, and payment tracking in one place."
+                },
+                "hr": {
+                    "title": "HR",
+                    "description": "Staff records, payroll, and HR workflows for teaching and admin staff."
+                },
+                "canteen": {
+                    "title": "Canteen",
+                    "description": "Meal plans and canteen orders, connected to student accounts."
+                }
             }
         }
     },

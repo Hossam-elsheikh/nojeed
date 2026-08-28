@@ -1,0 +1,14 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chat bubble -->
+  <path d="M20 12 L74 12 C80 12 84 16 84 22 L84 40 C84 46 80 50 74 50 L46 50 L34 60 L34 50 L20 50 C14 50 10 46 10 40 L10 22 C10 16 14 12 20 12 Z" fill="#FFC23C"/>
+  <circle cx="30" cy="31" r="4" fill="#F0A91E"/>
+  <circle cx="47" cy="31" r="4" fill="#F0A91E"/>
+  <circle cx="64" cy="31" r="4" fill="#F0A91E"/>
+  <!-- Video window -->
+  <rect x="22" y="58" width="76" height="58" rx="12" fill="#7B3F9E"/>
+  <circle cx="60" cy="80" r="11" fill="#F4ECFA"/>
+  <path d="M42 110 C42 98 50 92 60 92 C70 92 78 98 78 110 Z" fill="#F4ECFA"/>
+  <circle cx="34" cy="70" r="5" fill="#FF5C7A"/>
+  <!-- Camera -->
+  <path d="M102 74 L126 62 L126 112 L102 100 Z" fill="#23B5B5"/>
+</svg>

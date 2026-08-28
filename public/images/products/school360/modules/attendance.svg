@@ -1,0 +1,13 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Calendar body -->
+  <rect x="26" y="34" width="88" height="80" rx="10" fill="#7B3F9E"/>
+  <!-- Header band -->
+  <path d="M26 44 C26 38 31 34 36 34 L104 34 C109 34 114 38 114 44 L114 54 L26 54 Z" fill="#5E2E7C"/>
+  <!-- Page area -->
+  <rect x="34" y="60" width="72" height="46" rx="6" fill="#F4ECFA"/>
+  <!-- Hanger rings -->
+  <rect x="44" y="26" width="8" height="18" rx="4" fill="#FF8A4C"/>
+  <rect x="88" y="26" width="8" height="18" rx="4" fill="#FF8A4C"/>
+  <!-- Check -->
+  <path d="M52 82 L64 94 L90 70" stroke="#2BB673" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
