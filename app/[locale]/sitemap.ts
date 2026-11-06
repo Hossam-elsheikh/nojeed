@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = site.baseUrl
     const lastModified = new Date()
 
-    const staticPaths = ['', '/services', '/projects', '/products', '/contact']
+    const staticPaths = ['', '/services', '/projects', '/products', '/contact', '/privacy/fusions']
     const dynamicPaths = [
         ...services.map((s) => `/services/${s.slug}`),
         ...portfolioProjects.map((p) => `/projects/${p.key}`),

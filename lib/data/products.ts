@@ -32,6 +32,13 @@ export const products = [
         mark: '/images/products/school360/mark.png',
         icon: '/images/products/school360/modules/school-setup.svg',
     },
+    {
+        key: 'fusions',
+        slug: 'fusions',
+        icon: '/images/products/fusions/icon.png',
+        siteHref: '/products/fusions',
+        privacyHref: '/privacy/fusions',
+    },
 ] as const
 
 export type ProductSlug = (typeof products)[number]['slug']

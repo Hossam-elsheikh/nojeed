@@ -47,6 +47,10 @@ export const routing = defineRouting({
             en: '/privacy',
             ar: '/privacy',
         },
+        '/privacy/fusions': {
+            en: '/privacy/fusions',
+            ar: '/privacy/fusions',
+        },
     },
 })
 

@@ -6,6 +6,7 @@ import { Container } from '@/components/Container'
 import { products } from '@/lib/data/products'
 import { NabihProduct } from '@/sections/products/NabihProduct'
 import { School360Product } from '@/sections/products/School360Product'
+import { FusionsProduct } from '@/sections/products/FusionsProduct'
 
 export function generateStaticParams() {
     return products.map((product) => ({ slug: product.slug }))
@@ -32,11 +33,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     const locale = await getLocale()
     const nextProduct = next.key === product.key ? null : <NextProductLink slug={next.slug} productKey={next.key} />
 
-    return product.key === 'nabih' ? (
-        <NabihProduct locale={locale}>{nextProduct}</NabihProduct>
-    ) : (
-        <School360Product>{nextProduct}</School360Product>
-    )
+    if (product.key === 'nabih') return <NabihProduct locale={locale}>{nextProduct}</NabihProduct>
+    if (product.key === 'school360') return <School360Product>{nextProduct}</School360Product>
+    return <FusionsProduct>{nextProduct}</FusionsProduct>
 }
 
 async function NextProductLink({ slug, productKey }: { slug: string; productKey: string }) {

@@ -49,7 +49,13 @@ export default async function ProductsPage() {
                             }}
                             className="group flex flex-col overflow-hidden rounded-[20px] border border-navy/10 bg-surface transition-all hover:-translate-y-1 hover:border-accent"
                         >
-                            {product.key === 'nabih' ? <NabihPreview locale={locale} /> : <School360Preview />}
+                            {product.key === 'nabih' ? (
+                                <NabihPreview locale={locale} />
+                            ) : product.key === 'school360' ? (
+                                <School360Preview />
+                            ) : (
+                                <FusionsPreview />
+                            )}
 
                             <div className="flex flex-1 flex-col p-7">
                                 <div className="flex flex-wrap items-center gap-3">
@@ -134,6 +140,22 @@ function School360Preview() {
                     />
                 ))}
             </div>
+        </div>
+    )
+}
+
+
+function FusionsPreview() {
+    return (
+        <div className="relative h-[300px] overflow-hidden bg-[#100d20]">
+            <Image
+                src="/images/products/fusions/screens/hub.png"
+                alt=""
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover object-top opacity-90"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface to-transparent" aria-hidden="true" />
         </div>
     )
 }

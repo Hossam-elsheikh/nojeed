@@ -53,7 +53,7 @@
             "products": {
                 "eyebrow": "Products",
                 "title": "Software we own",
-                "description": "School 360 — a full school management system we built on Odoo, ready to deploy.",
+                "description": "Nabih, School 360, and Fusions — products we built for the way people live, learn, and play.",
                 "cta": "Explore School 360 →"
             }
         }
@@ -290,6 +290,12 @@
                 "tag": "School management",
                 "meta": "Odoo 19 · Web portal · Mobile app",
                 "description": "A modular school management system covering everything from admissions to the canteen — with a parent and student portal, mobile notifications, and full Arabic support."
+            },
+            "fusions": {
+                "name": "Fusions",
+                "tag": "Mobile arcade game",
+                "meta": "Flutter · Android · Offline play",
+                "description": "A collection of short arcade games you can play solo, then fuse into new challenges by mixing each game’s rules."
             }
         },
         "ctaTitle": "Have a product of your own in mind?",
@@ -527,6 +533,53 @@
                     "description": "Meal plans and canteen orders, connected to student accounts."
                 }
             }
+        },
+        "fusions": {
+            "eyebrow": "Product · Mobile game",
+            "title": "Short arcade games. Unexpected combinations.",
+            "subtitle": "Pick a quick arcade game, then add another game’s signature rule and see the run change. Fusions turns familiar one-finger controls into fresh combinations, with daily challenges and records to explore.",
+            "chips": {
+                "platform": "Android",
+                "offline": "Play offline",
+                "account": "No account"
+            },
+            "heroAlt": "The Fusions home screen with its Daily Lab and arcade game collection.",
+            "screenshotsEyebrow": "Inside the game",
+            "screenshotsTitle": "A collection of quick runs and rule mixes",
+            "screenshots": {
+                "hub": {
+                    "title": "The Hub",
+                    "alt": "Fusions Hub screen showing Daily Lab challenges and the game collection."
+                },
+                "picker": {
+                    "title": "Build a fusion",
+                    "alt": "Fusion picker showing a Core and a rule-changing Twist."
+                },
+                "snake": {
+                    "title": "Arcade gameplay",
+                    "alt": "Pixel-style Snake gameplay with collectibles and hazards."
+                }
+            },
+            "featuresEyebrow": "How it plays",
+            "featuresTitle": "Choose a game. Add a rule. Make it yours.",
+            "features": {
+                "core": {
+                    "title": "Quick arcade games",
+                    "description": "Play short, one-finger arcade runs, each with its own goal and style."
+                },
+                "fusion": {
+                    "title": "Mix the rules",
+                    "description": "Fuse one game with another game’s Twist to change how a run plays."
+                },
+                "daily": {
+                    "title": "Daily Lab and Codex",
+                    "description": "Take on the daily set, discover combinations, and keep your personal bests."
+                }
+            },
+            "privacyTitle": "Your progress stays on your device",
+            "privacyBody": "Fusions does not require an account. Game records and preferences are saved locally. The current release has no ads, analytics, or cloud sync.",
+            "privacyLink": "Read the Fusions Privacy Policy",
+            "contact": "Questions about Fusions? Contact Nojeed."
         }
     },
     "finalCta": {
@@ -700,5 +753,45 @@
         "terms": "Terms of Service",
         "privacy": "Privacy Policy",
         "rights": "All rights reserved"
+    },
+    "fusionsPrivacyPage": {
+        "eyebrow": "Fusions · Privacy",
+        "title": "Fusions Privacy Policy",
+        "updated": "Last updated: November 6, 2026",
+        "intro": "This policy explains how Fusions, the mobile arcade game published by Nojeed, handles information. It applies to the Fusions app and is separate from the privacy policy for the Nojeed website and other products.",
+        "sections": {
+            "s1": {
+                "title": "1. Who publishes Fusions",
+                "body": "Fusions is published by Nojeed Software Solutions (“Nojeed,” “we,” or “us”). This policy is specifically for the Fusions mobile game."
+            },
+            "s2": {
+                "title": "2. Information saved on your device",
+                "body": "Fusions saves gameplay progress and app preferences on your device. This can include scores, number of runs, play time, last-played times, Power balance and refill date, your last fusion, selected theme, music and sound settings, haptics, and reduced-motion preference. The app does not ask you to create an account or provide your name, email, contacts, location, photos, or microphone recordings."
+            },
+            "s3": {
+                "title": "3. How that information is used",
+                "body": "The app uses locally saved information to remember progress and preferences, show records, and run game features such as the daily Power refill. Nojeed does not receive these saved values."
+            },
+            "s4": {
+                "title": "4. Information collected or sent by the app",
+                "body": "The current version of Fusions does not have an account service, cloud synchronization, advertising, analytics, or online leaderboard service. It does not send the gameplay records or preferences listed above to Nojeed. If the app’s data practices change, we will update this policy and the app’s Google Play disclosures."
+            },
+            "s5": {
+                "title": "5. Sharing and third-party services",
+                "body": "Nojeed does not sell or share Fusions gameplay records or preferences with other parties. Google Play handles app distribution and may process information under Google’s own privacy terms when you use Google Play. The current app does not include an ad or analytics service."
+            },
+            "s6": {
+                "title": "6. Retention and deletion",
+                "body": "Your saved game data remains in the app’s local storage until you clear the app’s storage or uninstall Fusions. Android device backup settings may include app data in backups managed by your device platform; those backups are controlled by the platform, not Nojeed. Fusions has no user account or Nojeed-held gameplay data to delete."
+            },
+            "s7": {
+                "title": "7. Storage and security",
+                "body": "Fusions stores its progress in the app’s private storage on your device. Nojeed does not operate a server containing your game records. Protect access to your device and review its backup settings. No local storage method can protect data if a device or its operating system is compromised."
+            },
+            "s8": {
+                "title": "8. Changes and contact",
+                "body": "We may update this policy when the app or its data practices change. The latest version will be posted on this page with a revised date. For questions about Fusions privacy, contact Nojeed at nojeed.eg@gmail.com."
+            }
+        }
     }
 }
