@@ -296,6 +296,12 @@
                 "tag": "Mobile arcade game",
                 "meta": "Flutter · Android · Offline play",
                 "description": "A collection of short arcade games you can play solo, then fuse into new challenges by mixing each game’s rules."
+            },
+            "sandwich": {
+                "name": "Sandwich",
+                "tag": "Restaurant platform",
+                "meta": "Web · Multi-branch · Arabic-first",
+                "description": "One platform for restaurant orders, branches, POS, kitchen operations, delivery, online ordering, menu management, customers, and reports."
             }
         },
         "ctaTitle": "Have a product of your own in mind?",
@@ -580,6 +586,21 @@
             "privacyBody": "Fusions does not require an account. Game records and preferences are saved locally. Online leaderboards through Google Play Games are optional. The current release has no ads, analytics, or cloud sync.",
             "privacyLink": "Read the Fusions Privacy Policy",
             "contact": "Questions about Fusions? Contact Nojeed."
+        },
+        "sandwich": {
+            "eyebrow": "Product · Restaurant operations",
+            "title": "Every branch. Every order channel. One system.",
+            "subtitle": "Sandwich is an Arabic-first restaurant operations platform for multi-branch teams. It connects the call center, branch orders, kitchen, delivery, POS, online store, menu, customers, and reporting.",
+            "heroAlt": "Sandwich restaurant dashboard and product overview.",
+            "chips": {
+                "multiBranch": "Multi-branch",
+                "arabicFirst": "Arabic-first",
+                "offlinePos": "Offline-ready POS"
+            },
+            "demoLink": "Try the live demo",
+            "videoEyebrow": "Full product walkthrough",
+            "videoTitle": "Sandwich — Full product walkthrough",
+            "videoDescription": "Follow an order from the call center and cashier through the branch, kitchen, and delivery. The walkthrough also covers online ordering, menu management, and reporting."
         }
     },
     "finalCta": {

@@ -39,6 +39,12 @@ export const products = [
         siteHref: '/products/fusions',
         privacyHref: '/privacy/fusions',
     },
+    {
+        key: 'sandwich',
+        slug: 'sandwich',
+        thumbnail: '/images/products/sandwich/thumbnail.png',
+        siteHref: 'https://sandwich.nojeed.me',
+    },
 ] as const
 
 export type ProductSlug = (typeof products)[number]['slug']
@@ -98,6 +104,7 @@ export const nabihLanguages = ['english', 'french', 'german'] as const
 /* -------------------------------------------------------------------------- */
 
 export const school360 = products[1]
+export const sandwich = products[3]
 
 const moduleIcon = (file: string) => `/images/products/school360/modules/${file}.svg`
 
