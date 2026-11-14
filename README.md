@@ -34,7 +34,7 @@ npm run dev
 
 Copy `.env.example` to `.env.local` and fill in:
 
-- `GMAIL_APP_PASSWORD` — required for the contact form (`app/api/contact/route.ts`) to actually deliver messages to nojeed.eg@gmail.com via Gmail SMTP. See `.env.example` for how to generate one. Without it, the form shows a visible error instead of silently dropping submissions.
+- `GMAIL_APP_PASSWORD` — required for the contact form (`app/api/contact/route.ts`) to actually deliver messages to info@nojeed.me via Gmail SMTP. See `.env.example` for how to generate one. Without it, the form shows a visible error instead of silently dropping submissions.
 
 ## Content TODOs
 

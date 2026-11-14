@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/routing'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/ui/Button'
+import { ProductTermsLink } from '@/components/ProductTermsLink'
 import { sandwich } from '@/lib/data/products'
 
 const chips = ['multiBranch', 'arabicFirst', 'offlinePos'] as const
@@ -33,6 +34,7 @@ export async function SandwichProduct({ children }: { children?: React.ReactNode
                                 ))}
                             </div>
                             <Button href={sandwich.siteHref} className="mt-7">{t('demoLink')}</Button>
+                            <ProductTermsLink slug="sandwich" className="mt-3 inline-flex text-sm font-semibold text-teal underline underline-offset-4" />
                         </div>
                         <div className="relative overflow-hidden rounded-[24px] border border-navy/10 bg-[#170603] shadow-[0_28px_80px_rgba(22,36,63,0.18)]">
                             <Image

@@ -701,7 +701,198 @@
             },
             "s12": {
                 "title": "12. Contact",
-                "body": "Questions about these Terms of Service? Reach us at nojeed.eg@gmail.com or through our contact page."
+                "body": "Questions about these Terms of Service? Reach us at info@nojeed.me or through our contact page."
+            }
+        }
+    },
+    "productTermsPage": {
+        "updated": "Last updated: November 14, 2026",
+        "linkLabel": "Terms of Service",
+        "fusionsPrivacyLink": "Fusions Privacy Policy",
+        "products": {
+            "nabih": {
+                "eyebrow": "Nabih · Terms",
+                "pageTitle": "Nabih Terms of Service",
+                "intro": "These Product Terms apply to the Nabih Android app and Nabih web pages published by Nojeed. They supplement Nojeed’s general website terms; if the two conflict about Nabih, these Product Terms control.",
+                "sections": {
+                    "s1": {
+                        "title": "1. Agreement and scope",
+                        "body": "By installing, purchasing, or using Nabih, you agree to these Product Terms. Nabih is a personal organizer for tracking routines, reading, study, spending, and other items you choose to record."
+                    },
+                    "s2": {
+                        "title": "2. Personal license",
+                        "body": "After a valid purchase or other authorized access, Nojeed grants you a limited, personal, non-exclusive, non-transferable license to use Nabih on a device you control. You may not sell, redistribute, sublicense, or make Nabih available to others as a service."
+                    },
+                    "s3": {
+                        "title": "3. Informational tool, not professional advice",
+                        "body": "Nabih’s reminders, summaries, estimates, and calculations are organizational aids only. They are not medical, financial, religious, or other professional advice, and are not a substitute for a clinician, adviser, or other qualified professional. Medication and health-related tracking does not provide diagnosis, treatment, or emergency alerts. Check important information independently."
+                    },
+                    "s4": {
+                        "title": "4. Your entries and device storage",
+                        "body": "In the current release, Nabih stores your entries in encrypted app storage on your device and does not use a Nojeed account or server to store them. You control the entries and are responsible for protecting your device and keeping any exports or backups you need. Clearing app storage or uninstalling the app may remove local information."
+                    },
+                    "s5": {
+                        "title": "5. Notifications and device features",
+                        "body": "Reminders, widgets, and prayer-time calculations depend on your device, settings, permissions, and the information you enter. Notifications may be delayed, blocked, or unavailable because of device settings or operating-system behavior. Do not rely on Nabih as the only reminder for a time-critical task."
+                    },
+                    "s6": {
+                        "title": "6. Purchase and app store terms",
+                        "body": "Nabih is distributed through Google Play. Google handles app distribution, payment, and any refund request under its own terms and policies. Your use is also subject to the applicable Google Play terms. Nojeed does not receive the local entries described in Section 4."
+                    },
+                    "s7": {
+                        "title": "7. Ownership and prohibited use",
+                        "body": "Nojeed and its licensors retain rights to Nabih’s original code, design, and branding. Third-party components remain subject to their own licenses. You retain your rights to information you enter. Do not tamper with, copy, modify, reverse engineer, or redistribute Nabih, or misuse the app or another person’s rights, except where applicable law permits."
+                    },
+                    "s8": {
+                        "title": "8. Availability and liability",
+                        "body": "We may update or discontinue features and do not promise that Nabih will work on every device or remain uninterrupted. To the extent permitted by law, Nabih is provided as available, and Nojeed is not liable for indirect or consequential losses, including loss of local data. Nothing here limits rights or liability that cannot be limited by law."
+                    },
+                    "s9": {
+                        "title": "9. Changes, law, and contact",
+                        "body": "We may revise these Product Terms when Nabih changes and will post the current version here with its update date. These terms are governed by the laws of the Arab Republic of Egypt, subject to mandatory rights that apply to you. Questions can be sent to info@nojeed.me."
+                    }
+                }
+            },
+            "school360": {
+                "eyebrow": "School 360 · Terms",
+                "pageTitle": "School 360 Terms of Service",
+                "intro": "These Product Terms apply to the School 360 school-management system, including the web portal and mobile features made available in a school’s deployment. A school order form, service agreement, or data-processing agreement may add to these terms and controls if there is a conflict about that deployment.",
+                "sections": {
+                    "s1": {
+                        "title": "1. Agreement and deployment scope",
+                        "body": "The school or organization purchasing or operating a School 360 deployment is the customer. The deployment’s modules, users, hosting, implementation, support, fees, and service commitments are those set out in its written agreement with Nojeed."
+                    },
+                    "s2": {
+                        "title": "2. Authorized users and accounts",
+                        "body": "The customer may authorize its staff, students, parents, and other designated users to access the deployment for school-related purposes. The customer is responsible for assigning appropriate roles, keeping account details current, and promptly removing access that is no longer authorized. Each user must protect their credentials and use only their own account."
+                    },
+                    "s3": {
+                        "title": "3. School responsibilities",
+                        "body": "The school is responsible for the information it enters and for having the authority, notices, and permissions required to use information about students, guardians, staff, and applicants. The school must configure access appropriately and use the system in line with its own policies and applicable law."
+                    },
+                    "s4": {
+                        "title": "4. Student and school information",
+                        "body": "The written customer agreement and any data-processing terms govern how Nojeed handles information in the school’s deployment, including permitted use, security, retention, and return or deletion. These Product Terms do not replace those documents. The school should not enter information it is not authorized to provide."
+                    },
+                    "s5": {
+                        "title": "5. Records and school decisions",
+                        "body": "School 360 provides tools for records such as admissions, attendance, grades, fees, communications, and transport. The school remains responsible for checking the accuracy of records and for decisions made using them. Maintain any independent records and backups required for school operations."
+                    },
+                    "s6": {
+                        "title": "6. Integrations and third-party services",
+                        "body": "A deployment may include integrations such as messaging, mobile notifications, or video-call services. Their availability and use may depend on third-party providers, which operate under their own terms and privacy policies. The customer is responsible for configuring and authorizing its chosen integrations."
+                    },
+                    "s7": {
+                        "title": "7. Fees, support, and service commitments",
+                        "body": "Fees, payment dates, implementation scope, hosting, support, renewals, and service levels are set out in the school’s written agreement or order. No feature, response time, or service level is promised unless it appears in that agreement. Overdue fees may result in suspension as described in the agreement."
+                    },
+                    "s8": {
+                        "title": "8. Ownership and license",
+                        "body": "Nojeed and its licensors retain rights to the School 360 product, its original software, design, and branding. Odoo and other third-party components remain subject to their own licenses. During the agreement term, Nojeed grants the customer a limited license to access and use the deployed system for its internal school operations, subject to these terms and the customer agreement. The customer retains rights to its own records and materials."
+                    },
+                    "s9": {
+                        "title": "9. Security and availability",
+                        "body": "The customer must safeguard its administrator accounts, review user access, and tell Nojeed promptly about suspected unauthorized access. Nojeed may maintain, update, or temporarily restrict the service. Backup, recovery, and availability commitments are governed by the customer agreement; keep any additional records your school needs."
+                    },
+                    "s10": {
+                        "title": "10. Suspension and termination",
+                        "body": "Nojeed may restrict access to address a security risk, unlawful use, or material breach, subject to the customer agreement and applicable law. At the end of the deployment, access and any export, return, or deletion of school information are handled under the customer agreement and applicable data-processing terms."
+                    },
+                    "s11": {
+                        "title": "11. Disclaimers, law, and contact",
+                        "body": "Except for commitments in a written customer agreement and to the extent permitted by law, School 360 is provided as available without a guarantee of uninterrupted operation or error-free records. Nojeed is not liable for indirect or consequential loss where the law permits that exclusion. These terms are governed by Egyptian law, subject to mandatory rights. Contact info@nojeed.me with questions."
+                    }
+                }
+            },
+            "fusions": {
+                "eyebrow": "Fusions · Terms",
+                "pageTitle": "Fusions Terms of Service",
+                "intro": "These Product Terms apply to the Fusions mobile arcade game published by Nojeed. They supplement Nojeed’s general website terms; if the two conflict about Fusions, these Product Terms control.",
+                "sections": {
+                    "s1": {
+                        "title": "1. Agreement and scope",
+                        "body": "By installing or using Fusions, you agree to these Product Terms. Fusions is a casual game that can be played offline; an account is not required to play its core features."
+                    },
+                    "s2": {
+                        "title": "2. Eligibility and game license",
+                        "body": "You may use Fusions only if you can accept these terms under the rules where you live. Nojeed grants you a limited, personal, non-transferable license to install and play the game for your own entertainment. You may not sell, redistribute, or sublicense it."
+                    },
+                    "s3": {
+                        "title": "3. Local progress and preferences",
+                        "body": "Fusions saves gameplay progress and preferences in the app’s private storage on your device. Nojeed does not operate an account or cloud-save service for this information. Clearing app storage or uninstalling the game may delete local records; device backups, if enabled, are controlled by your platform."
+                    },
+                    "s4": {
+                        "title": "4. Optional Google Play Games leaderboards",
+                        "body": "On Android, you can use optional Google Play Games leaderboards. When signed in, the game sends the eligible best scores described in the Fusions privacy policy to Google, which displays them according to your Play Games profile settings. Google operates sign-in and leaderboard services under its own terms and privacy policy."
+                    },
+                    "s5": {
+                        "title": "5. Fair play and prohibited conduct",
+                        "body": "Do not cheat, manipulate scores, exploit errors, tamper with the game, or interfere with other players or leaderboard services. Nojeed may hide scores that appear fraudulent and may restrict access for material violations, subject to applicable law."
+                    },
+                    "s6": {
+                        "title": "6. App store and third-party terms",
+                        "body": "Google Play distributes the Android app and may process information under its own terms. Optional Play Games features are provided by Google. Your use of those services is subject to Google’s terms and privacy policy; Nojeed does not control their availability."
+                    },
+                    "s7": {
+                        "title": "7. Ownership and updates",
+                        "body": "Nojeed and its licensors retain rights to Fusions’ original games, artwork, music, code, and branding. Third-party components remain subject to their own licenses. You receive only the license in these terms. We may update the game, change features, or discontinue it; app updates and installation are handled through the platform."
+                    },
+                    "s8": {
+                        "title": "8. Availability and liability",
+                        "body": "Fusions is provided as available, and Nojeed does not guarantee uninterrupted play or that every feature will work on every device. To the extent permitted by law, Nojeed is not liable for indirect or consequential loss, including loss of local progress. Rights that cannot be limited by law remain unaffected."
+                    },
+                    "s9": {
+                        "title": "9. Privacy, governing law, and contact",
+                        "body": "The Fusions Privacy Policy explains what information the game stores and sends. These Product Terms are governed by the laws of the Arab Republic of Egypt, subject to mandatory rights that apply to you. Questions can be sent to info@nojeed.me."
+                    }
+                }
+            },
+            "sandwich": {
+                "eyebrow": "Sandwich · Terms",
+                "pageTitle": "Sandwich Terms of Service",
+                "intro": "These Product Terms apply to the Sandwich restaurant operations platform and its enabled modules. A merchant order, implementation, or service agreement sets the deployment details and may supplement or control over these terms if they conflict.",
+                "sections": {
+                    "s1": {
+                        "title": "1. Customer and deployment",
+                        "body": "The restaurant, merchant, or organization named in the applicable order is the customer. The order or written agreement defines the branches, users, modules, hosting, implementation, support, fees, and service commitments for its Sandwich deployment."
+                    },
+                    "s2": {
+                        "title": "2. Accounts and staff access",
+                        "body": "The customer may authorize its owners, managers, and staff to use the deployment for restaurant operations. The customer is responsible for assigning appropriate access, keeping account details accurate, protecting administrator credentials, and promptly removing former users. Each user must use their own authorized account."
+                    },
+                    "s3": {
+                        "title": "3. Menus, prices, and restaurant operations",
+                        "body": "The customer is responsible for the accuracy and legality of its menus, product descriptions, prices, taxes, availability, inventory, promotions, and other business information. The customer remains responsible for food safety, allergen information, licensing, and compliance with rules that apply to its restaurant."
+                    },
+                    "s4": {
+                        "title": "4. Orders, payments, and fulfillment",
+                        "body": "The customer is responsible for reviewing and fulfilling orders, handling cancellations and refunds, and resolving customer issues. Any payment processor, delivery provider, marketplace, or messaging service is a separate third party with its own terms. Sandwich does not replace the customer’s obligations to its customers or those providers."
+                    },
+                    "s5": {
+                        "title": "5. Business and customer information",
+                        "body": "The customer is responsible for having the rights, notices, and permissions needed for information it enters about employees, customers, or others, and for choosing who can access it. The applicable written agreement and privacy or data-processing terms govern Nojeed’s handling, security, retention, and return or deletion of information in the deployment."
+                    },
+                    "s6": {
+                        "title": "6. Integrations and third-party services",
+                        "body": "Online ordering, payment, delivery, notifications, and other integrations may depend on external providers. Those providers operate independently and may change or interrupt their services. The customer is responsible for selecting, authorizing, and maintaining any required third-party accounts."
+                    },
+                    "s7": {
+                        "title": "7. Fees, implementation, and support",
+                        "body": "Pricing, payment, renewal, implementation scope, hosting, support, and any service levels are set out in the customer’s written order or agreement. Additional branches, modules, users, or work may require a change to that agreement. Overdue payment may result in suspension under the agreed terms."
+                    },
+                    "s8": {
+                        "title": "8. Ownership and license",
+                        "body": "Nojeed and its licensors retain rights to Sandwich’s original software, templates, design, and branding. Third-party components remain subject to their own licenses. During the customer agreement, Nojeed grants the customer a limited, non-exclusive license to use the deployed platform for its internal restaurant operations. The customer retains rights to its menus, business records, and other materials it provides."
+                    },
+                    "s9": {
+                        "title": "9. Availability and records",
+                        "body": "We may maintain, update, or change the platform and its features. Nojeed does not promise uninterrupted availability unless the customer agreement says so. The customer should review important transactions and keep any business records or exports it needs under its own policies and agreement."
+                    },
+                    "s10": {
+                        "title": "10. Suspension, liability, law, and contact",
+                        "body": "Access may be suspended for a security risk, unlawful use, or material breach, subject to the customer agreement and applicable law. Except for written commitments and to the extent permitted by law, Sandwich is provided as available; Nojeed is not liable for indirect or consequential loss where that exclusion is lawful. Egyptian law governs these terms, subject to mandatory rights. Contact info@nojeed.me."
+                    }
+                }
             }
         }
     },
@@ -745,7 +936,7 @@
             },
             "s9": {
                 "title": "9. Your Rights",
-                "body": "You have the right to access the personal data we hold about you, request corrections to inaccurate data, request deletion of your data, and withdraw consent for processing at any time. To exercise any of these rights, contact us at nojeed.eg@gmail.com. We will respond within a reasonable timeframe."
+                "body": "You have the right to access the personal data we hold about you, request corrections to inaccurate data, request deletion of your data, and withdraw consent for processing at any time. To exercise any of these rights, contact us at info@nojeed.me. We will respond within a reasonable timeframe."
             },
             "s10": {
                 "title": "10. Third-Party Links",
@@ -761,7 +952,7 @@
             },
             "s13": {
                 "title": "13. Contact",
-                "body": "For any questions or concerns about this Privacy Policy or how we handle your data, please contact us at nojeed.eg@gmail.com or by phone at +20 128 662 3451."
+                "body": "For any questions or concerns about this Privacy Policy or how we handle your data, please contact us at info@nojeed.me or by phone at +20 128 662 3451."
             }
         }
     },
@@ -811,7 +1002,7 @@
             },
             "s8": {
                 "title": "8. Changes and contact",
-                "body": "We may update this policy when the app or its data practices change. The latest version will be posted on this page with a revised date. For questions about Fusions privacy, contact Nojeed at nojeed.eg@gmail.com."
+                "body": "We may update this policy when the app or its data practices change. The latest version will be posted on this page with a revised date. For questions about Fusions privacy, contact Nojeed at info@nojeed.me."
             }
         }
     }

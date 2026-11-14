@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/routing'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/ui/Button'
+import { ProductTermsLink } from '@/components/ProductTermsLink'
 import { school360, productModules, alsoIncluded, productFeatures } from '@/lib/data/products'
 import { site } from '@/lib/site'
 
@@ -56,6 +57,7 @@ export async function School360Product({ children }: { children?: React.ReactNod
                                     {t('cta2')}
                                 </Button>
                             </div>
+                            <ProductTermsLink slug="school-360" className="mt-3 inline-flex text-sm font-semibold text-teal underline underline-offset-4" />
                         </div>
 
                         <ModuleRing label={tPage('cards.school360.name')} />

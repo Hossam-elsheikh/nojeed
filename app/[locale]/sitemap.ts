@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...services.map((s) => `/services/${s.slug}`),
         ...portfolioProjects.map((p) => `/projects/${p.key}`),
         ...products.map((p) => `/products/${p.slug}`),
+        ...products.map((p) => `/products/${p.slug}/terms`),
     ]
 
     return [...staticPaths, ...dynamicPaths].flatMap((path) =>

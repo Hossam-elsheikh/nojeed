@@ -16,6 +16,7 @@ import { Link } from '@/i18n/routing'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/ui/Button'
 import { ScreenCrop } from '@/components/ScreenCrop'
+import { ProductTermsLink } from '@/components/ProductTermsLink'
 import {
     nabih,
     nabihAreas,
@@ -110,6 +111,7 @@ export async function NabihProduct({ locale, children }: { locale: string; child
                                 </Button>
                             </div>
                             <p className="mt-3.5 text-[13px] text-subtle">{t('ctaNote')}</p>
+                            <ProductTermsLink slug="nabih" className="mt-2 inline-flex text-sm font-semibold text-teal underline underline-offset-4" />
                         </div>
 
                         {/* The day's list, cropped, with the notification it would send */}

@@ -4,6 +4,7 @@ import { CalendarDays, Gamepad2, Shuffle } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/ui/Button'
+import { ProductTermsLink } from '@/components/ProductTermsLink'
 import { site } from '@/lib/site'
 
 const screenshots = [
@@ -52,6 +53,7 @@ export async function FusionsProduct({ children }: { children?: React.ReactNode 
                             </div>
                             <div className="mt-7 flex flex-wrap items-center gap-3.5">
                                 <Link href="/privacy/fusions" className="inline-flex min-h-11 items-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-teal">{t('privacyLink')}</Link>
+                                <ProductTermsLink slug="fusions" className="inline-flex min-h-11 items-center rounded-full border border-navy/10 bg-surface px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-accent" />
                                 <Button href={`mailto:${site.email}`} variant="outline">{t('contact')}</Button>
                             </div>
                         </div>
