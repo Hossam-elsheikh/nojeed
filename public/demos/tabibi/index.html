@@ -1,0 +1,33 @@
+<!doctype html>
+<!--
+  dir and lang are set here rather than by React.
+
+  ar-EG is the canonical locale (NFR-L01), so RTL is the document's starting
+  state and not something the app switches on after hydrating. Setting it in
+  JavaScript would mean the first paint of every cold load is left-to-right and
+  then flips, which on a slow front-desk PC is visible.
+
+  The shell rewrites both when a user whose locale is `en` signs in.
+-->
+<html lang="ar-EG" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#2172C4" />
+    <title>طبيبي</title>
+    <script type="module" crossorigin src="/demos/tabibi/assets/index-CS3ELh6D.js"></script>
+    <link rel="modulepreload" crossorigin href="/demos/tabibi/assets/vendor-CcR_CNlk.js">
+    <link rel="modulepreload" crossorigin href="/demos/tabibi/assets/runtime-CNAgBrMG.js">
+    <link rel="modulepreload" crossorigin href="/demos/tabibi/assets/portal-patient-DAWSbx80.js">
+    <link rel="modulepreload" crossorigin href="/demos/tabibi/assets/sync-Dh2eqovF.js">
+    <link rel="modulepreload" crossorigin href="/demos/tabibi/assets/realtime-DrKB1Yoz.js">
+    <link rel="modulepreload" crossorigin href="/demos/tabibi/assets/portal-reception-BGWEUv6M.js">
+    <link rel="modulepreload" crossorigin href="/demos/tabibi/assets/portal-management-C2-GgpBY.js">
+    <link rel="stylesheet" crossorigin href="/demos/tabibi/assets/vendor-DQjbQ5qz.css">
+    <link rel="stylesheet" crossorigin href="/demos/tabibi/assets/index-L-LB0rex.css">
+    <meta name="robots" content="noindex, nofollow">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

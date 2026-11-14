@@ -302,6 +302,12 @@
                 "tag": "Restaurant platform",
                 "meta": "Web · Multi-branch · Arabic-first",
                 "description": "One platform for restaurant orders, branches, POS, kitchen operations, delivery, online ordering, menu management, customers, and reports."
+            },
+            "tabibi": {
+                "name": "Tabibi",
+                "tag": "Clinic platform",
+                "meta": "Web · Mobile · Arabic-first",
+                "description": "One system for a clinic’s whole day: booking, the live queue, the consultation and prescription, billing, and closing the drawer — with a portal for every role and one for the patient."
             }
         },
         "ctaTitle": "Have a product of your own in mind?",
@@ -601,6 +607,125 @@
             "videoEyebrow": "Full product walkthrough",
             "videoTitle": "Sandwich — Full product walkthrough",
             "videoDescription": "Follow an order from the call center and cashier through the branch, kitchen, and delivery. The walkthrough also covers online ordering, menu management, and reporting."
+        },
+        "tabibi": {
+            "eyebrow": "Product · Clinic operations",
+            "title": "The whole clinic in one place — from the booking to closing the day.",
+            "subtitle": "Tabibi is an Arabic-first platform for outpatient clinics. Reception, the doctor, the nurse, the owner and the patient each open their own portal onto the same day, and the queue moves for all of them at the same moment.",
+            "heroAlt": "The Tabibi demo’s front door: choose a role at a fictional clinic and step in.",
+            "chips": {
+                "portals": "Five portals, one account",
+                "liveQueue": "Live queue",
+                "arabicFirst": "Arabic-first, right-to-left"
+            },
+            "demoLink": "Try the live demo",
+            "demoNote": "The demo is a fictional clinic that runs entirely in your browser — nothing you type leaves your device. Tabibi is in active development and not yet generally available.",
+            "rolesEyebrow": "Who it is for",
+            "rolesTitle": "Five roles, each seeing only what is theirs",
+            "rolesIntro": "One sign-in. The portals a person gets follow from their job at the clinic, and a doctor who is also a patient somewhere keeps both.",
+            "roles": {
+                "reception": {
+                    "title": "Reception",
+                    "description": "Register a patient, book, check in, move the queue, take the payment and print the receipt."
+                },
+                "doctor": {
+                    "title": "Doctor",
+                    "description": "The patient in the room, their history and allergies beside the note, the prescription written and printed."
+                },
+                "nurse": {
+                    "title": "Nurse",
+                    "description": "Vitals and allergies recorded before the patient walks in, so the doctor starts with them."
+                },
+                "management": {
+                    "title": "Management",
+                    "description": "The branch’s pulse, schedules, services, the team, the booking link and the waiting screen."
+                },
+                "patient": {
+                    "title": "Patient",
+                    "description": "Their place in the queue as it moves, upcoming bookings, prescriptions and receipts — for them and their family."
+                }
+            },
+            "screensEyebrow": "Inside the product",
+            "screensTitle": "Built for the desk it sits on",
+            "screens": {
+                "reception": {
+                    "label": "Reception",
+                    "title": "The desk, on one screen",
+                    "description": "Who is inside, who is next and how long the wait is expected to be — next to patient search, today’s bookings and the corrections patients sent from their phones. Registering a new patient and closing the day are each one key away.",
+                    "alt": "Tabibi’s reception desk: the live queue beside patient search and bookings."
+                },
+                "doctor": {
+                    "label": "Doctor",
+                    "title": "The consultation, with the chart beside it",
+                    "description": "The note on one side and what matters about this patient on the other: allergies first, then the last visit and recent diagnoses. Calling the next patient is one button, and the waiting room sees it at once.",
+                    "alt": "Tabibi’s consultation screen: the note, the patient’s allergies and the queue."
+                },
+                "management": {
+                    "label": "Management",
+                    "title": "The branch’s pulse",
+                    "description": "Waiting now, seen today, collected and billed, the no-show rate, and where bookings come from — each figure opening the section behind it.",
+                    "alt": "Tabibi’s management screen: today’s figures and booking sources."
+                },
+                "display": {
+                    "title": "The waiting-room screen",
+                    "description": "A television that shows the number being called for each doctor and who should get ready — numbers only, never a name.",
+                    "alt": "Tabibi’s waiting-room screen showing the numbers being called."
+                },
+                "booking": {
+                    "alt": "A clinic’s public booking page on a phone."
+                },
+                "patient": {
+                    "title": "The patient’s side",
+                    "description": "A booking link the clinic can share or print as a code, and a portal where the patient follows their turn without calling the desk.",
+                    "alt": "The patient portal on a phone, showing their place in the queue."
+                }
+            },
+            "dayEyebrow": "A day at the clinic",
+            "dayTitle": "One visit, start to finish",
+            "day": {
+                "book": {
+                    "title": "Book",
+                    "description": "By phone at the desk, from the clinic’s link, or by walking in."
+                },
+                "arrive": {
+                    "title": "Arrive",
+                    "description": "The queue number is issued on arrival, so the queue is made of the people who are actually there."
+                },
+                "consult": {
+                    "title": "Consult",
+                    "description": "Vitals, the note, the diagnosis and a printed prescription."
+                },
+                "pay": {
+                    "title": "Pay",
+                    "description": "The bill follows the visit; the receipt is printed or sent to the patient’s portal."
+                },
+                "close": {
+                    "title": "Close the day",
+                    "description": "The drawer is counted against what the system expects, and the difference is explained before anyone goes home."
+                }
+            },
+            "foundationsEyebrow": "Underneath",
+            "foundationsTitle": "The parts you only notice when they are missing",
+            "foundations": {
+                "live": {
+                    "title": "Live everywhere",
+                    "description": "One press of “next” updates reception, the doctor, the waiting screen and the patient’s phone together."
+                },
+                "arabic": {
+                    "title": "Arabic first",
+                    "description": "Written in the Egyptian Arabic a clinic actually speaks and right-to-left from the first screen, with an English interface as well."
+                },
+                "permissions": {
+                    "title": "Each role, its own view",
+                    "description": "The desk does not read the clinical note, and each clinic’s records stay that clinic’s."
+                },
+                "print": {
+                    "title": "Paper when it is needed",
+                    "description": "Prescriptions and receipts print from the browser, in formal Arabic, on the clinic’s own printer."
+                }
+            },
+            "ctaTitle": "Running a clinic and want to see it on your own day?",
+            "ctaButton": "Talk to us →"
         }
     },
     "finalCta": {

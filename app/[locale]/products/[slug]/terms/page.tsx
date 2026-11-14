@@ -5,7 +5,8 @@ import { Container } from '@/components/Container'
 import { Link } from '@/i18n/routing'
 import { products, type ProductKey } from '@/lib/data/products'
 
-const sectionKeys: Record<ProductKey, readonly string[]> = {
+/** A product with no entry has no published terms yet, and no terms page. */
+const sectionKeys: Partial<Record<ProductKey, readonly string[]>> = {
     nabih: ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9'],
     school360: ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11'],
     fusions: ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9'],
@@ -13,13 +14,13 @@ const sectionKeys: Record<ProductKey, readonly string[]> = {
 }
 
 export function generateStaticParams() {
-    return products.map((product) => ({ slug: product.slug }))
+    return products.filter((product) => product.key in sectionKeys).map((product) => ({ slug: product.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params
     const product = products.find((item) => item.slug === slug)
-    if (!product) return {}
+    if (!product || !sectionKeys[product.key]) return {}
 
     const t = await getTranslations('productTermsPage')
     return {
@@ -32,6 +33,8 @@ export default async function ProductTermsPage({ params }: { params: Promise<{ s
     const { slug } = await params
     const product = products.find((item) => item.slug === slug)
     if (!product) notFound()
+    const sections = sectionKeys[product.key]
+    if (!sections) notFound()
 
     const t = await getTranslations('productTermsPage')
     const namespace = `products.${product.key}`
@@ -55,7 +58,7 @@ export default async function ProductTermsPage({ params }: { params: Promise<{ s
                 )}
 
                 <div className="mt-10 flex flex-col gap-5">
-                    {sectionKeys[product.key].map((key) => (
+                    {sections.map((key) => (
                         <section key={key} className="rounded-2xl border border-navy/10 bg-surface px-6 py-5">
                             <h2 className="font-serif text-lg font-medium text-navy">
                                 {t(`${namespace}.sections.${key}.title`)}

@@ -5,7 +5,7 @@ import { Link } from '@/i18n/routing'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/ui/Button'
 
-import { products, productModules, school360, nabih, sandwich } from '@/lib/data/products'
+import { products, productModules, school360, nabih, sandwich, tabibi } from '@/lib/data/products'
 
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations('productsPage')
@@ -55,6 +55,8 @@ export default async function ProductsPage() {
                                 <School360Preview />
                             ) : product.key === 'fusions' ? (
                                 <FusionsPreview />
+                            ) : product.key === 'tabibi' ? (
+                                <TabibiPreview />
                             ) : (
                                 <SandwichPreview />
                             )}
@@ -168,6 +170,22 @@ function SandwichPreview() {
         <div className="relative h-[300px] overflow-hidden bg-[#170603]">
             <Image
                 src={sandwich.thumbnail}
+                alt=""
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface to-transparent" aria-hidden="true" />
+        </div>
+    )
+}
+
+
+function TabibiPreview() {
+    return (
+        <div className="relative h-[300px] overflow-hidden bg-[#0f1a22]">
+            <Image
+                src={tabibi.thumbnail}
                 alt=""
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"

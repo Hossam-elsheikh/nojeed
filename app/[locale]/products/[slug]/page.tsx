@@ -8,6 +8,7 @@ import { NabihProduct } from '@/sections/products/NabihProduct'
 import { School360Product } from '@/sections/products/School360Product'
 import { FusionsProduct } from '@/sections/products/FusionsProduct'
 import { SandwichProduct } from '@/sections/products/SandwichProduct'
+import { TabibiProduct } from '@/sections/products/TabibiProduct'
 
 export function generateStaticParams() {
     return products.map((product) => ({ slug: product.slug }))
@@ -37,6 +38,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     if (product.key === 'nabih') return <NabihProduct locale={locale}>{nextProduct}</NabihProduct>
     if (product.key === 'school360') return <School360Product>{nextProduct}</School360Product>
     if (product.key === 'fusions') return <FusionsProduct>{nextProduct}</FusionsProduct>
+    if (product.key === 'tabibi') return <TabibiProduct>{nextProduct}</TabibiProduct>
     return <SandwichProduct>{nextProduct}</SandwichProduct>
 }
 

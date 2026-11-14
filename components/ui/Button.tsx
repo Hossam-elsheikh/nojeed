@@ -51,6 +51,15 @@ export function Button({ variant = 'accent', className, children, ...props }: Bu
                 </NextLink>
             )
         }
+        /* A product demo in `public/demos`: a static app, not a localized page
+           of this site, so it is a plain link that opens beside it. */
+        if (props.href.startsWith('/demos/')) {
+            return (
+                <a href={props.href} target="_blank" rel="noopener" className={classes}>
+                    {children}
+                </a>
+            )
+        }
         return (
             // @ts-expect-error -- href is a plain internal pathname at runtime
             <Link href={props.href} className={classes}>

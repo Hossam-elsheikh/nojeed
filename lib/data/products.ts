@@ -15,6 +15,14 @@ import {
     GraduationCap,
     PhoneCall,
     Dumbbell,
+    ClipboardList,
+    Stethoscope,
+    HeartPulse,
+    BarChart3,
+    UserRound,
+    Radio,
+    ShieldCheck,
+    Printer,
 } from 'lucide-react'
 
 export const products = [
@@ -44,6 +52,13 @@ export const products = [
         slug: 'sandwich',
         thumbnail: '/images/products/sandwich/thumbnail.png',
         siteHref: 'https://sandwich.nojeed.me',
+    },
+    {
+        key: 'tabibi',
+        slug: 'tabibi',
+        thumbnail: '/images/products/tabibi/thumbnail.png',
+        /** Served by this site from `public/demos/tabibi` — see `next.config.ts`. */
+        siteHref: '/demos/tabibi',
     },
 ] as const
 
@@ -133,4 +148,32 @@ export const productFeatures = [
     { key: 'portal', icon: Users },
     { key: 'mobileApp', icon: Smartphone },
     { key: 'arabic', icon: Languages },
+] as const
+
+/* -------------------------------------------------------------------------- */
+/*  Tabibi                                                                     */
+/* -------------------------------------------------------------------------- */
+
+export const tabibi = {
+    ...products[4],
+    screen: (file: string) => `/images/products/tabibi/${file}.png`,
+} as const
+
+/** The five portals, in the order a patient's visit meets them. */
+export const tabibiRoles = [
+    { key: 'reception', icon: ClipboardList },
+    { key: 'doctor', icon: Stethoscope },
+    { key: 'nurse', icon: HeartPulse },
+    { key: 'management', icon: BarChart3 },
+    { key: 'patient', icon: UserRound },
+] as const
+
+/** One visit, from the booking to the drawer being counted. */
+export const tabibiDay = ['book', 'arrive', 'consult', 'pay', 'close'] as const
+
+export const tabibiFoundations = [
+    { key: 'live', icon: Radio },
+    { key: 'arabic', icon: Languages },
+    { key: 'permissions', icon: ShieldCheck },
+    { key: 'print', icon: Printer },
 ] as const
