@@ -1094,7 +1094,7 @@
     "fusionsPrivacyPage": {
         "eyebrow": "Fusions · Privacy",
         "title": "Fusions Privacy Policy",
-        "updated": "Last updated: November 10, 2026",
+        "updated": "Last updated: November 21, 2026",
         "intro": "This policy explains how Fusions, the mobile arcade game published by Nojeed, handles information. It applies to the Fusions app and is separate from the privacy policy for the Nojeed website and other products.",
         "sections": {
             "s1": {
@@ -1103,30 +1103,38 @@
             },
             "s2": {
                 "title": "2. Information saved on your device",
-                "body": "Fusions saves gameplay progress and app preferences on your device. This can include scores, number of runs, play time, last-played times, Power balance and refill date, your last fusion, selected theme, music and sound settings, haptics, and reduced-motion preference. It also keeps your best Core and Daily Lab scores that are waiting to be sent to Google Play Games leaderboards, and which of them have been sent. The app does not ask you to create an account or provide your name, email, contacts, location, photos, or microphone recordings."
+                "body": "Fusions saves gameplay progress and app preferences on your device. This can include scores and how your best scores climbed, number of runs, play time, last-played times, Power balance and refill date, your last fusion, the feats you have won, selected theme and hero look, playlists, music and sound settings, haptics, and reduced-motion preference. It also keeps a recording of the touches in your best run in each game, for ghost races, and that run’s score at each second, so a later run can show whether it is ahead. It keeps your best Core and Daily Lab scores that are waiting to be sent to Google Play Games leaderboards, which of them have been sent, and whether your Google account owns FUSIONS Pro. The app does not ask you to create an account or provide your name, email, contacts, location, photos, or microphone recordings."
             },
             "s3": {
                 "title": "3. How that information is used",
-                "body": "The app uses locally saved information to remember progress and preferences, show records, run game features such as the daily Power refill, and send new best scores to leaderboards while you are signed in to Google Play Games. Nojeed does not receive these saved values."
+                "body": "The app uses locally saved information to remember progress and preferences, show records, run game features such as the daily Power refill and ghost races, and send new best scores to leaderboards while you are signed in to Google Play Games. Nojeed does not receive these saved values."
             },
             "s4": {
                 "title": "4. Information collected or sent by the app",
-                "body": "On Android, Fusions offers optional online leaderboards through Google Play Games Services, a Google service. If you already use Google Play Games on your device, Google may sign you in when the game starts. Otherwise, the app asks you to sign in only when you open a leaderboard. While you are signed in, the app sends Google your best score in each Core game and in each Daily Lab tier, and Google shows it on that leaderboard with your Play Games profile name and picture. Who can see it depends on your Play Games profile settings. Scores from fusions, your other records, and your preferences are not sent. Fusions has no account service of its own, cloud synchronization, advertising, or analytics, and every part of the game can be played without signing in. If the app’s data practices change, we will update this policy and the app’s Google Play disclosures."
+                "body": "On Android, Fusions offers optional online leaderboards through Google Play Games Services, a Google service. If you already use Google Play Games on your device, Google may sign you in when the game starts. Otherwise, the app asks you to sign in only when you open a leaderboard. While you are signed in, the app sends Google your best score in each Core game and in each Daily Lab tier, and Google shows it on that leaderboard with your Play Games profile name and picture. Who can see it depends on your Play Games profile settings. Scores from fusions, your other records, and your preferences are not sent. Apart from leaderboards, the app sends information only when you choose to: a FUSIONS Pro purchase goes through Google Play (section 5), and a score card or a challenge goes to the app you pick (section 6). Fusions has no account service of its own, cloud synchronization, advertising, or analytics, and every part of the game can be played without signing in. If the app’s data practices change, we will update this policy and the app’s Google Play disclosures."
             },
             "s5": {
-                "title": "5. Sharing and third-party services",
-                "body": "Nojeed does not sell Fusions gameplay records or preferences. The only information the app shares is the leaderboard scores described above, which go to Google through Google Play Games Services while you are signed in. Google handles those scores, and your Play Games sign-in, under its own privacy policy at https://policies.google.com/privacy. As the game’s publisher, Nojeed can view Fusions leaderboards in Google Play Console and can hide scores that appear to be fraudulent. Google Play also handles app distribution and may process information under Google’s own privacy terms when you use Google Play. The current app does not include an ad or analytics service."
+                "title": "5. FUSIONS Pro purchases",
+                "body": "FUSIONS Pro is an optional one-time purchase made through Google Play. Google handles the payment under its own privacy policy, and Nojeed never sees your card or other payment details. The app asks Google Play whether your Google account owns Pro, and saves the answer on your device so Pro keeps working offline. Google Play gives Nojeed a record of each order, such as its order number, price and country, which Nojeed uses only for refunds, taxes and support."
             },
             "s6": {
-                "title": "6. Retention and deletion",
-                "body": "Your saved game data remains in the app’s local storage until you clear the app’s storage or uninstall Fusions. Android device backup settings may include app data in backups managed by your device platform; those backups are controlled by the platform, not Nojeed. Leaderboard scores are kept by Google with your Play Games profile. You can change who sees your profile, or delete your Play Games data, in your Google Play Games settings or your Google Account. Fusions has no user account and Nojeed holds no gameplay data of yours to delete."
+                "title": "6. Score cards and challenges",
+                "body": "With FUSIONS Pro you can share a best score as a picture. After a run, anyone can tap Challenge a friend, which shares a short code naming the game, its level and your score, so the person you send it to can play that same level in Fusions. In both cases the app hands the picture or the text to the app you choose, such as a messaging app, and that app handles it under its own terms. Nothing is shared unless you tap the button, and Nojeed does not receive it. The recordings of your best runs that ghost races use stay on your device."
             },
             "s7": {
-                "title": "7. Storage and security",
-                "body": "Fusions stores its progress in the app’s private storage on your device. Nojeed does not operate a server containing your game records; leaderboard scores are stored by Google Play Games Services. Protect access to your device and review its backup settings. No local storage method can protect data if a device or its operating system is compromised."
+                "title": "7. Sharing and third-party services",
+                "body": "Nojeed does not sell Fusions gameplay records or preferences. The app shares information only in the ways described above: leaderboard scores go to Google through Google Play Games Services while you are signed in, a FUSIONS Pro purchase goes through Google Play, and score cards and challenges go to the app you pick when you tap to share them. Google handles leaderboard scores, your Play Games sign-in and Pro purchases under its own privacy policy at https://policies.google.com/privacy. As the game’s publisher, Nojeed can view Fusions leaderboards in Google Play Console and can hide scores that appear to be fraudulent. Google Play also handles app distribution and may process information under Google’s own privacy terms when you use Google Play. The current app does not include an ad or analytics service."
             },
             "s8": {
-                "title": "8. Changes and contact",
+                "title": "8. Retention and deletion",
+                "body": "Your saved game data remains in the app’s local storage until you clear the app’s storage or uninstall Fusions. Android device backup settings may include app data in backups managed by your device platform; those backups are controlled by the platform, not Nojeed. Leaderboard scores are kept by Google with your Play Games profile. You can change who sees your profile, or delete your Play Games data, in your Google Play Games settings or your Google Account. Records of FUSIONS Pro orders stay in Google Play Console, where Nojeed uses them only for refunds, taxes and support. Fusions has no user account and Nojeed holds no gameplay data of yours to delete."
+            },
+            "s9": {
+                "title": "9. Storage and security",
+                "body": "Fusions stores its progress in the app’s private storage on your device. Nojeed does not operate a server containing your game records; leaderboard scores are stored by Google Play Games Services. Protect access to your device and review its backup settings. No local storage method can protect data if a device or its operating system is compromised."
+            },
+            "s10": {
+                "title": "10. Changes and contact",
                 "body": "We may update this policy when the app or its data practices change. The latest version will be posted on this page with a revised date. For questions about Fusions privacy, contact Nojeed at info@nojeed.me."
             }
         }

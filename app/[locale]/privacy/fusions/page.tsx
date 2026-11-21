@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return { title: t('title'), description: t('intro'), robots: { index: true, follow: true } }
 }
 
-const sections = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8'] as const
+const sections = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10'] as const
 
 export default async function FusionsPrivacyPage() {
     const t = await getTranslations('fusionsPrivacyPage')
